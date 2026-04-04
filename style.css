@@ -183,3 +183,299 @@ img {
     font-weight: 700;
     line-height: 1.2;
 }
+
+.meal-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ---------- MEAL EDITING ---------- */
+.detail-page {
+    flex: 1;
+    padding: 20px 24px;
+}
+
+.detail-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.detail-left {
+    text-align: center;
+}
+
+.detail-meal-image {
+    width: clamp(220px, 35vw, 360px);
+    margin: 0 auto 24px;
+}
+
+.detail-title {
+    margin: 0 0 12px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.detail-price {
+    margin: 0;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    font-weight: 600;
+}
+
+.detail-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detail-section-title {
+    margin: 0;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 700;
+}
+
+.detail-includes {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.include-item {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.include-image {
+    width: 100%;
+    height: 100%;
+}
+
+.detail-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.detail-tag {
+    padding: 6px 12px;
+    border: 1px solid #cfcfcf;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.addon-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.addon-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.addon-image {
+    width: 42px;
+}
+
+.addon-name {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.addon-button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.addon-button img {
+    width: 42px;
+    display: block;
+}
+
+.next-button {
+    margin: 32px auto 0; /* centers horizontally */
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* split for wider screens */
+@media (min-width: 900px) {
+    .detail-layout {
+        flex-direction: row;
+        gap: 0;
+        align-items: stretch;
+    }
+
+    .detail-left {
+        width: 52%;
+        padding: 32px 40px 32px 0;
+        border-right: 1px solid #d8d8d8;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .detail-right {
+        width: 48%;
+        padding: 8px 0 0 40px;
+    }
+
+    .next-button {
+        margin-top: auto; /* pushes to the bottom */
+        margin-left: auto; /* centers horizontally */
+        margin-right: auto; /* centers horizontally */
+    }
+}
+
+/* ---------- SIDE SELECTION ---------- */
+.selection-page {
+    flex: 1;
+    padding: 20px 24px 32px;
+}
+
+.selection-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.selection-title {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.selection-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.selection-card {
+    width: 300px;
+    padding: 18px 16px;
+    border: 1px solid #cfcfcf;
+    background: #ffffff;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.selection-name {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.selection-card.selected {
+    border: 2px solid #005035;
+}
+
+.selection-next {
+    margin-top: 32px;
+}
+
+
+/* ---------- SIDE SIZE SELECTION ---------- */
+.selection-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.selection-page-title {
+  margin: 0 auto;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.size-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.size-toggle {
+  display: flex;
+  width: 100%;
+  max-width: 260px;
+  border: 1px solid #7d7d7d;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.size-option {
+  flex: 1;
+  padding: 12px 0;
+  text-align: center;
+  text-decoration: none;
+  color: #111111;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: #ffffff;
+}
+
+.selected-size {
+  background: #e9e9e9;
+  border-right: 1px solid #7d7d7d;
+}
+
+.includes-section {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.side-size-page .detail-left {
+  text-align: center;
+}
+
+.side-size-page .detail-meal-image {
+  width: clamp(180px, 28vw, 260px);
+  margin: 0 auto 20px;
+}
+
+@media (min-width: 900px) {
+  .selection-topbar {
+    margin-bottom: 32px;
+  }
+
+  .selection-page-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .side-size-page {
+    position: relative;
+  }
+}
