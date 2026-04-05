@@ -479,3 +479,640 @@ img {
     position: relative;
   }
 }
+
+/* ---------- BEVERAGE SELECTION ---------- */
+
+.beverage-page {
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.beverage-container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.beverage-card {
+    width: 320px;
+    height: 300px;
+    border: 1px solid #cfcfcf;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    text-decoration: none;
+}
+
+.beverage-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.beverage-label {
+    margin-top: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* ---------- DRINK SIZE SELECTION ---------- */
+/* ---------- DRINK SIZE SELECTION ---------- */
+
+.beverage-size-page {
+    background: #f4f4f4;
+}
+
+/* MAIN LAYOUT */
+.drink-size-layout {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+/* LEFT SIDE */
+.drink-left {
+    text-align: center;
+    padding-right: 60px;
+}
+
+.drink-img-box {
+    width: 320px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drink-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.drink-name {
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.drink-meta {
+    margin-top: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* RIGHT SIDE */
+.drink-right {
+    padding-left: 60px;
+    border-left: 1px solid #d8d8d8;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* SECTION HEADINGS */
+.size-section h3,
+.includes-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+/* SIZE TOGGLE */
+.size-toggle {
+    display: flex;
+    width: 320px;
+    border: 1px solid #bdbdbd;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.size-option {
+    flex: 1;
+    padding: 14px 0;
+    text-align: center;
+    text-decoration: none;
+    color: #111;
+    font-size: 1.3rem;
+    font-weight: 600;
+    background: #fff;
+    position: relative;
+}
+
+/* vertical dividers */
+.size-option:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: #bdbdbd;
+}
+
+.selected-size {
+    background: #efefef;
+}
+
+/* INCLUDES BOX */
+.includes-box {
+    width: 420px;
+    height: 120px;
+    border: 1px solid #cfcfcf;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    background: #fff;
+    color: #333;
+}
+
+/* BUTTON */
+.next-btn {
+    margin-top: 10px;
+    background: #000;
+    color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    width: 260px;
+    font-size: 1.1rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+    .drink-size-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .drink-left {
+        padding-right: 0;
+    }
+
+    .drink-right {
+        padding-left: 0;
+        border-left: none;
+        align-items: center;
+    }
+
+    .includes-box {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+/* ---------- REVIEW PAGE ---------- */
+.review-page {
+    padding: 20px 24px 40px;
+    background: #f4f4f4;
+}
+
+/* LAYOUT */
+.review-layout {
+    display: flex;
+    margin-top: 20px;
+}
+
+/* LEFT SIDE */
+.review-left {
+    width: 50%;
+    padding-right: 40px;
+}
+
+.review-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.review-img {
+    width: 120px;
+    border: 1px solid #cfcfcf;
+    border-radius: 16px;
+}
+
+.review-info {
+    flex: 1;
+}
+
+.review-info h3 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.review-info p {
+    margin: 6px 0 0;
+    font-size: 1rem;
+}
+
+.edit-link {
+    font-size: 0.95rem;
+    text-decoration: underline;
+    color: #111;
+}
+
+.review-left hr {
+    margin: 24px 0;
+    border: none;
+    border-top: 1px solid #d8d8d8;
+}
+
+/* RIGHT SIDE */
+.review-right {
+    width: 50%;
+    padding-left: 40px;
+    border-left: 1px solid #d8d8d8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.review-title {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.review-meta {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* QTY BOX */
+.qty-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.qty-box button {
+    background: #fff;
+    border: none;
+    padding: 10px 16px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.qty-box span {
+    padding: 0 20px;
+    font-size: 1.1rem;
+}
+
+/* PRICE */
+.price-box {
+    text-align: left;
+    width: 220px;
+}
+
+.price-box p {
+    margin: 6px 0;
+}
+
+.price-box hr {
+    margin: 8px 0;
+}
+
+.total {
+    font-weight: 700;
+}
+
+/* BUTTON */
+.checkout-btn {
+    margin-top: 10px;
+    background: #000;
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+    .review-layout {
+        flex-direction: column;
+    }
+
+    .review-left,
+    .review-right {
+        width: 100%;
+        padding: 0;
+        border: none;
+    }
+
+    .review-right {
+        margin-top: 30px;
+    }
+}
+
+/* ---------- PLACE ORDER (FINAL CLEAN VERSION) ---------- */
+
+.placeorder-page {
+  background: #f4f4f4;
+}
+
+/* MAIN LAYOUT */
+.placeorder-layout {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  gap: 32px; /* tighter spacing */
+}
+
+/* LEFT SIDE */
+.place-left {
+  text-align: center;
+  padding-right: 32px; /* reduced so vertical line is visible */
+}
+
+.place-img-box {
+  width: 280px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.place-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.place-meal-name {
+  margin-top: 16px;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.place-meal-meta {
+  margin-top: 6px;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+/* RIGHT SIDE */
+.place-right {
+  padding-left: 32px; /* reduced from 60px */
+  border-left: 1px solid #d8d8d8; /* vertical grey line */
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* tighter spacing */
+}
+
+/* SECTION HEADINGS */
+.place-section h3 {
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+
+.place-section p {
+  margin: 2px 0;
+}
+
+.place-ready {
+  margin-top: 4px;
+}
+
+.place-total {
+  margin-top: 4px;
+  font-weight: 700;
+}
+
+/* LINKS */
+.place-link {
+  display: inline-block;
+  margin-top: 6px;
+  color: #0077cc;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* DIVIDER LINES */
+.place-divider {
+  border: none;
+  border-top: 1px solid #d8d8d8;
+  margin: 6px 0; /* tighter */
+}
+
+/* INPUT */
+.place-input {
+  width: 260px;
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* BUTTONS */
+.place-cancel-btn {
+  margin-top: 4px;
+  background: #dcdcdc;
+  color: #111;
+  padding: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  width: 260px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: block;
+}
+
+.place-pay-btn {
+  margin-top: 6px;
+  background: #000;
+  color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  width: 260px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .placeorder-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .place-left {
+    padding-right: 0;
+  }
+
+  .place-right {
+    padding-left: 0;
+    border-left: none;
+    align-items: center;
+  }
+
+  .place-input,
+  .place-pay-btn,
+  .place-cancel-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+/* ---------- ORDER CONFIRMATION PAGE ---------- */
+
+.confirm-page {
+  background: #f4f4f4;
+}
+
+/* MAIN LAYOUT */
+.confirm-layout {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  gap: 32px;
+}
+
+/* LEFT SIDE */
+.confirm-left {
+  text-align: center;
+  padding-right: 32px;
+}
+
+.confirm-img-box {
+  width: 280px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirm-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.confirm-meal-name {
+  margin-top: 16px;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.confirm-meal-meta {
+  margin-top: 6px;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+/* RIGHT SIDE */
+.confirm-right {
+  padding-left: 32px;
+  border-left: 1px solid #d8d8d8;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* GREEN READY BOX — CHECKMARK ABOVE + CENTERED */
+.confirm-ready-box {
+  background: #e6f6e8;          /* soft green */
+  border: 1px solid #b6e2b8;    /* subtle green border */
+  padding: 20px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;       /* stack vertically */
+  align-items: center;          /* center horizontally */
+  justify-content: center;      /* center vertically */
+  gap: 10px;
+}
+
+.confirm-check {
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+.confirm-ready-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  color: #005c2a;               /* deep green */
+  text-align: center;
+}
+
+/* SECTION HEADINGS */
+.confirm-section h3 {
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+
+.confirm-section p {
+  margin: 2px 0;
+}
+
+.confirm-total {
+  margin-top: 4px;
+  font-weight: 700;
+}
+
+/* DIVIDER LINES */
+.confirm-divider {
+  border: none;
+  border-top: 1px solid #d8d8d8;
+  margin: 6px 0;
+}
+
+/* BUTTON */
+.confirm-home-btn {
+  margin-top: 10px;
+  background: #000;
+  color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  width: 260px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .confirm-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .confirm-left {
+    padding-right: 0;
+  }
+
+  .confirm-right {
+    padding-left: 0;
+    border-left: none;
+    align-items: center;
+  }
+
+  .confirm-home-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
