@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+  <title>Add New Card</title>
+</head>
+<body>
+    <!-- Fixed green navigation bar at the very top of the page -->
+    <header class="top-bar">
+        <img class="topbar-logo" src="../pictures/charlotte-logo.png" />
+        <img class="dark-mode-icon" src="../pictures/dark-mode-button.svg" />
+        <img class="menu-icon" id="menuOpen" src="../pictures/hamburger-menu-icon.svg" />
+    </header>
+
+        <div class="menu-overlay" id="menuOverlay"></div>
+
+    <aside class="side-menu" id="sideMenu" aria-hidden="true">
+      <button class="menu-close" id="menuClose" aria-label="Close menu">
+        <img src="../pictures/close-icon.svg" alt="Close">
+      </button>
+
+      <nav class="side-menu-nav">
+        <a href="./index.html" class="side-menu-link">
+          <img src="../pictures/home-icon.svg" alt="Homepage">
+          <span>Homepage</span>
+        </a>
+
+        <a href="./maps.html" class="side-menu-link">
+          <img src="../pictures/maps-icon.svg" alt="Maps">
+          <span>Maps</span>
+        </a>
+
+        <a href="./profile.html" class="side-menu-link">
+          <img src="../pictures/profile-icon.svg" alt="Profile">
+          <span>Profile</span>
+        </a>
+
+        <a href="./paymentMethod.html" class="side-menu-link">
+          <img src="../pictures/payment-icon.svg" alt="Payment Method">
+          <span>Payment Method</span>
+        </a>
+
+        <a href="./pastOrders.html" class="side-menu-link">
+          <img src="../pictures/orders-icon.svg" alt="Past Orders">
+          <span>Past Orders</span>
+        </a>
+      </nav>
+    </aside>
+
+  <div class="back-to-page-add-new-card">
+    <!-- First saved credit card preview card (showing last 4 digits 1234, expires 02/28) -->
+    <div class="group-68">
+      <div class="rectangle-77"></div>
+      <div class="_1234">1234</div>
+      <div class="exp-02-28">Exp 02/28</div>
+      <div class="div">•••• •••• ••••</div>
+      <div class="rectangle-78"></div>
+      <!-- Trash can icon - allows user to delete this saved card -->
+      <img class="mynaui-trash" src="../pictures/mynaui-trash0.svg" alt="delete" />
+      <!-- Credit card brand icon (Visa/Mastercard/etc) -->
+      <img class="rectangle-79" src="../pictures/rectangle-790.png" alt="card" />
+    </div>
+    
+    <!-- Black "Save Card" button - submits the new card information -->
+    <div class="button">
+      <div class="save-card">Save Card</div>
+    </div>
+    
+    <!-- Heading for the saved cards section -->
+    <div class="group-69">
+      <div class="saved-cards">Saved Cards</div>
+    </div>
+    
+    <!-- Form field: Name on Card -->
+    <div class="group-70">
+      <div class="name-on-card">Name on Card</div>
+      <div class="rectangle-81"></div>
+    </div>
+    
+    <!-- Form fields: Expiration Date and CVC (side by side) -->
+    <div class="group-72">
+      <div class="expiration-date">Expiration Date</div>
+      <div class="cvc">CVC</div>
+      <div class="rectangle-812"></div>
+      <div class="rectangle-83"></div>
+      <!-- Placeholder text inside expiration date field -->
+      <div class="mm-yy">MM / YY</div>
+    </div>
+    
+    <!-- Form field: Card Number -->
+    <div class="group-71">
+      <div class="card-number">Card Number</div>
+      <div class="rectangle-813"></div>
+    </div>
+    
+    <!-- Placeholder text inside card number field -->
+    <div class="enter-card-number">Enter card number</div>
+    
+    <!-- Green-outlined button to add a new card (opens form or shows new card entry) -->
+    <div class="group-73">
+      <div class="rectangle-80"></div>
+      <!-- Plus icon -->
+      <img class="flowbite-plus-outline" src="../pictures/flowbite-plus-outline0.svg" alt="add" />
+      <div class="add-new-card">Add New Card</div>
+    </div>
+  </div>
+</body>
+</html>

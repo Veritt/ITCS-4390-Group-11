@@ -5,13 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>University Food Ordering</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="../script.js" defer></script>
 </head>
 <body>
     <header class="top-bar">
         <img class="topbar-logo" src="../pictures/charlotte-logo.png" alt="UNC Charlotte Dining Logo">
         <img class="dark-mode-icon" src="../pictures/dark-mode-button.svg" alt="Dark Mode">
-        <img class="menu-icon" src="../pictures/hamburger-menu-icon.svg" alt="Menu">
+        <img class="menu-icon" id="menuOpen" src="../pictures/hamburger-menu-icon.svg" alt="Menu">
     </header>
+
+        <div class="menu-overlay" id="menuOverlay"></div>
+
+    <aside class="side-menu" id="sideMenu" aria-hidden="true">
+      <button class="menu-close" id="menuClose" aria-label="Close menu">
+        <img src="../pictures/close-icon.svg" alt="Close">
+      </button>
+
+      <nav class="side-menu-nav">
+        <a href="./index.html" class="side-menu-link">
+          <img src="../pictures/home-icon.svg" alt="Homepage">
+          <span>Homepage</span>
+        </a>
+
+        <a href="./maps.html" class="side-menu-link">
+          <img src="../pictures/maps-icon.svg" alt="Maps">
+          <span>Maps</span>
+        </a>
+
+        <a href="./profile.html" class="side-menu-link">
+          <img src="../pictures/profile-icon.svg" alt="Profile">
+          <span>Profile</span>
+        </a>
+
+        <a href="./paymentMethod.html" class="side-menu-link">
+          <img src="../pictures/payment-icon.svg" alt="Payment Method">
+          <span>Payment Method</span>
+        </a>
+
+        <a href="./pastOrders.html" class="side-menu-link">
+          <img src="../pictures/orders-icon.svg" alt="Past Orders">
+          <span>Past Orders</span>
+        </a>
+      </nav>
+    </aside>
+
+    <section class="search-section">
+        <div class="search-bar">
+            <img src="../pictures/search-icon.png" alt="Search" class="search-icon">
+            <input type="text" placeholder="Search" class="search-input">
+        </div>
+    </section>
     
     <main class="homepage">
         <section class="banner-section">
@@ -23,7 +66,7 @@
         <section class="section">
             <h2 class="section-title">Restaurants</h2>
             <div class="restaurant-grid">
-                <img class="restaurant-logo" src="../pictures/bojangles-logo.svg" alt="Bojangles">
+                <a href="../screens/restaurantMenu.html"><img class="restaurant-logo" src="../pictures/bojangles-logo.svg" alt="Bojangles"></a>
                 <img class="restaurant-logo" src="../pictures/wendys-logo.png" alt="Wendy's">
                 <img class="restaurant-logo" src="../pictures/chickfila-logo.png" alt="Chick-fil-A">
                 <img class="restaurant-logo" src="../pictures/subway-logo.png" alt="Subway">
