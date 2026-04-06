@@ -479,3 +479,116 @@ img {
     position: relative;
   }
 }
+
+/* ---------- HOMEPAGE (INDEX) ---------- */
+.homepage {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 22px 26px 40px;
+}
+
+.banner-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.banner-wrapper {
+    background: #005035;
+    border-radius: 18px;
+    padding: 6px;
+    width: 400px;
+    max-width: 100%;
+}
+
+.banner-pic {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.restaurant-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.restaurant-logo {
+    width: 100px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.location-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.location-image {
+    width: 100px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.visit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    gap: 36px;
+    margin-top: 26px;
+}
+
+.visit-card {
+    background: #005035;
+    color: #ffffff;
+    border-radius: 10px;
+    min-height: 54px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.visit-title {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.visit-arrow-icon {
+    width: 18px;
+    height: 18px;
+    transform: rotate(-90deg);
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .homepage {
+        padding: 18px 18px 32px;
+    }
+
+    .restaurant-grid, .location-grid {
+        gap: 12px;
+    }
+
+    .restaurant-logo, .location-image {
+        width: 84px;
+        height: 64px;
+    }
+
+    .visit-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
