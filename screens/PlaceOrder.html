@@ -1,0 +1,89 @@
+<!-- @format -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Place Order</title>
+  </head>
+  <body>
+    <div class="restaurant-menu">
+      <!-- TOP BAR -->
+      <header class="top-bar">
+        <img class="topbar-logo" src="../pictures/charlotte-logo.png" />
+        <img class="dark-mode-icon" src="../pictures/dark-mode-button.svg" />
+        <img class="menu-icon" src="../pictures/hamburger-menu-icon.svg" />
+      </header>
+
+      <!-- MAIN -->
+      <main class="selection-page placeorder-page">
+        <div class="selection-topbar">
+          <a href="./ReviewPage.html" class="back-link">← Back</a>
+          <h1 class="selection-page-title">Place Order</h1>
+        </div>
+
+        <div class="placeorder-layout">
+          <!-- LEFT -->
+          <div class="place-left">
+            <div class="place-img-box">
+              <img
+                src="../pictures/large-chicken-meal.png"
+                alt="Chicken Sandwich Meal"
+              />
+            </div>
+
+            <h2 class="place-meal-name">Chicken Sandwich Meal</h2>
+            <p class="place-meal-meta">Medium Fries · Medium Sweet Tea</p>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="place-right">
+            <!-- PICKUP -->
+            <section class="place-section">
+              <h3>Pick up at:</h3>
+              <p>8845 Craver Rd, Charlotte, NC 28223</p>
+              <p class="place-ready">Ready in <strong>14 Min</strong></p>
+              <a href="#" class="place-link">Schedule for Later</a>
+            </section>
+
+            <hr class="place-divider" />
+
+            <!-- COST -->
+            <section class="place-section">
+              <h3>Order Summary</h3>
+              <p>Subtotal: $9.43</p>
+              <p>Tax: $0.43</p>
+              <p class="place-total">Total: $9.86</p>
+            </section>
+
+            <hr class="place-divider" />
+
+            <!-- PAYMENT -->
+            <section class="place-section">
+              <h3>Payment Method</h3>
+              <p>Visa •••• 1234</p>
+              <a href="#" class="place-link">Add new card</a>
+            </section>
+
+            <hr class="place-divider" />
+
+            <!-- PROMO -->
+            <section class="place-section">
+              <h3>Promo Code</h3>
+              <input
+                type="text"
+                class="place-input"
+                placeholder="Enter promo code"
+              />
+            </section>
+
+            <!-- BUTTON -->
+            <a href="Confirmation.html" class="place-pay-btn">Pay 9.86</a>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
