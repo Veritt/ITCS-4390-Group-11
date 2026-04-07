@@ -16,15 +16,15 @@ body {
 }
 
 img {
-    display: block; /* remove inline spacing below images */
+    display: block; 
     max-width: 100%;
 }
 
 /* --------- RESTAURANT MENU ---------- */
 .restaurant-menu {
     min-height: 100vh;
-    display: flex; /* enables flex layout */
-    flex-direction: column; /* stacks children vertically */
+    display: flex; 
+    flex-direction: column; 
     background: #ffffff;
 }
 
@@ -33,25 +33,27 @@ img {
     width: 100%;
     min-height: 92px;
     display: flex;
-    align-items: center; /*vertically centers */
-    justify-content: center; /* horizontally centers */
-    position: relative; /* allows absolute positioning */
+    align-items: center; 
+    justify-content: center; 
+    position: relative; 
     padding: 18px 20px;
     background: #005035;
 }
+
+
 
 .topbar-logo {
     width: 170px;
 }
 
 .dark-mode-icon, .menu-icon {
-    position: absolute; /* relative to top bar */
+    position: absolute; 
     top: 50%;
     width: 34px;
 }
 
 .dark-mode-icon {
-    transform: translateY(-5%); /* controls vertical centering */
+    transform: translateY(-5%); 
     right: 72px;
 }
 
@@ -62,7 +64,7 @@ img {
 
 /* Main Content */
 .menu-content {
-    flex: 1; /* fills space below header */
+    flex: 1; 
     padding: 28px 20px;
 }
 
@@ -82,14 +84,13 @@ img {
 
 .header-text {
     display: flex;
-    flex-direction: column; /* stacks text vertically */
-    justify-content: center; /* centers text vertically */
+    flex-direction: column; 
+    justify-content: center; 
 }
 
 .bojangles {
     margin: 0;
-    font-size: clamp(2.4rem, 6vw, 3.4rem); /* font grows with viewport, but doesn't go above or below a certain size */
-    font-weight: 700;
+    font-size: clamp(2.4rem, 6vw, 3.4rem); 
     line-height: 1.05;
 }
 
@@ -301,7 +302,7 @@ img {
 }
 
 .next-button {
-    margin: 32px auto 0; /* centers horizontally */
+    margin: 32px auto 0; 
     width: 100%;
     max-width: 320px;
     padding: 14px 20px;
@@ -340,9 +341,9 @@ img {
     }
 
     .next-button {
-        margin-top: auto; /* pushes to the bottom */
-        margin-left: auto; /* centers horizontally */
-        margin-right: auto; /* centers horizontally */
+        margin-top: auto; 
+        margin-left: auto; 
+        margin-right: auto; 
     }
 }
 
@@ -478,6 +479,134 @@ img {
   .side-size-page {
     position: relative;
   }
+}
+
+/* ---------- HOMEPAGE (INDEX) ---------- */
+.homepage {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 22px 26px 40px;
+}
+
+.banner-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.banner-wrapper {
+    background: #005035;
+    border-radius: 18px;
+    padding: 6px;
+    width: 400px;
+    max-width: 100%;
+}
+
+.banner-pic {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.restaurant-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.restaurant-logo {
+    width: 100px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.location-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.location-image {
+    width: 100px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.visit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    gap: 36px;
+    margin-top: 26px;
+}
+
+.visit-card {
+    background: #005035;
+    color: #ffffff;
+    border-radius: 10px;
+    min-height: 54px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.visit-title {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.visit-arrow-icon {
+    width: 18px;
+    height: 18px;
+    transform: rotate(-90deg);
+    display: block;
+}
+
+.restaurant-grid a {
+  display: inline-block;
+}
+
+.restaurant-grid a:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease;
+    border: 3px solid #005035;
+    border-radius: 12px;
+}
+
+.restaurant-logo {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .homepage {
+        padding: 18px 18px 32px;
+    }
+
+    .restaurant-grid, .location-grid {
+        gap: 12px;
+    }
+
+    .restaurant-logo, .location-image {
+        width: 84px;
+        height: 64px;
+    }
+
+    .visit-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
 }
 
 /* ---------- HOMEPAGE (INDEX) ---------- */
@@ -943,6 +1072,7 @@ img {
 }
 
 /* ---------- PLACE ORDER ---------- */
+/* ---------- PLACE ORDER ---------- */
 
 .placeorder-page {
   background: #f4f4f4;
@@ -954,13 +1084,13 @@ img {
   display: flex;
   justify-content: center;
   padding: 0 20px;
-  gap: 32px; /* tighter spacing */
+  gap: 32px; 
 }
 
 /* LEFT SIDE */
 .place-left {
   text-align: center;
-  padding-right: 32px; /* reduced so vertical line is visible */
+  padding-right: 32px; 
 }
 
 .place-img-box {
@@ -991,11 +1121,11 @@ img {
 
 /* RIGHT SIDE */
 .place-right {
-  padding-left: 32px; /* reduced from 60px */
-  border-left: 1px solid #d8d8d8; /* vertical grey line */
+  padding-left: 32px; 
+  border-left: 1px solid #d8d8d8; 
   display: flex;
   flex-direction: column;
-  gap: 16px; /* tighter spacing */
+  gap: 16px; 
 }
 
 /* SECTION HEADINGS */
@@ -1153,17 +1283,16 @@ img {
   gap: 16px;
 }
 
-/* GREEN READY BOX — CHECKMARK ABOVE + CENTERED */
 .confirm-ready-box {
-  background: #e6f6e8;          /* soft green */
-  border: 1px solid #b6e2b8;    /* subtle green border */
+  background: #e6f6e8;         
+  border: 1px solid #b6e2b8;   
   padding: 20px;
   border-radius: 10px;
 
   display: flex;
-  flex-direction: column;       /* stack vertically */
-  align-items: center;          /* center horizontally */
-  justify-content: center;      /* center vertically */
+  flex-direction: column;       
+  align-items: center;        
+  justify-content: center;    
   gap: 10px;
 }
 
@@ -1177,7 +1306,7 @@ img {
   font-size: 1.4rem;
   font-weight: 700;
   margin: 0;
-  color: #005c2a;               /* deep green */
+  color: #005c2a;               
   text-align: center;
 }
 
@@ -1389,4 +1518,385 @@ img {
 
 .search-input::placeholder {
     color: #777;
+}/* ---------- PROFILE PAGE ---------- */
+
+.profile-page {
+    padding: 32px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Profile Image */
+.profile-page .userimg {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 18px;
+}
+
+/* Name + School */
+.profile-page .profile-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.profile-page .profile-school {
+    margin-top: 6px;
+    font-size: 1.1rem;
+    color: #6b6b6b;
+    margin-bottom: 32px;
+}
+
+/* Rows (Email, Receipts, Logout) */
+.profile-page .profile-row {
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid #e2e2e2;
+    font-size: 1.05rem;
+}
+
+.profile-page .profile-row:last-child {
+    border-bottom: none;
+}
+
+/* Icons */
+.profile-page .icon {
+    width: 26px;
+    height: 26px;
+}
+
+/* Email text */
+.profile-page .email {
+    font-weight: 600;
+}
+
+/* Logout */
+.profile-page .logout-text {
+    color: #c62828;
+    font-weight: 700;
+}
+
+/* ---------- CREDIT CARD PAGE ---------- */
+
+.card-page {
+    padding: 40px 20px 60px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Title */
+.card-page h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+/* Saved Cards Layout */
+.saved-cards-grid {
+    display: flex;
+    justify-content: flex-start;
+    gap: 28px;
+    margin-bottom: 32px;
+}
+
+/* Individual Card */
+.saved-card {
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 12px;
+    width: 250px;
+    height: 130px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+}
+
+/* VISA Logo */
+.saved-card .brand {
+    width: 48px;
+    height: auto;
+   
+}
+
+/* Masked Number */
+.saved-card .masked {
+    font-size: 0.95rem;
+    color: #555;
+    letter-spacing: 2px;
+}
+
+/* Last 4 digits */
+.saved-card .last4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+/* Expiration */
+.saved-card .exp {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Trash Icon */
+.saved-card .delete {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 92%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+/* Add New Card Button */
+.add-card-btn {
+    border: 2px solid #005035;
+    color: #005035;
+    border-radius: 10px;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #ffffff;
+    cursor: pointer;
+    width: fit-content;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-card-btn img {
+    width: 22px;
+}
+
+/* Form */
+.card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.card-form label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.card-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b8b8b8;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* Exp + CVC Row */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .half {
+    flex: 1;
+}
+
+/* Save Button */
+.save-card-btn {
+    margin-top: 20px;
+    background: #000;
+    color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+/* ---------- DINING LOCATIONS PAGE ---------- */
+
+.locations-page {
+    padding: 40px 20px 60px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.locations-page h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 28px;
+    color: #000;
+}
+
+/* Location Item Container */
+.location-item {
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left side: logo + text */
+.location-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Logo */
+.location-logo {
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Text */
+.location-text h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.location-text p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 2px 0 0 0;
+}
+
+/* Arrow icon */
+.arrow-icon {
+    width: 26px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Top Bar  */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 92px;
+    background: #005035;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.topbar-logo {
+    height: 40px;
+}
+
+.menu-icon,
+.dark-mode-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    right: 20px;
+}
+
+.dark-mode-icon {
+    right: 70px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .location-logo {
+        width: 55px;
+    }
+
+    .arrow-icon {
+        width: 22px;
+    }
+}
+/* ---------- DINING LOCATIONS PAGE ---------- */
+
+.locations-page {
+    padding: 120px 20px 60px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.locations-page h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 28px;
+    color: #000;
+    text-align: left;
+}
+
+/* Location Item Container */
+.location-item {
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left side: logo + text */
+.location-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Logo */
+.location-logo {
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Text */
+.location-text h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.location-text p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 2px 0 0 0;
+}
+
+/* Arrow icon */
+.arrow-icon {
+    width: 26px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .location-logo {
+        width: 55px;
+    }
+
+    .arrow-icon {
+        width: 22px;
+    }
 }
