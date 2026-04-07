@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../script.js" defer></script>
+    <title>Saved Cards</title>
+  </head>
+
+  <body>
+    <div class="restaurant-menu">
+
+      <!-- TOP BAR -->
+      <header class="top-bar">
+        <img class="topbar-logo" src="../pictures/charlotte-logo.png" />
+        <img class="dark-mode-icon" src="../pictures/dark-mode-button.svg" />
+        <img class="menu-icon" id="menuOpen" src="../pictures/hamburger-menu-icon.svg" />
+      </header>
+
+      <div class="menu-overlay" id="menuOverlay"></div>
+
+    <aside class="side-menu" id="sideMenu" aria-hidden="true">
+        <button class="menu-close" id="menuClose" aria-label="Close menu">
+            <img src="../pictures/close-icon.svg" alt="Close">
+        </button>
+
+        <nav class="side-menu-nav">
+            <a href="./index.html" class="side-menu-link">
+            <img src="../pictures/home-icon.svg" alt="Homepage">
+            <span>Homepage</span>
+            </a>
+
+            <a href="./profile.html" class="side-menu-link">
+            <img src="../pictures/profile-icon.svg" alt="Profile">
+            <span>Profile</span>
+            </a>
+
+            <a href="./paymentMethod.html" class="side-menu-link">
+            <img src="../pictures/payment-icon.svg" alt="Payment Method">
+            <span>Payment Method</span>
+            </a>
+
+            <a href="./pastOrders.html" class="side-menu-link">
+            <img src="../pictures/orders-icon.svg" alt="Past Orders">
+            <span>Past Orders</span>
+            </a>
+        </nav>
+    </aside>
+
+      <!-- PAGE CONTENT -->
+      <div class="card-page">
+
+        <h2>Saved Cards</h2>
+
+        <div class="saved-cards-grid">
+
+          <!-- CARD 1 -->
+          <div class="saved-card">
+            <img class="brand" src="../pictures/visa.png" />
+            <div class="masked">•••• •••• ••••</div>
+            <div class="last4">1234</div>
+            <div class="exp">Exp 02/28</div>
+            <img class="delete" src="../pictures/trash.svg" />
+          </div>
+
+        </div>
+
+        <!-- ADD NEW CARD BUTTON -->
+        <button class="add-card-btn">
+          <img src="../pictures/flowbite-plus-outline0.svg" />
+          Add New Card
+        </button>
+        
+        <!-- FORM -->
+        <form class="card-form">
+          <div>
+            <label>Name on Card</label>
+            <input type="text" placeholder="Full Name" />
+          </div>
+
+          <div>
+            <label>Card Number</label>
+            <input type="text" placeholder="Enter card number" />
+          </div>
+
+          <div class="form-row">
+            <div class="half">
+              <label>Expiration Date</label>
+              <input type="text" placeholder="MM / YY" />
+            </div>
+            <div class="half">
+              <label>CVC</label>
+              <input type="text" placeholder="CVC" />
+            </div>
+          </div>
+
+          <a href="./AfterAddingNewCard.html" class="done-button">Save New Card</a>
+        </form>
+
+      </div>
+    </div>
+  </body>
+</html>
