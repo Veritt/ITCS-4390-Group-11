@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
-       <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../script.js" defer></script>
     <title>Saved Cards</title>
   </head>
 
@@ -14,27 +15,10 @@
       <header class="top-bar">
         <img class="topbar-logo" src="../pictures/charlotte-logo.png" />
         <img class="dark-mode-icon" src="../pictures/dark-mode-button.svg" />
-        <img class="menu-icon" src="../pictures/hamburger-menu-icon.svg" />
-      </header>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <script src="../script.js" defer></script>
-    <title>After Adding New Card</title>
-</head>
-<body>
-    <header class="top-bar">
-        <a href="./index.html">
-            <img class="topbar-logo" src="../pictures/charlotte-logo.png" />
-        </a>
-        <img class="dark-mode-icon" src="../pictures/dark-mode-button.svg" />
         <img class="menu-icon" id="menuOpen" src="../pictures/hamburger-menu-icon.svg" />
-    </header>
+      </header>
 
-    <div class="menu-overlay" id="menuOverlay"></div>
+      <div class="menu-overlay" id="menuOverlay"></div>
 
     <aside class="side-menu" id="sideMenu" aria-hidden="true">
         <button class="menu-close" id="menuClose" aria-label="Close menu">
@@ -64,7 +48,6 @@
         </nav>
     </aside>
 
-
       <!-- PAGE CONTENT -->
       <div class="card-page">
 
@@ -81,15 +64,6 @@
             <img class="delete" src="../pictures/trash.svg" />
           </div>
 
-          <!-- CARD 2 -->
-          <div class="saved-card">
-            <img class="brand" src="../pictures/visa.png" />
-            <div class="masked">•••• •••• ••••</div>
-            <div class="last4">1467</div>
-            <div class="exp">Exp 01/28</div>
-            <img class="delete" src="../pictures/trash.svg" />
-          </div>
-
         </div>
 
         <!-- ADD NEW CARD BUTTON -->
@@ -97,7 +71,7 @@
           <img src="../pictures/flowbite-plus-outline0.svg" />
           Add New Card
         </button>
-
+        
         <!-- FORM -->
         <form class="card-form">
           <div>
@@ -121,7 +95,7 @@
             </div>
           </div>
 
-          <button class="save-card-btn">Save Card</button>
+          <a href="./AfterAddingNewCard.html" class="done-button">Save New Card</a>
         </form>
 
       </div>

@@ -13,6 +13,8 @@ html, body {
 body {
     min-height: 100vh;
     background: #ffffff;
+    padding-top: 92px;
+
 }
 
 img {
@@ -40,6 +42,20 @@ img {
     background: #005035;
 }
 
+
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 92px;
+    background: #005035;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
 
 
 .topbar-logo {
@@ -1397,6 +1413,20 @@ img {
 
 .topbar-logo {
     height: 40px;
+    justify-content: space-between;
+    padding: 0 24px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+
+    position: fixed;
+}
+
+.topbar-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 56px;
+    max-height: 70%;
 }
 
 .menu-icon,
@@ -1497,4 +1527,332 @@ img {
     .arrow-icon {
         width: 22px;
     }
+}
+
+/* ---------- CARD SUCCESS PAGE ---------- */
+.success-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+    background: #f5f5f5;
+}
+
+.success-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    text-align: center;
+}
+
+.success-icon {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+.success-text {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2f5f44;
+    line-height: 1.4;
+}
+
+.done-button {
+    margin-top: 40px;
+    width: 260px;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background: #000;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.done-button:hover {
+    opacity: 0.9;
+}
+
+/* ---------- HOMEPAGE (INDEX) ---------- */
+.homepage {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 22px 26px 40px;
+}
+
+.banner-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.banner-wrapper {
+    background: #005035;
+    border-radius: 18px;
+    padding: 6px;
+    width: 400px;
+    max-width: 100%;
+}
+
+.banner-pic {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.restaurant-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.restaurant-logo {
+    width: 100px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.location-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.location-image {
+    width: 100px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.visit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    gap: 36px;
+    margin-top: 26px;
+}
+
+.visit-card {
+    background: #005035;
+    color: #ffffff;
+    border-radius: 10px;
+    min-height: 54px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.visit-title {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.visit-arrow-icon {
+    width: 18px;
+    height: 18px;
+    transform: rotate(-90deg);
+    display: block;
+}
+
+.restaurant-grid a {
+  display: inline-block;
+}
+
+.restaurant-grid a:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease;
+    border: 3px solid #005035;
+    border-radius: 12px;
+}
+
+.restaurant-logo {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .homepage {
+        padding: 18px 18px 32px;
+    }
+
+    .restaurant-grid, .location-grid {
+        gap: 12px;
+    }
+
+    .restaurant-logo, .location-image {
+        width: 84px;
+        height: 64px;
+    }
+
+    .visit-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* HAMBURGER MENU */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -340px;
+    width: 320px;
+    max-width: 85%;
+    height: 100vh;
+    background: #d9ebe4;
+    border-radius: 24px 0 0 24px;
+    z-index: 2000;
+    padding: 20px 0 24px;
+    transition: right 0.3s ease;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+}
+
+.side-menu.open {
+    right: 0;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1999;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-close {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-bottom: 18px;
+}
+
+.menu-close img {
+    width: 36px;
+    height: 36px;
+    display: block;
+}
+
+.side-menu-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu-link {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 16px 24px;
+    text-decoration: none;
+    color: #5a5a5a;
+    font-size: 1rem;
+    font-weight: 600;
+    border-top: 2px solid #005035;
+}
+
+.side-menu-link:last-child {
+    border-bottom: 2px solid #005035;
+}
+
+.side-menu-link img {
+    width: 36px;
+    height: 36px;
+    display: block;
+}
+
+.side-menu-link:hover {
+    background: rgba(0, 80, 53, 0.08);
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+@media (max-width: 400px) {
+    .side-menu {
+        width: 150px;
+        max-width: 80%;
+    }
+
+    .side-menu-link {
+        padding: 13px 18px;
+        font-size: 1rem;
+    }
+
+    .side-menu-link img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .menu-close img {
+        width: 28px;
+        height: 28px;
+    }
+}
+ 
+   /* ---------- SEARCH BAR ---------- */
+.search-section {
+    display: flex;
+    padding: 20px 0 8px;
+    background: transparent;
+    justify-content: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #eaeaea;
+    border-radius: 28px;
+    padding: 14px 18px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    width: 100%;
+    color: #333;
+}
+
+.search-input::placeholder {
+    color: #777;
 }

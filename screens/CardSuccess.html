@@ -5,20 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <script src="../script.js" defer></script>
-    <title>Meals</title>
+    <title>Card Success</title>
 </head>
 <body>
-    <div class="restaurant-menu">
-        <header class="top-bar">
-            <img class="topbar-logo" src="../pictures/charlotte-logo.png" alt="UNC Charlotte Dining Logo">
-            <img class="dark-mode-icon" src="../pictures/dark-mode-button.svg" alt="Dark Mode">
-            <img class="menu-icon" src="../pictures/hamburger-menu-icon.svg" alt="Menu">
-        </header>
+    <header class="top-bar">
+        <a href="./index.html">
+            <img class="topbar-logo" src="../pictures/charlotte-logo.png" />
+        </a>
+        <img class="dark-mode-icon" src="../pictures/dark-mode-button.svg" />
+        <img class="menu-icon" id="menuOpen" src="../pictures/hamburger-menu-icon.svg" />
+    </header>
 
-            <img class="menu-icon" id="menuOpen" src="../pictures/hamburger-menu-icon.svg" alt="Menu">
-        </header>
-
-        <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="menu-overlay" id="menuOverlay"></div>
 
     <aside class="side-menu" id="sideMenu" aria-hidden="true">
         <button class="menu-close" id="menuClose" aria-label="Close menu">
@@ -48,21 +46,17 @@
         </nav>
     </aside>
 
-    <main class="menu-content">
-        <a href="./restaurantMenu.html" class="back-link">
-            <img src="../pictures/back-arrow-icon.svg" alt="Back" class="back-icon">
-            <span>Back</span>
-        </a>
+    <main class="success-page">
+        <div class="success-content">
+            <div class="success-icon">
+                <img src="../pictures/checkmark_green.png" alt="Success">
+            </div>
 
-        <h1 class="meals-heading">Meals</h1>
+            <h2 class="success-text">
+                Your card has been <br>successfully added!
+            </h2>
 
-        <div class="meals-container">
-            <a href="./mealEditing.html" class="meal-card-link meal-option">
-                <div class="meal-card">
-                    <img src="../pictures/large-chicken-meal.png" alt="Chicken Sandwich Meal" class="meal-image">
-                    <p class="meal-title">Chicken Sandwich Meal</p>
-                </div>
-            </a>
+            <a href="./AddNewCard.html" class="done-button">Done</a>
         </div>
     </main>
 </body>

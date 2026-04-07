@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <script src="../script.js" defer></script>
     <title>Dining Locations</title>
   </head>
 
@@ -16,6 +17,39 @@
         <img class="dark-mode-icon" src="../pictures/dark-mode-button.svg" />
         <img class="menu-icon" src="../pictures/hamburger-menu-icon.svg" />
       </header>
+
+        <img class="menu-icon" id="menuOpen" src="../pictures/hamburger-menu-icon.svg" />
+      </header>
+
+      <div class="menu-overlay" id="menuOverlay"></div>
+
+    <aside class="side-menu" id="sideMenu" aria-hidden="true">
+        <button class="menu-close" id="menuClose" aria-label="Close menu">
+            <img src="../pictures/close-icon.svg" alt="Close">
+        </button>
+
+        <nav class="side-menu-nav">
+            <a href="./index.html" class="side-menu-link">
+            <img src="../pictures/home-icon.svg" alt="Homepage">
+            <span>Homepage</span>
+            </a>
+
+            <a href="./profile.html" class="side-menu-link">
+            <img src="../pictures/profile-icon.svg" alt="Profile">
+            <span>Profile</span>
+            </a>
+
+            <a href="./paymentMethod.html" class="side-menu-link">
+            <img src="../pictures/payment-icon.svg" alt="Payment Method">
+            <span>Payment Method</span>
+            </a>
+
+            <a href="./pastOrders.html" class="side-menu-link">
+            <img src="../pictures/orders-icon.svg" alt="Past Orders">
+            <span>Past Orders</span>
+            </a>
+        </nav>
+    </aside>
 
       <!-- PAGE CONTENT -->
       <div class="locations-page">
@@ -38,6 +72,7 @@
         <div class="location-item">
           <div class="location-left">
             <img src="../pictures/subwaylogo.jpg" class="location-logo" />
+            <img src="../pictures/subway-logo.png" class="location-logo" />
             <div class="location-text">
               <h3>Subway</h3>
               <p>Cone University Center</p>
