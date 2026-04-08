@@ -1835,3 +1835,350 @@ img {
 .search-input::placeholder {
     color: #777;
 }
+
+<!-- ---------- Past Orders ---------- -->
+/* Resetting all default margins/padding so everything looks clean */
+a, button, input, select, h1, h2, h3, h4, h5, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  background: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Removes default list bullets and indentation from menus and lists */
+menu, ol, ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Dropdown container - border + rounded corners + white bg */
+.dropdown {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  transition: margin-bottom 0.25s ease, margin-top 0.25s ease;
+}
+
+/* Header area (restaurant logo + name + location) */
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  cursor: pointer;
+  background: #f5f5f500; /* fully transparent */
+}
+
+/* Restaurant logo image styling */
+.dropdown-header img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;  /* Keeps image from distorting */
+  border-radius: 12px;  /* Soft rounded corners for logo */
+  background-color: #f8f8f8;  /* Light gray background behind logo */
+}
+
+/* Restaurant name text styling */
+.dropdown-header strong {
+  font-size: 16px;
+}
+
+/* Restaurant location text styling (lighter/gray) */
+.dropdown-header span {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Remove the default disclosure triangle (the little arrow) */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  list-style: none;
+}
+
+/* Custom dropdown arrow using pseudo-element */
+.dropdown-header::after {
+  content: "▼";
+  margin-left: auto;
+  transition: transform 0.3s ease;
+  font-size: 14px;
+}
+
+/* Rotate arrow when dropdown is open */
+.dropdown[open] .dropdown-header::after {
+  transform: rotate(180deg);
+}
+
+/* Content area inside dropdown (order details) */
+.dropdown-content {
+  padding: 15px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.dropdown-content {
+  min-height: 20px;
+}
+
+/* Main page wrapper */
+.past-order-desktop {
+  background: #ffffff;
+  height: 889px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Green top bar with logo & icons */
+.mobile-top-bar {
+  height: 106px;
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+}
+
+/* Dark green background rectangle filling the entire top bar */
+.rectangle-65 {
+  background: #005035;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+
+/* Main logo image - centered horizontally, positioned near bottom of top bar */
+.loggg-3 {
+  width: 186px;
+  height: 70px;
+  position: absolute;
+  left: calc(50% - 104.5px);  /* Centers logo */
+  bottom: 10px;               /* Lifts logo slightly above bottom edge */
+  object-fit: cover;
+  aspect-ratio: 186/70;       /* Maintains exact width-to-height ratio */
+}
+
+/* Hamburger menu icon */
+.pajamas-hamburger {
+  width: 39px;
+  height: 39px;
+  position: absolute;
+  right: 13px;
+  bottom: 9px;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+
+/* Dark mode toggle button */
+.dark-mode-button {
+  width: 40px;
+  height: 38px;
+  position: absolute;
+  right: 63px;
+  bottom: 10px;
+  overflow: visible;
+}
+
+/* Scrollable white card that holds all the dropdowns */
+.frame-122 {
+  background: #ffffff;
+  padding: 71px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 25.09%;
+  bottom: 28.24%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Vendor logo inside dropdown header */
+.dropdown-header .vendor-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  object-fit: cover;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  flex-shrink: 0;
+}
+
+/* Group of dropdowns stacked vertically */
+.dropdown-group {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: 32px;
+}
+
+.frame-122 {
+  gap: 0;
+}
+
+.dropdown-group details {
+  width: 100%;
+}
+
+/* Add spacing when dropdown is open (mutually exclusive feel) */
+.dropdown-group details:first-of-type[open] {
+  margin-bottom: 28px;
+}
+
+.dropdown-group details:last-of-type[open] {
+  margin-top: 28px;
+}
+
+/* Styling for order items inside dropdown */
+.dropdown-content {
+  font-family: system-ui, -apple-system, 'Inter', 'Segoe UI', Roboto, Helvetica, sans-serif;
+  padding: 20px 18px;
+}
+
+/* The recent order label */
+.recent-order {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  color: #5e5e5e;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  font-family: inherit;
+}
+
+.order-item-card {
+  margin-bottom: 24px;
+}
+
+.order-item-card:last-child {
+  margin-bottom: 0;
+}
+
+/* row for item name and price */
+.item-name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.item-name {
+  font-weight: 700;
+  font-size: 17px;
+  color: #1e2a2e;
+  font-family: inherit;
+}
+
+.order-price {
+  font-weight: 700;
+  color: #1a3c34;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.item-details {
+  font-size: 14px;
+  color: #4a5b5e;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.customizations {
+  font-size: 13px;
+  color: #6c7a7d;
+  margin-top: 4px;
+}
+
+/* Two-column layout (item details left, price+date right) */
+.order-content-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.order-left {
+  flex: 1;
+  min-width: 0; /* prevent overflow */
+}
+
+.order-right {
+  text-align: right;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.order-right .order-price {
+  font-weight: 700;
+  font-size: 16px;
+  color: #1a3c34;
+  line-height: 1.3;
+}
+
+/* date directly under the price */
+.order-date-under-price {
+  font-size: 13px;
+  font-weight: 400;
+  color: #7f8c8d;
+  letter-spacing: -0.1px;
+  white-space: nowrap;
+}
+
+.recent-order-header {
+  margin-bottom: 14px;
+}
+
+.order-left .item-name {
+  margin-bottom: 6px;
+  display: block;
+}
+
+.order-left .item-details {
+  margin-bottom: 0;
+}
+
+.order-item-card {
+  margin-bottom: 24px;
+}
+
+/* border between order cards */
+.dropdown-content .order-item-card + .order-item-card {
+  margin-top: 16px;
+  padding-top: 8px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.recent-order-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dropdown-content img {
+  display: none;
+}
+
+.order-right .order-date-under-price {
+  margin-top: 0;
+}
