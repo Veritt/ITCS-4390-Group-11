@@ -1885,7 +1885,6 @@ img {
     color: #777;
 }
 
-<!-- ---------- Past Orders ---------- -->
 /* Resetting all default margins/padding so everything looks clean */
 a, button, input, select, h1, h2, h3, h4, h5, * {
   box-sizing: border-box;
@@ -2230,4 +2229,159 @@ summary {
 
 .order-right .order-date-under-price {
   margin-top: 0;
+}
+
+/* CSS Assignment 11, Part 3 */
+/* Payment Method Page, Name on Card, Card Number, etc. - Input Focus */
+.card-form input {
+  border: 1px solid #b8b8b8;
+  box-sizing: border-box;
+}
+.card-form input:focus {
+  outline: none;
+  border: 1px solid #005035;
+  box-shadow: 0 0 0 1px #005035;
+}
+
+/* Homepage, Search Bar - White background, Gray Border */
+.search-bar {
+  border: 1px solid #00000040 !important;
+  background: #ffffff !important;
+  box-sizing: border-box;
+}
+
+/* Homepage, Search Bar - Input Focus Solid Green Border */
+.search-bar:focus-within {
+  outline: none;
+  border: 1px solid #005035;
+  box-shadow: 0 0 0 1px #005035;
+}
+
+/* Place Order Page, Promo Code - Input Focus Solid Green Border */
+.place-input {
+  border: 1px solid #b8b8b8;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.place-input:focus {
+  outline: none;
+  border: 1px solid #005035;
+  box-shadow: 0 0 0 1px #005035;
+}
+
+/* Navigation Bar, Dark Mode and Hamburger - Hover Over*/
+.dark-mode-icon:hover,
+.menu-icon:hover {
+    filter: brightness(0) saturate(100%) invert(83%) sepia(36%) saturate(449%) hue-rotate(45deg) brightness(95%) contrast(92%);
+    cursor: pointer;
+    transition: filter 0.2s ease;
+}
+
+/* Payment Method Page, Add New Card Button - Hover Over */
+.add-card-btn:hover {
+    background-color: #005035;
+    color: #ffffff;
+}
+.add-card-btn:hover img {
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+
+/* Payment Method Page, Save Card Button - Hover Over */
+.save-card-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+/* Past Orders Page, Bojangles and Subway Dropdown - Hover Over */
+.dropdown:hover {
+    border: 1px solid #005035;
+    transition: border 0.2s ease;
+}
+
+/* Restaurant Menu Page, Meals Card - Hover Over */
+.menu-card:hover {
+    border: 1px solid #005035;
+    transition: border 0.2s ease;
+}
+
+/* Meals Page, Chicken Sandwich Meal Card - Hover Over */
+.meal-image:hover {
+    border: 1px solid #005035;
+    transition: border 0.2s ease;
+}
+
+/* Checkout/Ordering Pages, Addon Button - Hover Over */
+.addon-button:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+.addon-button:hover img {
+    filter: brightness(0) saturate(100%) invert(83%) sepia(36%) saturate(449%) hue-rotate(45deg) brightness(95%) contrast(92%);
+    transition: filter 0.2s ease;
+}
+
+/* Checkout/Ordering Pages, Next Buttons (Side/Meal Only) - Hover Over */
+.next-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+/* Side Selection Page, Fries Card - Hover Over */
+.selection-card:hover {
+    border: 1px solid #005035;
+    transition: border 0.2s ease;
+}
+
+/* Checkout/Ordering Pages, Size Options - Hover Over */
+.size-option:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+/* Drink Selection Page, Sweat Tea Card - Hover Over */
+.beverage-card:hover {
+    border: 1px solid #005035;
+    transition: border 0.2s ease;
+}
+
+/* Drink Selection Size Page, Next Button -  Hover Over*/
+.next-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+/* Review Page Page, Quantity Box +/- Signs -  Hover Over*/
+.qty-box button:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+/* Review Page Page, " Go to Chekcout"  Button -  Hover Over*/
+.checkout-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+/* Place Order Page, Pay Button -  Hover Over*/
+.place-pay-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+/* Confirmation Page, Back to Home Button -  Hover Over*/
+.confirm-home-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
 }
