@@ -3,11 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuClose = document.getElementById("menuClose");
     const sideMenu = document.getElementById("sideMenu");
     const menuOverlay = document.getElementById("menuOverlay");
-    
-    if (!menuOpen || !menuClose || !sideMenu || !menuOverlay) {
-        return;
-    }
-    
+
+ 
+
     function openMenu() {
         sideMenu.classList.add("open");
         menuOverlay.classList.add("show");

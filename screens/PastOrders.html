@@ -1,52 +1,142 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style.css" />
-    <title>Dining Locations</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+  <title>Past Orders</title>
+</head>
+<body>
+  <div class="past-order-desktop">
+    <!-- Top navigation bar (green background) with logo, hamburger menu, dark mode icon -->
+    <header class="top-bar">
+        <a href="./index.html" class="topbar-logo">
+            <img src="../pictures/charlotte-logo.png" alt="UNC Charlotte Dining Logo">
+        </a>
+        <img class="dark-mode-icon" src="../pictures/dark-mode-button.svg" alt="Dark Mode">
+        <img class="menu-icon" id="menuOpen" src="../pictures/hamburger-menu-icon.svg" alt="Menu">
+    </header>
+    
+    <!-- hamburger Menu overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
 
-  <body>
-    <div class="restaurant-menu">
+    <aside class="side-menu" id="sideMenu" aria-hidden="true">
+      <button class="menu-close" id="menuClose" aria-label="Close menu">
+        <img src="../pictures/close-icon.svg" alt="Close">
+      </button>
 
-      <!-- TOP BAR -->
-      <header class="top-bar">
-        <img class="topbar-logo" src="../pictures/charlotte-logo.png" />
-        <img class="dark-mode-icon" src="../pictures/dark-mode-button.svg" />
-        <img class="menu-icon" src="../pictures/hamburger-menu-icon.svg" />
-      </header>
+      <nav class="side-menu-nav">
+        <a href="./index.html" class="side-menu-link">
+          <img src="../pictures/home-icon.svg" alt="Homepage">
+          <span>Homepage</span>
+        </a>
 
-      <!-- PAGE CONTENT -->
-      <div class="locations-page">
+        <a href="./profile.html" class="side-menu-link">
+          <img src="../pictures/profile-icon.svg" alt="Profile">
+          <span>Profile</span>
+        </a>
 
-        <h2>Dining Locations</h2>
+        <a href="./paymentMethod.html" class="side-menu-link">
+          <img src="../pictures/payment-icon.svg" alt="Payment Method">
+          <span>Payment Method</span>
+        </a>
 
-        <!-- LOCATION 1 -->
-        <div class="location-item">
-          <div class="location-left">
-            <img src="../pictures/bojangles-logo.svg" class="location-logo" />
-            <div class="location-text">
-              <h3>Bojangles</h3>
-              <p>Student Union</p>
+        <a href="./pastOrders.html" class="side-menu-link">
+          <img src="../pictures/orders-icon.svg" alt="Past Orders">
+          <span>Past Orders</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Container that holds all past orders (dropdowns) -->
+    <div class="frame-122">
+      <div class="dropdown-group">
+        
+        <!-- The Bojangles dropdown menu with one order-->
+        <details class="dropdown" name="restaurant-dropdown">
+          <summary class="dropdown-header">
+            <img src="../pictures/bojangles-logo.svg"
+                 alt="Bojangles logo"
+                 style="width:52px; height:52px; border-radius:14px; object-fit:cover;">
+            <div>
+              <strong>Bojangles</strong><br>
+              <span>Student Union</span>
+            </div>
+          </summary>
+          <div class="dropdown-content">
+            <div class="recent-order-block">
+              <div class="order-item-card">
+                <div class="recent-order recent-order-header">Recent Order</div>
+                <!-- Grid layout splits item details on the left and price+date right -->
+                <div class="order-content-grid">
+                  <div class="order-left">
+                    <div class="item-name">Bo's Chicken Sandwich Meal</div>
+                    <div class="item-details">
+                      Medium Sweet Tea • Medium Fries
+                    </div>
+                  </div>
+                  <div class="order-right">
+                    <span class="order-price">$7.99</span>
+                    <span class="order-date-under-price">Yesterday</span>
+                  </div>
+                </div>
+              </div> 
             </div>
           </div>
-          <img src="../pictures/arrow-down-.webp" class="arrow-icon" />
-        </div>
+        </details>
 
-        <!-- LOCATION 2 -->
-        <div class="location-item">
-          <div class="location-left">
-            <img src="../pictures/subwaylogo.jpg" class="location-logo" />
-            <div class="location-text">
-              <h3>Subway</h3>
-              <p>Cone University Center</p>
+        <!-- The Subway dropdown menu with two orders -->
+        <details class="dropdown" name="restaurant-dropdown">
+          <summary class="dropdown-header">
+            <img src="../pictures/subway.png"
+                 alt="Subway logo"
+                 style="width:52px; height:52px; border-radius:14px; object-fit:cover;">
+            <div>
+              <strong>Subway</strong><br>
+              <span>Cone University Center</span>
+            </div>
+          </summary>
+          
+          <div class="dropdown-content">
+            <div class="recent-order-block">
+              <!-- The first order: build Your Own 6 inch sandwich -->
+              <div class="order-item-card">
+                <div class="recent-order recent-order-header">Recent Order</div>
+                <div class="order-content-grid">
+                  <div class="order-left">
+                    <div class="item-name">Build Your Own 6 inch</div>
+                    <div class="item-details">
+                      9-Grain Wheat (Toasted) • Steak • American Cheese
+                    </div>
+                  </div>
+                  <div class="order-right">
+                    <span class="order-price">$7.99</span>
+                    <span class="order-date-under-price">Yesterday</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- The second order: cookie -->
+              <div class="order-item-card">
+                <div class="order-content-grid">
+                  <div class="order-left">
+                    <div class="item-name">Raspberry Cheesecake Cookie</div>
+                  </div>
+                  <div class="order-right">
+                    <span class="order-price">$2.99</span>
+                    <span class="order-date-under-price">02/22/26</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <img src="../pictures/arrow-down-.webp" class="arrow-icon" />
-        </div>
-
+        </details>
+        
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>

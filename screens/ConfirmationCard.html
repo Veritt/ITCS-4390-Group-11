@@ -1,23 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+       <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <script src="../script.js" defer></script>
-    <title>Side Selection</title>
-</head>
-<body>
+    <title>Saved Cards</title>
+  </head>
+
+  <body>
     <div class="restaurant-menu">
-        <header class="top-bar">
-            <a href="./index.html" class="topbar-logo">
+
+      <!-- TOP BAR -->
+      <header class="top-bar">
+        <a href="./index.html" class="topbar-logo">
             <img src="../pictures/charlotte-logo.png" alt="UNC Charlotte Dining Logo">
         </a>
-            <img class="dark-mode-icon" src="../pictures/dark-mode-button.svg" alt="Dark Mode">
-            <img class="menu-icon" id="menuOpen" src="../pictures/hamburger-menu-icon.svg" alt="Menu">
-        </header>
+        <img class="dark-mode-icon" src="../pictures/dark-mode-button.svg" />
+        <img class="menu-icon" id="menuOpen" src="../pictures/hamburger-menu-icon.svg" alt="Menu">
+      </header>
 
-        <!-- Hamburger Menu-->
+      <!-- Hamburger Menu-->
       <div class="menu-overlay" id="menuOverlay"></div>
 
     <aside class="side-menu" id="sideMenu" aria-hidden="true">
@@ -48,25 +51,14 @@
       </nav>
     </aside>
 
-        <main class="selection-page">
-            <div class="selection-header">
-                <a href="./mealEditing.html" class="back-link">
-                    <img src="../pictures/back-arrow-icon.svg" alt="Back" class="back-icon">
-                    <span>Back</span>
-                </a>
+    <!-- Main Content -->
+    <main class="confirmation-content">
+      <div class="confirmation-card">
+        <img src="../pictures/Eo_circle_green_checkmark.png" alt="Green check mark" class="checkmark-image" style="display: block; margin: 0 auto;">
+        <p class="confirmation-text">Your card has been added successfully</p>
+        <button class="done-button" onclick="window.location.href='./AfterAddingNewCard.html'">Done</button>
+      </div>
+    </main>
 
-                <h1 class="selection-title">Choose a Side</h1>
-            </div>
-
-            <div class="selection-grid">
-                <button class="selection-card" type="button">
-                    <img src="../pictures/bojangles-fries.png" alt="Fries" class="selection-image">
-                    <span class="selection-name">Fries</span>
-                </button>
-            </div>
-
-            <a href="./sideSizeSelection.html" class="next-button selection-next">Next, choose a side size</a>
-        </main>
-    </div>
-</body>
+  </body>
 </html>

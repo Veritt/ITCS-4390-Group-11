@@ -13,6 +13,8 @@ html, body {
 body {
     min-height: 100vh;
     background: #ffffff;
+    padding-top: 92px;
+
 }
 
 img {
@@ -28,18 +30,18 @@ img {
     background: #ffffff;
 }
 
-/* Top Bar */
 .top-bar {
-    width: 100%;
-    min-height: 92px;
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    position: relative; 
-    padding: 18px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 92px;
     background: #005035;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
 }
-
 
 
 .topbar-logo {
@@ -481,262 +483,6 @@ img {
   }
 }
 
-/* ---------- HOMEPAGE (INDEX) ---------- */
-.homepage {
-    max-width: 1050px;
-    margin: 0 auto;
-    padding: 22px 26px 40px;
-}
-
-.banner-section {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 18px;
-}
-
-.banner-wrapper {
-    background: #005035;
-    border-radius: 18px;
-    padding: 6px;
-    width: 400px;
-    max-width: 100%;
-}
-
-.banner-pic {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.section {
-    margin-bottom: 20px;
-}
-
-.section-title {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.restaurant-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.restaurant-logo {
-    width: 100px;
-    height: 72px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.location-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.location-image {
-    width: 100px;
-    height: 72px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.visit-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(180px, 1fr));
-    gap: 36px;
-    margin-top: 26px;
-}
-
-.visit-card {
-    background: #005035;
-    color: #ffffff;
-    border-radius: 10px;
-    min-height: 54px;
-    padding: 0 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.visit-title {
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-.visit-arrow-icon {
-    width: 18px;
-    height: 18px;
-    transform: rotate(-90deg);
-    display: block;
-}
-
-.restaurant-grid a {
-  display: inline-block;
-}
-
-.restaurant-grid a:hover {
-    transform: scale(1.05);
-    transition: 0.2s ease;
-    border: 3px solid #005035;
-    border-radius: 12px;
-}
-
-.restaurant-logo {
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .homepage {
-        padding: 18px 18px 32px;
-    }
-
-    .restaurant-grid, .location-grid {
-        gap: 12px;
-    }
-
-    .restaurant-logo, .location-image {
-        width: 84px;
-        height: 64px;
-    }
-
-    .visit-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-}
-
-/* ---------- HOMEPAGE (INDEX) ---------- */
-.homepage {
-    max-width: 1050px;
-    margin: 0 auto;
-    padding: 22px 26px 40px;
-}
-
-.banner-section {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 18px;
-}
-
-.banner-wrapper {
-    background: #005035;
-    border-radius: 18px;
-    padding: 6px;
-    width: 400px;
-    max-width: 100%;
-}
-
-.banner-pic {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.section {
-    margin-bottom: 20px;
-}
-
-.section-title {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.restaurant-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.restaurant-logo {
-    width: 100px;
-    height: 72px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.location-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.location-image {
-    width: 100px;
-    height: 72px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.visit-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(180px, 1fr));
-    gap: 36px;
-    margin-top: 26px;
-}
-
-.visit-card {
-    background: #005035;
-    color: #ffffff;
-    border-radius: 10px;
-    min-height: 54px;
-    padding: 0 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.visit-title {
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-.visit-arrow-icon {
-    width: 18px;
-    height: 18px;
-    transform: rotate(-90deg);
-    display: block;
-}
-
-.restaurant-grid a {
-  display: inline-block;
-}
-
-.restaurant-grid a:hover {
-    transform: scale(1.05);
-    transition: 0.2s ease;
-    border: 3px solid #005035;
-    border-radius: 12px;
-}
-
-.restaurant-logo {
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .homepage {
-        padding: 18px 18px 32px;
-    }
-
-    .restaurant-grid, .location-grid {
-        gap: 12px;
-    }
-
-    .restaurant-logo, .location-image {
-        width: 84px;
-        height: 64px;
-    }
-
-    .visit-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-}
-
 /* ---------- BEVERAGE SELECTION ---------- */
 
 .beverage-page {
@@ -777,6 +523,8 @@ img {
 }
 
 /* ---------- DRINK SIZE SELECTION ---------- */
+
+
 .beverage-size-page {
     background: #f4f4f4;
 }
@@ -1071,7 +819,6 @@ img {
     }
 }
 
-/* ---------- PLACE ORDER ---------- */
 /* ---------- PLACE ORDER ---------- */
 
 .placeorder-page {
@@ -1371,154 +1118,56 @@ img {
   }
 }
 
-/* ---------- HAMBURGER MENU ---------- */
+/* ---------- CARD CONFIRMATION PAGE ---------- */
 
-.side-menu {
-    position: fixed;
-    top: 0;
-    right: -340px;
-    width: 320px;
-    max-width: 85%;
-    height: 100vh;
-    background: #d9ebe4;
-    border-radius: 24px 0 0 24px;
-    z-index: 2000;
-    padding: 20px 0 24px;
-    transition: right 0.3s ease;
-    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+.confirmation-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); /* Adjust based on header height */
+  padding: 20px;
 }
 
-.side-menu.open {
-    right: 0;
+.confirmation-card {
+  text-align: center;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
 }
 
-.menu-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1999;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+.checkmark-image {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
 }
 
-.menu-overlay.show {
-    opacity: 1;
-    visibility: visible;
+.confirmation-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
 }
 
-.menu-close {
-    border: none;
-    background: transparent;
-    padding: 0;
-    cursor: pointer;
-    display: block;
-    margin-left: auto;
-    margin-right: 20px;
-    margin-bottom: 18px;
+.done-button {
+  background: #000;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.menu-close img {
-    width: 36px;
-    height: 36px;
-    display: block;
+.done-button:hover {
+  background: #333;
 }
 
-.side-menu-nav {
-    display: flex;
-    flex-direction: column;
-}
-
-.side-menu-link {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    padding: 16px 24px;
-    text-decoration: none;
-    color: #5a5a5a;
-    font-size: 1rem;
-    font-weight: 600;
-    border-top: 2px solid #005035;
-}
-
-.side-menu-link:last-child {
-    border-bottom: 2px solid #005035;
-}
-
-.side-menu-link img {
-    width: 36px;
-    height: 36px;
-    display: block;
-}
-
-.side-menu-link:hover {
-    background: rgba(0, 80, 53, 0.08);
-}
-
-.menu-icon {
-    cursor: pointer;
-}
-
-@media (max-width: 400px) {
-    .side-menu {
-        width: 150px;
-        max-width: 80%;
-    }
-
-    .side-menu-link {
-        padding: 13px 18px;
-        font-size: 1rem;
-    }
-
-    .side-menu-link img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .menu-close img {
-        width: 28px;
-        height: 28px;
-    }
-}
-
-/* ---------- SEARCH BAR ---------- */
-.search-section {
-    display: flex;
-    padding: 20px 0 8px;
-    background: transparent;
-    justify-content: center;
-}
-
-.search-bar {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #eaeaea;
-    border-radius: 28px;
-    padding: 14px 18px;
-    width: 100%;
-    max-width: 450px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-}
-
-.search-icon {
-    width: 20px;
-    height: 20px;
-    opacity: 0.6;
-}
-
-.search-input {
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 1rem;
-    width: 100%;
-    color: #333;
-}
-
-.search-input::placeholder {
-    color: #777;
-}/* ---------- PROFILE PAGE ---------- */
+/* ---------- PROFILE PAGE ---------- */
 
 .profile-page {
     padding: 32px 20px;
@@ -1783,7 +1432,6 @@ img {
     cursor: pointer;
 }
 
-/* Top Bar  */
 .top-bar {
     position: fixed;
     top: 0;
@@ -1793,12 +1441,20 @@ img {
     background: #005035;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 24px;
     z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+
+    position: fixed;
 }
 
 .topbar-logo {
-    height: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 56px;
+    max-height: 70%;
 }
 
 .menu-icon,
@@ -1899,4 +1555,833 @@ img {
     .arrow-icon {
         width: 22px;
     }
+}
+
+/* ---------- CARD SUCCESS PAGE ---------- */
+.success-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+    background: #f5f5f5;
+}
+
+.success-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    text-align: center;
+}
+
+.success-icon {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+.success-text {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2f5f44;
+    line-height: 1.4;
+}
+
+.done-button {
+    margin-top: 40px;
+    width: 260px;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background: #000;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.done-button:hover {
+    opacity: 0.9;
+}
+
+/* ---------- HOMEPAGE (INDEX) ---------- */
+.homepage {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 22px 26px 40px;
+}
+
+.banner-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.banner-wrapper {
+    background: #005035;
+    border-radius: 18px;
+    padding: 6px;
+    width: 400px;
+    max-width: 100%;
+}
+
+.banner-pic {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.restaurant-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.restaurant-logo {
+    width: 100px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.location-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.location-image {
+    width: 100px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.visit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    gap: 36px;
+    margin-top: 26px;
+}
+
+.visit-card {
+    background: #005035;
+    color: #ffffff;
+    border-radius: 10px;
+    min-height: 54px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.visit-title {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.visit-arrow-icon {
+    width: 18px;
+    height: 18px;
+    transform: rotate(-90deg);
+    display: block;
+}
+
+.restaurant-grid a {
+  display: inline-block;
+}
+
+.restaurant-grid a:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease;
+    border: 3px solid #005035;
+    border-radius: 12px;
+}
+
+.restaurant-logo {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .homepage {
+        padding: 18px 18px 32px;
+    }
+
+    .restaurant-grid, .location-grid {
+        gap: 12px;
+    }
+
+    .restaurant-logo, .location-image {
+        width: 84px;
+        height: 64px;
+    }
+
+    .visit-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* HAMBURGER MENU */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -340px;
+    width: 320px;
+    max-width: 85%;
+    height: 100vh;
+    background: #d9ebe4;
+    border-radius: 24px 0 0 24px;
+    z-index: 2000;
+    padding: 20px 0 24px;
+    transition: right 0.3s ease;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+}
+
+.side-menu.open {
+    right: 0;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1999;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-close {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-bottom: 18px;
+}
+
+.menu-close img {
+    width: 36px;
+    height: 36px;
+    display: block;
+}
+
+.side-menu-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu-link {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 16px 24px;
+    text-decoration: none;
+    color: #5a5a5a;
+    font-size: 1rem;
+    font-weight: 600;
+    border-top: 2px solid #005035;
+}
+
+.side-menu-link:last-child {
+    border-bottom: 2px solid #005035;
+}
+
+.side-menu-link img {
+    width: 36px;
+    height: 36px;
+    display: block;
+}
+
+.side-menu-link:hover {
+    background: rgba(0, 80, 53, 0.08);
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+@media (max-width: 400px) {
+    .side-menu {
+        width: 150px;
+        max-width: 80%;
+    }
+
+    .side-menu-link {
+        padding: 13px 18px;
+        font-size: 1rem;
+    }
+
+    .side-menu-link img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .menu-close img {
+        width: 28px;
+        height: 28px;
+    }
+}
+ 
+   /* ---------- SEARCH BAR ---------- */
+.search-section {
+    display: flex;
+    padding: 20px 0 8px;
+    background: transparent;
+    justify-content: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #eaeaea;
+    border-radius: 28px;
+    padding: 14px 18px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    width: 100%;
+    color: #333;
+}
+
+.search-input::placeholder {
+    color: #777;
+}
+
+/* Resetting all default margins/padding so everything looks clean */
+a, button, input, select, h1, h2, h3, h4, h5, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  background: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Removes default list bullets and indentation from menus and lists */
+menu, ol, ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Dropdown container - border + rounded corners + white bg */
+.dropdown {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  transition: margin-bottom 0.25s ease, margin-top 0.25s ease;
+}
+
+/* Header area (restaurant logo + name + location) */
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  cursor: pointer;
+  background: #f5f5f500; /* fully transparent */
+}
+
+/* Restaurant logo image styling */
+.dropdown-header img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;  /* Keeps image from distorting */
+  border-radius: 12px;  /* Soft rounded corners for logo */
+  background-color: #f8f8f8;  /* Light gray background behind logo */
+}
+
+/* Restaurant name text styling */
+.dropdown-header strong {
+  font-size: 16px;
+}
+
+/* Restaurant location text styling (lighter/gray) */
+.dropdown-header span {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Remove the default disclosure triangle (the little arrow) */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  list-style: none;
+}
+
+/* Custom dropdown arrow using pseudo-element */
+.dropdown-header::after {
+  content: "▼";
+  margin-left: auto;
+  transition: transform 0.3s ease;
+  font-size: 14px;
+}
+
+/* Rotate arrow when dropdown is open */
+.dropdown[open] .dropdown-header::after {
+  transform: rotate(180deg);
+}
+
+/* Content area inside dropdown (order details) */
+.dropdown-content {
+  padding: 15px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.dropdown-content {
+  min-height: 20px;
+}
+
+/* Main page wrapper */
+.past-order-desktop {
+  background: #ffffff;
+  height: 889px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Green top bar with logo & icons */
+.mobile-top-bar {
+  height: 106px;
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+}
+
+/* Dark green background rectangle filling the entire top bar */
+.rectangle-65 {
+  background: #005035;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+
+/* Main logo image - centered horizontally, positioned near bottom of top bar */
+.loggg-3 {
+  width: 186px;
+  height: 70px;
+  position: absolute;
+  left: calc(50% - 104.5px);  /* Centers logo */
+  bottom: 10px;               /* Lifts logo slightly above bottom edge */
+  object-fit: cover;
+  aspect-ratio: 186/70;       /* Maintains exact width-to-height ratio */
+}
+
+/* Hamburger menu icon */
+.pajamas-hamburger {
+  width: 39px;
+  height: 39px;
+  position: absolute;
+  right: 13px;
+  bottom: 9px;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+
+/* Dark mode toggle button */
+.dark-mode-button {
+  width: 40px;
+  height: 38px;
+  position: absolute;
+  right: 63px;
+  bottom: 10px;
+  overflow: visible;
+}
+
+/* Scrollable white card that holds all the dropdowns */
+.frame-122 {
+  background: #ffffff;
+  padding: 71px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 25.09%;
+  bottom: 28.24%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Vendor logo inside dropdown header */
+.dropdown-header .vendor-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  object-fit: cover;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  flex-shrink: 0;
+}
+
+/* Group of dropdowns stacked vertically */
+.dropdown-group {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: 32px;
+}
+
+.frame-122 {
+  gap: 0;
+}
+
+.dropdown-group details {
+  width: 100%;
+}
+
+/* Add spacing when dropdown is open (mutually exclusive feel) */
+.dropdown-group details:first-of-type[open] {
+  margin-bottom: 28px;
+}
+
+.dropdown-group details:last-of-type[open] {
+  margin-top: 28px;
+}
+
+/* Styling for order items inside dropdown */
+.dropdown-content {
+  font-family: system-ui, -apple-system, 'Inter', 'Segoe UI', Roboto, Helvetica, sans-serif;
+  padding: 20px 18px;
+}
+
+/* The recent order label */
+.recent-order {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  color: #5e5e5e;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  font-family: inherit;
+}
+
+.order-item-card {
+  margin-bottom: 24px;
+}
+
+.order-item-card:last-child {
+  margin-bottom: 0;
+}
+
+/* row for item name and price */
+.item-name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.item-name {
+  font-weight: 700;
+  font-size: 17px;
+  color: #1e2a2e;
+  font-family: inherit;
+}
+
+.order-price {
+  font-weight: 700;
+  color: #1a3c34;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.item-details {
+  font-size: 14px;
+  color: #4a5b5e;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.customizations {
+  font-size: 13px;
+  color: #6c7a7d;
+  margin-top: 4px;
+}
+
+/* Two-column layout (item details left, price+date right) */
+.order-content-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.order-left {
+  flex: 1;
+  min-width: 0; /* prevent overflow */
+}
+
+.order-right {
+  text-align: right;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.order-right .order-price {
+  font-weight: 700;
+  font-size: 16px;
+  color: #1a3c34;
+  line-height: 1.3;
+}
+
+/* date directly under the price */
+.order-date-under-price {
+  font-size: 13px;
+  font-weight: 400;
+  color: #7f8c8d;
+  letter-spacing: -0.1px;
+  white-space: nowrap;
+}
+
+.recent-order-header {
+  margin-bottom: 14px;
+}
+
+.order-left .item-name {
+  margin-bottom: 6px;
+  display: block;
+}
+
+.order-left .item-details {
+  margin-bottom: 0;
+}
+
+.order-item-card {
+  margin-bottom: 24px;
+}
+
+/* border between order cards */
+.dropdown-content .order-item-card + .order-item-card {
+  margin-top: 16px;
+  padding-top: 8px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.recent-order-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dropdown-content img {
+  display: none;
+}
+
+.order-right .order-date-under-price {
+  margin-top: 0;
+}
+
+/* CSS Assignment 11, Part 3 */
+/* Payment Method Page, Name on Card, Card Number, etc. - Input Focus */
+.card-form input {
+  border: 1px solid #b8b8b8;
+  box-sizing: border-box;
+}
+.card-form input:focus {
+  outline: none;
+  border: 1px solid #005035;
+  box-shadow: 0 0 0 1px #005035;
+}
+
+/* Homepage, Search Bar - White background, Gray Border */
+.search-bar {
+  border: 1px solid #00000040 !important;
+  background: #ffffff !important;
+  box-sizing: border-box;
+}
+
+/* Homepage, Search Bar - Input Focus Solid Green Border */
+.search-bar:focus-within {
+  outline: none;
+  border: 1px solid #005035;
+  box-shadow: 0 0 0 1px #005035;
+}
+
+/* Place Order Page, Promo Code - Input Focus Solid Green Border */
+.place-input {
+  border: 1px solid #b8b8b8;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.place-input:focus {
+  outline: none;
+  border: 1px solid #005035;
+  box-shadow: 0 0 0 1px #005035;
+}
+
+/* Navigation Bar, Dark Mode and Hamburger - Hover Over*/
+.dark-mode-icon:hover,
+.menu-icon:hover {
+    filter: brightness(0) saturate(100%) invert(83%) sepia(36%) saturate(449%) hue-rotate(45deg) brightness(95%) contrast(92%);
+    cursor: pointer;
+    transition: filter 0.2s ease;
+}
+
+/* Payment Method Page, Add New Card Button - Hover Over */
+.add-card-btn:hover {
+    background-color: #005035;
+    color: #ffffff;
+}
+.add-card-btn:hover img {
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+
+/* Payment Method Page, Save Card Button - Hover Over */
+.save-card-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+/* Past Orders Page, Bojangles and Subway Dropdown - Hover Over */
+.dropdown:hover {
+    border: 1px solid #005035;
+    transition: border 0.2s ease;
+}
+
+/* Restaurant Menu Page, Meals Card - Hover Over */
+.menu-card:hover {
+    border: 1px solid #005035;
+    transition: border 0.2s ease;
+}
+
+/* Meals Page, Chicken Sandwich Meal Card - Hover Over */
+.meal-image:hover {
+    border: 1px solid #005035;
+    transition: border 0.2s ease;
+}
+
+/* Checkout/Ordering Pages, Addon Button - Hover Over */
+.addon-button:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+.addon-button:hover img {
+    filter: brightness(0) saturate(100%) invert(83%) sepia(36%) saturate(449%) hue-rotate(45deg) brightness(95%) contrast(92%);
+    transition: filter 0.2s ease;
+}
+
+/* Checkout/Ordering Pages, Next Buttons (Side/Meal Only) - Hover Over */
+.next-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+/* Side Selection Page, Fries Card - Hover Over */
+.selection-card:hover {
+    border: 1px solid #005035;
+    transition: border 0.2s ease;
+}
+
+/* Checkout/Ordering Pages, Size Options - Hover Over */
+.size-option:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+/* Drink Selection Page, Sweat Tea Card - Hover Over */
+.beverage-card:hover {
+    border: 1px solid #005035;
+    transition: border 0.2s ease;
+}
+
+/* Drink Selection Size Page, Next Button -  Hover Over*/
+.next-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+/* Review Page Page, Quantity Box +/- Signs -  Hover Over*/
+.qty-box button:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+/* Review Page Page, " Go to Chekcout"  Button -  Hover Over*/
+.checkout-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+/* Place Order Page, Pay Button -  Hover Over*/
+.place-pay-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+/* Confirmation Page, Back to Home Button -  Hover Over*/
+.confirm-home-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
 }
