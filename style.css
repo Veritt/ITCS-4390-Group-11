@@ -1939,14 +1939,17 @@ img {
 
 /* ---------- PAST ORDERS --------- */
 .past-orders-page {
-    min-height: 100vh;
+    min-height: calc(100vh - 92px);
     background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .past-orders-container {
     display: flex;
-    justify-content: center;
-    padding: 24px 16px 36px;
+    width: 100%;
+    max-width: 860px;
 }
 
 .past-orders-list {
