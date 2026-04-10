@@ -9,22 +9,31 @@
   <script src="../script.js" defer></script>
   <title>Past Orders</title>
 </head>
+
 <body>
-  <div class="past-order-desktop">
+  <div class="past-orders-page">
     <!-- Top navigation bar (green background) with logo, hamburger menu, dark mode icon -->
     <header class="top-bar">
         <a href="./index.html" class="topbar-logo">
             <img src="../pictures/charlotte-logo.png" alt="UNC Charlotte Dining Logo">
         </a>
-        <img class="dark-mode-icon" src="../pictures/dark-mode-button.svg" alt="Dark Mode">
+
+        <nav class="desktop-nav">
+            <a href="./index.html">Home</a>
+            <a href="./profile.html">Profile</a>
+            <a href="./paymentMethod.html">Payment Method</a>
+            <a href="./pastOrders.html" class="active">Past Orders</a>
+        </nav>
+
+        <img class="dark-mode-icon" src="../pictures/dark-mode-button.svg" />
         <img class="menu-icon" id="menuOpen" src="../pictures/hamburger-menu-icon.svg" alt="Menu">
-    </header>
+      </header>
     
-    <!-- hamburger Menu overlay -->
+
     <div class="menu-overlay" id="menuOverlay"></div>
 
-    <aside class="side-menu" id="sideMenu" aria-hidden="true">
-      <button class="menu-close" id="menuClose" aria-label="Close menu">
+    <aside class="side-menu" id="sideMenu">
+      <button class="menu-close" id="menuClose">
         <img src="../pictures/close-icon.svg" alt="Close">
       </button>
 
@@ -51,92 +60,97 @@
       </nav>
     </aside>
 
-    <!-- Container that holds all past orders (dropdowns) -->
-    <div class="frame-122">
-      <div class="dropdown-group">
-        
-        <!-- The Bojangles dropdown menu with one order-->
-        <details class="dropdown" name="restaurant-dropdown">
-          <summary class="dropdown-header">
-            <img src="../pictures/bojangles-logo.svg"
-                 alt="Bojangles logo"
-                 style="width:52px; height:52px; border-radius:14px; object-fit:cover;">
-            <div>
-              <strong>Bojangles</strong><br>
-              <span>Student Union</span>
-            </div>
-          </summary>
-          <div class="dropdown-content">
-            <div class="recent-order-block">
-              <div class="order-item-card">
-                <div class="recent-order recent-order-header">Recent Order</div>
-                <!-- Grid layout splits item details on the left and price+date right -->
-                <div class="order-content-grid">
-                  <div class="order-left">
-                    <div class="item-name">Bo's Chicken Sandwich Meal</div>
-                    <div class="item-details">
-                      Medium Sweet Tea • Medium Fries
-                    </div>
-                  </div>
-                  <div class="order-right">
-                    <span class="order-price">$7.99</span>
-                    <span class="order-date-under-price">Yesterday</span>
-                  </div>
-                </div>
-              </div> 
-            </div>
-          </div>
-        </details>
+    <main class="past-orders-container">
+    <section class="past-orders-list">
 
-        <!-- The Subway dropdown menu with two orders -->
-        <details class="dropdown" name="restaurant-dropdown">
-          <summary class="dropdown-header">
-            <img src="../pictures/subway.png"
-                 alt="Subway logo"
-                 style="width:52px; height:52px; border-radius:14px; object-fit:cover;">
-            <div>
-              <strong>Subway</strong><br>
-              <span>Cone University Center</span>
-            </div>
-          </summary>
-          
-          <div class="dropdown-content">
-            <div class="recent-order-block">
-              <!-- The first order: build Your Own 6 inch sandwich -->
-              <div class="order-item-card">
-                <div class="recent-order recent-order-header">Recent Order</div>
-                <div class="order-content-grid">
-                  <div class="order-left">
-                    <div class="item-name">Build Your Own 6 inch</div>
-                    <div class="item-details">
-                      9-Grain Wheat (Toasted) • Steak • American Cheese
-                    </div>
-                  </div>
-                  <div class="order-right">
-                    <span class="order-price">$7.99</span>
-                    <span class="order-date-under-price">Yesterday</span>
-                  </div>
-                </div>
-              </div>
+        <section class="past-order-restaurant">
+        <button class="past-order-summary" id="bojangles-button" type="button">
+            <img
+            src="../pictures/bojangles-logo.svg"
+            alt="Bojangles logo"
+            class="restaurant-logo"
+            >
 
-              <!-- The second order: cookie -->
-              <div class="order-item-card">
-                <div class="order-content-grid">
-                  <div class="order-left">
-                    <div class="item-name">Raspberry Cheesecake Cookie</div>
-                  </div>
-                  <div class="order-right">
+            <div class="restaurant-info">
+            <span class="restaurant-name">Bojangles</span>
+            <span class="restaurant-location">Student Union</span>
+            </div>
+
+            <img
+            src="../pictures/forward-arrow-icon.svg"
+            alt="Expand Bojangles orders"
+            class="dropdown-arrow"
+            >
+        </button>
+
+        <div class="past-order-details" id="bojangles-orders" hidden>
+            <div class="restaurant-order-group">
+            <article class="order-card">
+                <div class="order-label">Recent Order</div>
+                <div class="order-row">
+                <div class="order-main-info">
+                    <div class="order-item-name">Bo's Chicken Sandwich Meal</div>
+                    <div class="order-item-description">
+                    Medium Sweet Tea • Medium Fries
+                    </div>
+                </div>
+                <div class="order-additional-info">
+                    <span class="order-price">$7.99</span>
+                    <span class="order-date">Yesterday</span>
+                </div>
+                </div>
+            </article>
+            </div>
+        </div>
+        </section>
+
+        <section class="past-order-restaurant">
+        <button class="past-order-summary" id="subway-button" type="button">
+            <img src="../pictures/subway.png" alt="Subway logo" class="restaurant-logo">
+
+            <div class="restaurant-info">
+            <span class="restaurant-name">Subway</span>
+            <span class="restaurant-location">Cone University Center</span>
+            </div>
+
+            <img src="../pictures/forward-arrow-icon.svg" alt="Expand Subway orders" class="dropdown-arrow">
+        </button>
+
+        <div class="past-order-details" id="subway-orders" hidden>
+            <div class="restaurant-order-group">
+            <article class="order-card">
+                <div class="order-label">Recent Order</div>
+                <div class="order-row">
+                <div class="order-main-info">
+                    <div class="order-item-name">Build Your Own 6 inch</div>
+                    <div class="order-item-description">
+                    9-Grain Wheat (Toasted) • Steak • American Cheese
+                    </div>
+                </div>
+                <div class="order-additional-info">
+                    <span class="order-price">$7.99</span>
+                    <span class="order-date">Yesterday</span>
+                </div>
+                </div>
+            </article>
+
+            <article class="order-card">
+                <div class="order-row">
+                <div class="order-main-info">
+                    <div class="order-item-name">Raspberry Cheesecake Cookie</div>
+                </div>
+                <div class="order-additional-info">
                     <span class="order-price">$2.99</span>
-                    <span class="order-date-under-price">02/22/26</span>
-                  </div>
+                    <span class="order-date">02/22/26</span>
                 </div>
-              </div>
+                </div>
+            </article>
             </div>
-          </div>
-        </details>
-        
-      </div>
-    </div>
-  </div>
+        </div>
+        </section>
+
+    </section>
+    </main>
+</div>
 </body>
 </html>

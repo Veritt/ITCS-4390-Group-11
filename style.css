@@ -48,6 +48,45 @@ img {
     width: 170px;
 }
 
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.desktop-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    min-height: 40px;
+
+    background: transparent;
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    border-radius: 999px;
+
+    transition: all 0.2s ease;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a:focus-visible {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+}
+
+.desktop-nav a.active {
+    background: #ffffff;
+    color: #005035;
+    border-color: #ffffff;
+    font-weight: 750;
+}
+
 .dark-mode-icon, .menu-icon {
     position: absolute; 
     top: 50%;
@@ -56,12 +95,22 @@ img {
 
 .dark-mode-icon {
     transform: translateY(-5%); 
-    right: 72px;
+    right: 400px;
 }
 
 .menu-icon {
-    transform: translateY(-10%);
-    right: 20px;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-icon {
+        display: flex;
+        left: 40px;
+    }
 }
 
 /* Main Content */
@@ -1360,6 +1409,9 @@ img {
 
 /* Save Button */
 .save-card-btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
     margin-top: 20px;
     background: #000;
     color: #fff;
@@ -1741,20 +1793,20 @@ img {
 .side-menu {
     position: fixed;
     top: 0;
-    right: -340px;
+    left: -340px;
     width: 320px;
     max-width: 85%;
     height: 100vh;
     background: #d9ebe4;
-    border-radius: 24px 0 0 24px;
+    border-radius: 0 24px 24px 0;
     z-index: 2000;
     padding: 20px 0 24px;
     transition: right 0.3s ease;
-    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
 }
 
 .side-menu.open {
-    right: 0;
+    left: 0;
 }
 
 .menu-overlay {
@@ -1778,8 +1830,8 @@ img {
     padding: 0;
     cursor: pointer;
     display: block;
-    margin-left: auto;
-    margin-right: 20px;
+    margin-left: 20px;
+    margin-right: auto;
     margin-bottom: 18px;
 }
 
@@ -1885,350 +1937,191 @@ img {
     color: #777;
 }
 
-/* Resetting all default margins/padding so everything looks clean */
-a, button, input, select, h1, h2, h3, h4, h5, * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: none;
-  text-decoration: none;
-  background: none;
-  -webkit-font-smoothing: antialiased;
+/* ---------- PAST ORDERS --------- */
+.past-orders-page {
+    min-height: 100vh;
+    background: #ffffff;
 }
 
-/* Removes default list bullets and indentation from menus and lists */
-menu, ol, ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.past-orders-container {
+    display: flex;
+    justify-content: center;
+    padding: 24px 16px 36px;
 }
 
-/* Dropdown container - border + rounded corners + white bg */
-.dropdown {
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #fff;
-  transition: margin-bottom 0.25s ease, margin-top 0.25s ease;
+.past-orders-list {
+    width: 100%;
+    max-width: 860px;
+    background: #ffffff;
+    border: 1px solid #d8d8d8;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-/* Header area (restaurant logo + name + location) */
-.dropdown-header {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 15px;
-  cursor: pointer;
-  background: #f5f5f500; /* fully transparent */
+.past-order-restaurant {
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
 }
 
-/* Restaurant logo image styling */
-.dropdown-header img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;  /* Keeps image from distorting */
-  border-radius: 12px;  /* Soft rounded corners for logo */
-  background-color: #f8f8f8;  /* Light gray background behind logo */
+.past-order-summary {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 14px;
+    border: none;
+    background: #ffffff;
+    cursor: pointer;
+    text-align: left;
+    font: inherit;
 }
 
-/* Restaurant name text styling */
-.dropdown-header strong {
-  font-size: 16px;
+.restaurant-logo {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
-/* Restaurant location text styling (lighter/gray) */
-.dropdown-header span {
-  font-size: 14px;
-  color: #666;
+.restaurant-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
 }
 
-/* Remove the default disclosure triangle (the little arrow) */
-summary::-webkit-details-marker {
-  display: none;
+.restaurant-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111111;
+    line-height: 1.2;
 }
 
-summary {
-  list-style: none;
+.restaurant-location {
+    font-size: 0.9rem;
+    color: #666666;
+    line-height: 1.2;
 }
 
-/* Custom dropdown arrow using pseudo-element */
-.dropdown-header::after {
-  content: "▼";
-  margin-left: auto;
-  transition: transform 0.3s ease;
-  font-size: 14px;
+.dropdown-arrow {
+    width: 18px;
+    height: 18px;
+    margin-left: auto;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
 }
 
-/* Rotate arrow when dropdown is open */
-.dropdown[open] .dropdown-header::after {
-  transform: rotate(180deg);
+.past-order-summary.open .dropdown-arrow {
+    transform: rotate(90deg);
 }
 
-/* Content area inside dropdown (order details) */
-.dropdown-content {
-  padding: 15px;
-  background: #fff;
-  border-top: 1px solid #ddd;
+.past-order-details {
+    padding: 12px 14px 14px;
+    border-top: 1px solid #eeeeee;
+    background: #ffffff;
 }
 
-.dropdown-content {
-  min-height: 20px;
+.restaurant-order-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-/* Main page wrapper */
-.past-order-desktop {
-  background: #ffffff;
-  height: 889px;
-  position: relative;
-  overflow: hidden;
+.order-card + .order-card {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 12px;
 }
 
-/* Green top bar with logo & icons */
-.mobile-top-bar {
-  height: 106px;
-  position: absolute;
-  right: 0px;
-  left: 0px;
-  top: 0px;
+.order-label {
+    margin-bottom: 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #666666;
 }
 
-/* Dark green background rectangle filling the entire top bar */
-.rectangle-65 {
-  background: #005035;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  right: 0%;
-  left: 0%;
-  bottom: 0%;
-  top: 0%;
+.order-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14px;
 }
 
-/* Main logo image - centered horizontally, positioned near bottom of top bar */
-.loggg-3 {
-  width: 186px;
-  height: 70px;
-  position: absolute;
-  left: calc(50% - 104.5px);  /* Centers logo */
-  bottom: 10px;               /* Lifts logo slightly above bottom edge */
-  object-fit: cover;
-  aspect-ratio: 186/70;       /* Maintains exact width-to-height ratio */
+.order-main-info {
+    flex: 1;
+    min-width: 0;
 }
 
-/* Hamburger menu icon */
-.pajamas-hamburger {
-  width: 39px;
-  height: 39px;
-  position: absolute;
-  right: 13px;
-  bottom: 9px;
-  overflow: visible;
-  aspect-ratio: 1;
+.order-item-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 4px;
+    line-height: 1.3;
 }
 
-/* Dark mode toggle button */
-.dark-mode-button {
-  width: 40px;
-  height: 38px;
-  position: absolute;
-  right: 63px;
-  bottom: 10px;
-  overflow: visible;
+.order-item-description {
+    font-size: 0.9rem;
+    line-height: 1.35;
+    color: #555555;
 }
 
-/* Scrollable white card that holds all the dropdowns */
-.frame-122 {
-  background: #ffffff;
-  padding: 71px 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  align-items: center;
-  justify-content: center;
-  width: 60%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 25.09%;
-  bottom: 28.24%;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-/* Vendor logo inside dropdown header */
-.dropdown-header .vendor-logo {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  object-fit: cover;
-  background: white;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  flex-shrink: 0;
-}
-
-/* Group of dropdowns stacked vertically */
-.dropdown-group {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  gap: 32px;
-}
-
-.frame-122 {
-  gap: 0;
-}
-
-.dropdown-group details {
-  width: 100%;
-}
-
-/* Add spacing when dropdown is open (mutually exclusive feel) */
-.dropdown-group details:first-of-type[open] {
-  margin-bottom: 28px;
-}
-
-.dropdown-group details:last-of-type[open] {
-  margin-top: 28px;
-}
-
-/* Styling for order items inside dropdown */
-.dropdown-content {
-  font-family: system-ui, -apple-system, 'Inter', 'Segoe UI', Roboto, Helvetica, sans-serif;
-  padding: 20px 18px;
-}
-
-/* The recent order label */
-.recent-order {
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.3px;
-  color: #5e5e5e;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-  font-family: inherit;
-}
-
-.order-item-card {
-  margin-bottom: 24px;
-}
-
-.order-item-card:last-child {
-  margin-bottom: 0;
-}
-
-/* row for item name and price */
-.item-name-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  margin-bottom: 6px;
-}
-
-.item-name {
-  font-weight: 700;
-  font-size: 17px;
-  color: #1e2a2e;
-  font-family: inherit;
+.order-additional-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    flex-shrink: 0;
+    text-align: right;
 }
 
 .order-price {
-  font-weight: 700;
-  color: #1a3c34;
-  font-size: 16px;
-  white-space: nowrap;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111111;
+    white-space: nowrap;
 }
 
-.item-details {
-  font-size: 14px;
-  color: #4a5b5e;
-  line-height: 1.4;
-  margin-bottom: 8px;
-  font-weight: 400;
+.order-date {
+    font-size: 0.8rem;
+    color: #777777;
+    white-space: nowrap;
 }
 
-.customizations {
-  font-size: 13px;
-  color: #6c7a7d;
-  margin-top: 4px;
-}
+@media (max-width: 600px) {
+    .past-orders-container {
+        padding: 18px 12px 28px;
+    }
 
-/* Two-column layout (item details left, price+date right) */
-.order-content-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 16px;
-}
+    .past-orders-list {
+        padding: 14px;
+    }
 
-.order-left {
-  flex: 1;
-  min-width: 0; /* prevent overflow */
-}
+    .past-order-summary {
+        padding: 12px;
+    }
 
-.order-right {
-  text-align: right;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 4px;
-}
+    .past-order-details {
+        padding: 12px;
+    }
 
-.order-right .order-price {
-  font-weight: 700;
-  font-size: 16px;
-  color: #1a3c34;
-  line-height: 1.3;
-}
+    .order-row {
+        flex-direction: column;
+        gap: 8px;
+    }
 
-/* date directly under the price */
-.order-date-under-price {
-  font-size: 13px;
-  font-weight: 400;
-  color: #7f8c8d;
-  letter-spacing: -0.1px;
-  white-space: nowrap;
-}
-
-.recent-order-header {
-  margin-bottom: 14px;
-}
-
-.order-left .item-name {
-  margin-bottom: 6px;
-  display: block;
-}
-
-.order-left .item-details {
-  margin-bottom: 0;
-}
-
-.order-item-card {
-  margin-bottom: 24px;
-}
-
-/* border between order cards */
-.dropdown-content .order-item-card + .order-item-card {
-  margin-top: 16px;
-  padding-top: 8px;
-  border-top: 1px solid #f0f0f0;
-}
-
-.recent-order-block {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.dropdown-content img {
-  display: none;
-}
-
-.order-right .order-date-under-price {
-  margin-top: 0;
+    .order-additional-info {
+        align-items: flex-start;
+        text-align: left;
+    }
 }
 
 /* CSS Assignment 11, Part 3 */
