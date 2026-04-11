@@ -84,23 +84,38 @@ function autocomplete(inp, arr) {
     listContainer.setAttribute("id", this.id + "-autocomplete-list");
     listContainer.setAttribute("class", "autocomplete-items");
     this.parentNode.appendChild(listContainer);
+for (i = 0; i < arr.length; i++) {
+  let currentItem = arr[i]; // ✅ FIX 1
 
-    for (i = 0; i < arr.length; i++) {
-      if (arr[i].toUpperCase().includes(val.toUpperCase())) {
-        item = document.createElement("DIV");
-        item.innerHTML =
-          "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-        item.innerHTML += arr[i].substr(val.length);
-        item.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+  if (currentItem.name.toUpperCase().includes(val.toUpperCase())) {
+    item = document.createElement("DIV");
 
-        item.addEventListener("click", function () {
-          inp.value = this.getElementsByTagName("input")[0].value;
-          closeAllLists();
-        });
+    // highlight match
+    item.innerHTML =
+      "<strong>" + currentItem.name.substr(0, val.length) + "</strong>";
+    item.innerHTML += currentItem.name.substr(val.length);
 
-        listContainer.appendChild(item);
-      }
-    }
+    item.innerHTML += "<input type='hidden' value='" + currentItem.name + "'>";
+
+    // ✅ FIX 2: lock values properly (VERY IMPORTANT)
+    item.addEventListener(
+      "click",
+      (function (itemData) {
+        return function () {
+          if (itemData.link) {
+            window.location.href = itemData.link;
+          } else {
+            inp.value = itemData.name;
+            closeAllLists();
+          }
+        };
+      })(currentItem),
+    );
+
+    listContainer.appendChild(item);
+  }
+}
+
     if (listContainer.childElementCount === 0) {
       const noItem = document.createElement("DIV");
       noItem.innerHTML = "No results found";
@@ -158,14 +173,14 @@ function autocomplete(inp, arr) {
 // AUTOCOMPLETE INITIALIZATION
 // =========================
 document.addEventListener("DOMContentLoaded", function () {
-  const searchSuggestions = [
-    "Wendy's",
-    "Bojangles",
-    "Panda Express",
-    "Chick-Fil-A",
-    "Subway",
-    "Halal Shack",
-  ];
+ const searchSuggestions = [
+   { name: "Wendy's" },
+   { name: "Bojangles", link: "../screens/restaurantMenu.html" },
+   { name: "Panda Express" },
+   { name: "Chick-Fil-A" },
+   { name: "Subway" },
+   { name: "Halal Shack" },
+ ];
 
   const searchInput = document.getElementById("myInput");
   if (searchInput) {
