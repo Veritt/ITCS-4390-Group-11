@@ -91,9 +91,13 @@ for (i = 0; i < arr.length; i++) {
     item = document.createElement("DIV");
 
     // highlight match
-    item.innerHTML =
-      "<strong>" + currentItem.name.substr(0, val.length) + "</strong>";
-    item.innerHTML += currentItem.name.substr(val.length);
+    const matchIndex = currentItem.name.toUpperCase().indexOf(val.toUpperCase());
+
+    const beforeMatch = currentItem.name.substring(0, matchIndex);
+    const matchText = currentItem.name.substring(matchIndex, matchIndex + val.length);
+    const afterMatch = currentItem.name.substring(matchIndex + val.length);
+
+    item.innerHTML = beforeMatch + "<strong>" + matchText + "</strong>" + afterMatch;
 
     item.innerHTML += "<input type='hidden' value='" + currentItem.name + "'>";
 

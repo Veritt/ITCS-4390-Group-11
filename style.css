@@ -13,7 +13,7 @@ html, body {
 body {
     min-height: 100vh;
     background: #ffffff;
-    padding-top: 92px;
+    padding-top: 80px;
 
 }
 
@@ -24,25 +24,11 @@ img {
 
 /* --------- RESTAURANT MENU ---------- */
 .restaurant-menu {
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
     display: flex; 
     flex-direction: column; 
     background: #ffffff;
 }
-
-.top-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 92px;
-    background: #005035;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-}
-
 
 .topbar-logo {
     width: 170px;
@@ -141,13 +127,13 @@ img {
 
 .bojangles {
     margin: 0;
-    font-size: clamp(2.4rem, 6vw, 3.4rem); 
+    font-size: clamp(2.4rem, 3vw, 3.4rem); 
     line-height: 1.05;
 }
 
 .student-union {
     margin: 8px 0 0;
-    font-size: clamp(1.2rem, 3vw, 1.7rem);
+    font-size: clamp(1.2rem, 1.5vw, 1.7rem);
     line-height: 1.2;
 }
 
@@ -1314,8 +1300,25 @@ img {
     padding: 14px 16px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 10px;
     position: relative;
+}
+
+.card-number {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.masked {
+    font-size: 0.95rem;
+    color: #555;
+    letter-spacing: 2px;
+}
+
+.last4 {
+    font-size: 1.15rem;
+    font-weight: 700;
 }
 
 /* VISA Logo */
@@ -1489,7 +1492,7 @@ img {
     top: 0;
     left: 0;
     right: 0;
-    height: 92px;
+    height: 80px;
     background: #005035;
     display: flex;
     align-items: center;
@@ -1505,8 +1508,8 @@ img {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    height: 56px;
-    max-height: 70%;
+    height: 65px;
+    /* max-height: 100%; */
 }
 
 .menu-icon,
@@ -1666,7 +1669,7 @@ img {
 .homepage {
     max-width: 1050px;
     margin: 0 auto;
-    padding: 22px 26px 40px;
+    padding: 15px 26px;
 }
 
 .banner-section {
@@ -1679,6 +1682,7 @@ img {
     background: #005035;
     border-radius: 18px;
     padding: 6px;
+    margin-top: 15px;
     width: 400px;
     max-width: 100%;
 }
@@ -1690,13 +1694,14 @@ img {
 }
 
 .section {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .section-title {
     font-size: 1rem;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 15px;
 }
 
 .restaurant-grid {
@@ -1711,6 +1716,7 @@ img {
     object-fit: cover;
     border-radius: 10px;
 }
+
 .location-grid {
     display: flex;
     flex-wrap: wrap;
@@ -1914,10 +1920,9 @@ img {
     border-radius: 28px;
     padding: 14px 18px;
     width: 100%;
-    max-width: 450px;
+    margin-top: 20px;
+    max-width: 550px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-    position: relative; 
-    overflow: visible;
 }
 
 .search-icon {
@@ -1941,17 +1946,17 @@ img {
 
 /* ---------- PAST ORDERS --------- */
 .past-orders-page {
-    min-height: calc(100vh - 92px);
-    background: #ffffff;
+    min-height: calc(100vh - 80px);
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .past-orders-container {
-    display: flex;
     width: 100%;
-    max-width: 860px;
+    display: flex;
+    justify-content: center;
+    padding: 24px 16px 36px;
 }
 
 .past-orders-list {
@@ -1985,14 +1990,6 @@ img {
     cursor: pointer;
     text-align: left;
     font: inherit;
-}
-
-.restaurant-logo {
-    width: 52px;
-    height: 52px;
-    border-radius: 14px;
-    object-fit: cover;
-    flex-shrink: 0;
 }
 
 .restaurant-info {
@@ -2104,6 +2101,7 @@ img {
 @media (max-width: 600px) {
     .past-orders-container {
         padding: 18px 12px 28px;
+        margin: 0 15px;
     }
 
     .past-orders-list {
