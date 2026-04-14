@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+       <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../script.js" defer></script>
+    <title>Saved Cards</title>
+  </head>
+
+  <body>
+    <div class="restaurant-menu">
+
+      <!-- TOP BAR -->
+<header class="top-bar">
+        <a href="../../index.html" class="topbar-logo">
+            <img src="../../pictures/charlotte-logo.png" alt="UNC Charlotte Dining Logo">
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="../../index.html">Home</a>
+            <a href="../../profile.html">Profile</a>
+            <a href="../../paymentMethod.html">Payment Method</a>
+            <a href="../../pastOrders.html">Past Orders</a>
+        </nav>
+
+        <img class="dark-mode-icon" src="../../pictures/dark-mode-button.svg" />
+        <img class="menu-icon" id="menuOpen" src="../../pictures/hamburger-menu-icon.svg" alt="Menu">
+      </header>
+    
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <aside class="side-menu" id="sideMenu">
+      <button class="menu-close" id="menuClose">
+        <img src="../../pictures/close-icon.svg" alt="Close">
+      </button>
+
+      <nav class="side-menu-nav">
+        <a href="../../index.html" class="side-menu-link">
+          <img src="../../pictures/home-icon.svg" alt="Homepage">
+          <span>Homepage</span>
+        </a>
+
+        <a href="../../profile.html" class="side-menu-link">
+          <img src="../../pictures/profile-icon.svg" alt="Profile">
+          <span>Profile</span>
+        </a>
+
+        <a href="../../paymentMethod.html" class="side-menu-link">
+          <img src="../../pictures/payment-icon.svg" alt="Payment Method">
+          <span>Payment Method</span>
+        </a>
+
+        <a href="../../pastOrders.html" class="side-menu-link">
+          <img src="../../pictures/orders-icon.svg" alt="Past Orders">
+          <span>Past Orders</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="confirmation-content">
+      <div class="confirmation-card">
+        <img src="../../pictures/Eo_circle_green_checkmark.png" alt="Green check mark" class="checkmark-image" style="display: block; margin: 0 auto;">
+        <p class="confirmation-text">Your order has been placed successfully</p>
+        <button class="done-button" onclick="window.location.href='boConfirmation.html'">Go to Checkout</button>
+      </div>
+    </main>
+
+  </body>
+</html>
