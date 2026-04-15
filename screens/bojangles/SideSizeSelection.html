@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="restaurant-menu">
+    <header class="top-bar">
+        <a href="../../index.html" class="topbar-logo">
+            <img src="../../pictures/charlotte-logo.png" alt="UNC Charlotte Dining Logo">
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="../../index.html">Home</a>
+            <a href="../../profile.html">Profile</a>
+            <a href="../../paymentMethod.html">Payment Method</a>
+            <a href="../../pastOrders.html">Past Orders</a>
+        </nav>
+
+        <img class="dark-mode-icon" src="../../pictures/dark-mode-button.svg" />
+        <img class="menu-icon" id="menuOpen" src="../../pictures/hamburger-menu-icon.svg" alt="Menu">
+      </header>
+    
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <aside class="side-menu" id="sideMenu">
+      <button class="menu-close" id="menuClose">
+        <img src="../../pictures/close-icon.svg" alt="Close">
+      </button>
+
+      <nav class="side-menu-nav">
+        <a href="../../index.html" class="side-menu-link">
+          <img src="../../pictures/home-icon.svg" alt="Homepage">
+          <span>Homepage</span>
+        </a>
+
+        <a href="../../profile.html" class="side-menu-link">
+          <img src="../../pictures/profile-icon.svg" alt="Profile">
+          <span>Profile</span>
+        </a>
+
+        <a href="../../paymentMethod.html" class="side-menu-link">
+          <img src="../../pictures/payment-icon.svg" alt="Payment Method">
+          <span>Payment Method</span>
+        </a>
+
+        <a href="../../pastOrders.html" class="side-menu-link">
+          <img src="../../pictures/orders-icon.svg" alt="Past Orders">
+          <span>Past Orders</span>
+        </a>
+      </nav>
+    </aside>
+
+    <main class="detail-page side-size-page">
+      <div class="selection-topbar">
+        <a href="../bojangles/boMealEditing.html" class="back-link">
+          <img src="../../pictures/back-arrow-icon.svg" alt="Back" class="back-icon">
+          <span>Back</span>
+        </a>
+
+        <h1 class="selection-page-title">Customize your side</h1>
+      </div>
+
+      <div class="detail-layout">
+        <section class="detail-left">
+          <img src="../../pictures/bojangles-fries.png" alt="Fries" class="detail-meal-image">
+
+          <h2 class="detail-title">Fries</h2>
+          <p class="detail-price">$9.09 meal price | 450 cal</p>
+        </section>
+
+        <section class="detail-right">
+          <div class="size-section">
+            <h2 class="detail-section-title">Size Options:</h2>
+
+            <div class="size-toggle">
+              <a href="../bojangles/DrinkSelection.html" class="size-option selected-size">M</a>
+              <a href="../bojangles/DrinkSelection.html" class="size-option">L</a>
+            </div>
+          </div>
+
+          <div class="includes-section">
+            <h2 class="detail-section-title">Your Item Includes:</h2>
+
+            <div class="detail-includes">
+              <div class="include-item">
+                <img src="../../pictures/salt.webp" alt="Salt" class="include-image">
+              </div>
+            </div>
+
+            <div class="detail-tags">
+              <span class="detail-tag">Condiments</span>
+            </div>
+
+            <div class="addon-row">
+              <div class="addon-left">
+                <img src="../../pictures/ketchup.webp" alt="Ketchup" class="addon-image">
+                <span class="addon-name">Ketchup</span>
+              </div>
+
+              <button class="addon-button" type="button">
+                <img src="../../pictures/add-to-meal-icon.svg" alt="Add item">
+              </button>
+            </div>
+          </div>
+
+          <a href="../bojangles/DrinkSelection.html" class="next-button">Next, choose a beverage</a>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

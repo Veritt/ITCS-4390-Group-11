@@ -125,7 +125,8 @@ img {
     justify-content: center; 
 }
 
-.bojangles {
+.bojangles,
+.subway {
     margin: 0;
     font-size: clamp(2.4rem, 3vw, 3.4rem); 
     line-height: 1.05;
