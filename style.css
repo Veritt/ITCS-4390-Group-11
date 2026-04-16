@@ -2322,3 +2322,57 @@ img {
     width: 100%;
 }
 
+/* back link styling */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: #b45f2b;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      transition: 0.2s;
+      background: #fff3e8;
+      padding: 0.5rem 1.2rem;
+      border-radius: 60px;
+    }
+
+    .back-link:hover {
+      background: #ffe1cc;
+      transform: translateX(-4px);
+    }
+
+    .back-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* two column layout */
+    .detail-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      background: white;
+      border-radius: 2rem;
+      padding: 2rem;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+    }
+
+    .detail-left {
+      flex: 1.2;
+      min-width: 240px;
+    }
+
+   .detail-right {
+      flex: 1.2;
+      min-width: 260px;
+    }
+
+    .include-item {
+      background: white;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
