@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <script src="../../script.js" defer></script>
+    <title>Order Confirmed</title>
+  </head>
+  <body>
+    <div class="restaurant-menu">
+        <header class="top-bar">
+        <a href="../index.html" class="topbar-logo">
+            <img src="../../pictures/charlotte-logo.png" alt="UNC Charlotte Dining Logo">
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="../index.html">Home</a>
+            <a href="../profile.html">Profile</a>
+            <a href="../paymentMethod.html">Payment Method</a>
+            <a href="../pastOrders.html">Past Orders</a>
+        </nav>
+
+        <img class="dark-mode-icon" src="../../pictures/dark-mode-button.svg" />
+        <img class="menu-icon" id="menuOpen" src="../../pictures/hamburger-menu-icon.svg" alt="Menu">
+      </header>
+    
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <aside class="side-menu" id="sideMenu">
+      <button class="menu-close" id="menuClose">
+        <img src="../../pictures/close-icon.svg" alt="Close">
+      </button>
+
+      <nav class="side-menu-nav">
+        <a href="../index.html" class="side-menu-link">
+          <img src="../../pictures/home-icon.svg" alt="Homepage">
+          <span>Homepage</span>
+        </a>
+
+        <a href="../profile.html" class="side-menu-link">
+          <img src="../../pictures/profile-icon.svg" alt="Profile">
+          <span>Profile</span>
+        </a>
+
+        <a href="../paymentMethod.html" class="side-menu-link">
+          <img src="../../pictures/payment-icon.svg" alt="Payment Method">
+          <span>Payment Method</span>
+        </a>
+
+        <a href="../pastOrders.html" class="side-menu-link">
+          <img src="../../pictures/orders-icon.svg" alt="Past Orders">
+          <span>Past Orders</span>
+        </a>
+      </nav>
+    </aside>
+
+      <!-- MAIN -->
+      <main class="selection-page confirm-page">
+        <div class="selection-topbar">
+          <a href="../panda/ReviewPage.html" class="back-link">
+          <img src="../../pictures/back-arrow-icon.svg" class="back-icon">
+          <span>Back</span>
+        </a>
+          <h1 class="selection-page-title">Order Confirmed</h1>
+        </div>
+
+        <div class="confirm-layout">
+          <!-- LEFT -->
+          <div class="confirm-left">
+            <div class="confirm-img-box">
+              <img
+                src="../../pictures/orangechicken.webp"
+                alt="Orange Chicken Meal"
+              />
+            </div>
+
+            <h2 class="confirm-meal-name">Orange Chicken Meal</h2>
+            <p class="confirm-meal-meta">Eggroll · Medium Fountain Drink</p>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="confirm-right">
+            <!-- READY TIME -->
+            <section class="confirm-ready-box">
+              <img
+                src="../../pictures/checkmark_green.png"
+                class="confirm-check"
+              />
+              <h2 class="confirm-ready-title">Pickup Ready in 20 Minutes</h2>
+            </section>
+
+            <hr class="confirm-divider" />
+
+            <!-- PICKUP -->
+            <section class="confirm-section">
+              <h3>Pick up at:</h3>
+              <p>8845 Craver Rd, Charlotte, NC 28223</p>
+            </section>
+
+            <hr class="confirm-divider" />
+
+            <!-- COST -->
+            <section class="confirm-section">
+              <h3>Order Summary</h3>
+              <p>Subtotal: $16.97</p>
+              <p>Tax: $0.65</p>
+              <p class="confirm-total">Total: $17.62</p>
+            </section>
+
+            <hr class="confirm-divider" />
+
+            <!-- PAYMENT -->
+            <section class="confirm-section">
+              <h3>Payment Method</h3>
+              <p>Visa •••• 1234</p>
+              <a href="../paymentMethod.html" class="confirm-link">Add new card</a>
+            </section>
+
+            <!-- BUTTON -->
+            <a href="../index.html" class="confirm-home-btn">Back to Home</a>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

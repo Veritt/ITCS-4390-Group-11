@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../script.js" defer></script>
+    <title>Meal Editing</title>
+</head>
+<body>
+    <div class="restaurant-menu">
+        <header class="top-bar">
+        <a href="../index.html" class="topbar-logo">
+            <img src="../../pictures/charlotte-logo.png" alt="UNC Charlotte Dining Logo">
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="../index.html">Home</a>
+            <a href="../profile.html">Profile</a>
+            <a href="../paymentMethod.html">Payment Method</a>
+            <a href="../pastOrders.html">Past Orders</a>
+        </nav>
+
+        <img class="dark-mode-icon" src="../../pictures/dark-mode-button.svg" />
+        <img class="menu-icon" id="menuOpen" src="../../pictures/hamburger-menu-icon.svg" alt="Menu">
+      </header>
+    
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <aside class="side-menu" id="sideMenu">
+      <button class="menu-close" id="menuClose">
+        <img src="../../pictures/close-icon.svg" alt="Close">
+      </button>
+
+      <nav class="side-menu-nav">
+        <a href="../index.html" class="side-menu-link">
+          <img src="../../pictures/home-icon.svg" alt="Homepage">
+          <span>Homepage</span>
+        </a>
+
+        <a href="../profile.html" class="side-menu-link">
+          <img src="../../pictures/profile-icon.svg" alt="Profile">
+          <span>Profile</span>
+        </a>
+
+        <a href="../paymentMethod.html" class="side-menu-link">
+          <img src="../../pictures/payment-icon.svg" alt="Payment Method">
+          <span>Payment Method</span>
+        </a>
+
+        <a href="../pastOrders.html" class="side-menu-link">
+          <img src="../../pictures/orders-icon.svg" alt="Past Orders">
+          <span>Past Orders</span>
+        </a>
+      </nav>
+    </aside>
+
+        <main class="detail-page">
+            <a href="../panda/Meals.html" class="back-link">
+                <img src="../../pictures/back-arrow-icon.svg" alt="Back" class="back-icon">
+                <span>Back</span>
+            </a>
+
+            <div class="detail-layout">
+                <section class="detail-left">
+                    <img src="../../pictures/orangechicken.webp" alt="Orange Chicken" class="detail-meal-image">
+                    <h1 class="detail-title">Orange Chicken Plate</h1>
+                    <p class="detail-price">$11.99 | 860 cal</p>
+                </section>
+
+          <span></span>
+                <section class="detail-right">
+                    <h2 class="detail-section-title">Your Plate Includes:</h2>
+                    <div class="detail-includes">
+                        <div class="include-item">
+                            <img src="../../pictures/pandarice.jpg" alt="Fried Rice" class="include-image">
+                        </div>
+
+                        <div class="include-item">
+                            <img src="../../pictures/Chowmein.jpg" alt="Chow Mein" class="include-img">
+                        </div>
+
+                    </div>
+
+                    <a href="../panda/SideSelection.html" class="next-button">Next, choose a side</a>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
