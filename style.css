@@ -2428,3 +2428,14 @@ img {
     transition: border 0.2s ease;
 }
 
+/* ASSIGNMENT 12 -- FORMATS */ 
+.success-text {
+    color: #2e7d32;
+    font-size: 0.8rem;
+}
+
+.error-text {
+    color: #c62828;
+    font-size: 0.8rem;
+    font-weight: bold;
+}

@@ -61,11 +61,9 @@
 
       <!-- PAGE CONTENT -->
       <div class="card-page">
-
         <h2>Saved Cards</h2>
 
         <div class="saved-cards-grid">
-
           <!-- CARD 1 -->
           <div class="saved-card">
             <img class="brand" src="../pictures/visa.png" />
@@ -81,34 +79,40 @@
 
         <!-- ADD NEW CARD BUTTON -->
         <button class="add-card-btn">
-          <img src="../pictures/flowbite-plus-outline0.svg" />
+          <img src="../pictures/flowbite-plus-outline0.svg" alt="Add New Card"/>
           Add New Card
         </button>
         
         <!-- FORM -->
-        <form class="card-form">
-          <div>
-            <label>Name on Card</label>
-            <input type="text" placeholder="Full Name" />
+        <form class="card-form" id="cardForm" novalidate>
+          <div class="form-group">
+            <label for="cardName">Name on Card</label>
+            <input type="text" id="cardName" name="cardName" placeholder="Full Name" autocomplete="cc-name" />
+            <small class="input-message" id="cardNameMessage"></small>
           </div>
 
-          <div>
-            <label>Card Number</label>
-            <input type="text" placeholder="Enter card number" />
+          <div class="form-group">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter card number" inputmode="numeric" autocomplete="cc-number" maxlength="19"/>
+            <small class="input-message" id="cardNumberMessage"></small>
           </div>
 
           <div class="form-row">
-            <div class="half">
-              <label>Expiration Date</label>
-              <input type="text" placeholder="MM / YY" />
+            <div class="half form-group">
+              <label for="expirationDate">Expiration Date</label>
+              <input type="text" id="expirationDate" name="expirationDate" placeholder="MM / YY" inputmode="numeric" autocomplete="cc-exp" maxlength="7" />
+              <small class="input-message" id="expirationDateMessage"></small>
             </div>
-            <div class="half">
-              <label>CVC</label>
-              <input type="text" placeholder="CVC" />
+            <div class="half form-group">
+              <label for="cvc">CVC</label>
+              <input type="text" id="cvc" name="cvc" placeholder="CVC" inputmode="numeric" autocomplete="cc-csc" maxlength="4" />
+              <small class="input-message" id="cvcMessage"></small>
             </div>
           </div>
 
-          <a href="./ConfirmationCard.html" class="save-card-btn">Save Card</a>
+          <div class="form-status" id="formStatus"></div>
+
+          <button type="submit" class="save-card-btn">Save Card</button>
         </form>
 
       </div>
