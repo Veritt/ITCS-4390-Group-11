@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../script.js" defer></script>
+  <title>Restaurant Menu</title>
+</head>
+<body>
+    <div class="restaurant-menu">
+      <!-- TOP BAR -->
+        <header class="top-bar">
+        <a href="../index.html" class="topbar-logo">
+            <img src="../../pictures/charlotte-logo.png" alt="UNC Charlotte Dining Logo">
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="../index.html">Home</a>
+            <a href="../profile.html">Profile</a>
+            <a href="../paymentMethod.html">Payment Method</a>
+            <a href="../pastOrders.html">Past Orders</a>
+        </nav>
+
+        <img class="dark-mode-icon" src="../../pictures/dark-mode-button.svg" />
+        <img class="menu-icon" id="menuOpen" src="../../pictures/hamburger-menu-icon.svg" alt="Menu">
+      </header>
+    
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <aside class="side-menu" id="sideMenu">
+      <button class="menu-close" id="menuClose">
+        <img src="../../pictures/close-icon.svg" alt="Close">
+      </button>
+
+      <nav class="side-menu-nav">
+        <a href="../index.html" class="side-menu-link">
+          <img src="../../pictures/home-icon.svg" alt="Homepage">
+          <span>Homepage</span>
+        </a>
+
+        <a href="../profile.html" class="side-menu-link">
+          <img src="../../pictures/profile-icon.svg" alt="Profile">
+          <span>Profile</span>
+        </a>
+
+        <a href="../paymentMethod.html" class="side-menu-link">
+          <img src="../../pictures/payment-icon.svg" alt="Payment Method">
+          <span>Payment Method</span>
+        </a>
+
+        <a href="../pastOrders.html" class="side-menu-link">
+          <img src="../../pictures/orders-icon.svg" alt="Past Orders">
+          <span>Past Orders</span>
+        </a>
+      </nav>
+    </aside>
+
+        <!-- Main Content -->
+        <main class="menu-content">
+            <!-- Header Block -->
+            <div class="header-block">
+                <img class="header-logo" src="../../pictures/bojangles-logo.svg" alt="Bojangles Logo">
+
+                <div class="header-text">
+                    <h1 class="bojangles">Bojangles</h1>
+                    <p class="student-union">Student Union</p>
+                </div>
+            </div>
+
+            <!-- Menu Card -->
+            <a class="menu-card" href="../bojangles/boMeals.html">
+                <div class="menu-card-left">
+                    <img class="menu-card-image" src="../../pictures/small-chicken-meal.png" alt="Meal Preview">
+                    <div class="menu-card-title">Meals</div>
+                </div>
+
+                <img class="menu-card-arrow" src="../../pictures/forward-arrow-icon.svg" alt="Go to Meals">
+            </a>
+        </main>
+    </div>
+</body>
+</html>
