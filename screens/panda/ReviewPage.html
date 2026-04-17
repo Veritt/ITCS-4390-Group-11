@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
+  <title>Review your meal</title>
+</head>
+
+<body>
+    <div class="restaurant-menu">
+        <header class="top-bar">
+        <a href="../index.html" class="topbar-logo">
+            <img src="../../pictures/charlotte-logo.png" alt="UNC Charlotte Dining Logo">
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="../index.html">Home</a>
+            <a href="../profile.html">Profile</a>
+            <a href="../paymentMethod.html">Payment Method</a>
+            <a href="../pastOrders.html">Past Orders</a>
+        </nav>
+
+        <img class="dark-mode-icon" src="../../pictures/dark-mode-button.svg" />
+        <img class="menu-icon" id="menuOpen" src="../../pictures/hamburger-menu-icon.svg" alt="Menu">
+      </header>
+    
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <aside class="side-menu" id="sideMenu">
+      <button class="menu-close" id="menuClose">
+        <img src="../../pictures/close-icon.svg" alt="Close">
+      </button>
+
+      <nav class="side-menu-nav">
+        <a href="../index.html" class="side-menu-link">
+          <img src="../../pictures/home-icon.svg" alt="Homepage">
+          <span>Homepage</span>
+        </a>
+
+        <a href="../profile.html" class="side-menu-link">
+          <img src="../../pictures/profile-icon.svg" alt="Profile">
+          <span>Profile</span>
+        </a>
+
+        <a href="../paymentMethod.html" class="side-menu-link">
+          <img src="../../pictures/payment-icon.svg" alt="Payment Method">
+          <span>Payment Method</span>
+        </a>
+
+        <a href="../pastOrders.html" class="side-menu-link">
+          <img src="../../pictures/orders-icon.svg" alt="Past Orders">
+          <span>Past Orders</span>
+        </a>
+      </nav>
+    </aside>
+
+  <!-- MAIN -->
+  <main class="review-page">
+
+    <!-- TOP SECTION -->
+    <div class="selection-topbar">
+      <a href="../subway/DrinkSelectionSize.html" class="back-link">
+        <img src="../../pictures/back-arrow-icon.svg" class="back-icon">
+        <span>Back</span>
+      </a>
+
+      <h1 class="selection-page-title">Review your meal</h1>
+    </div>
+
+    <div class="review-layout">
+
+      <!-- LEFT: ITEMS -->
+      <div class="review-left">
+
+        <!-- ITEM -->
+        <div class="review-item">
+          <img src="../../pictures/turkeysub.jpg" class="review-img">
+
+          <div class="review-info">
+            <h3>Turkey Sub</h3>
+            <p>460 cal</p>
+            <p class="detail-price">$7.99 | 460 cal</p>
+            <p>Includes: Turkey, Lettuce, Tomato, Onion, Mayo</p>
+          </div>
+
+          <a href="#" class="edit-link">Edit</a>
+        </div>
+
+        <hr>
+
+        <div class="review-item">
+          <img src="../../pictures/Chips.webp" class="review-img">
+
+          <div class="review-info">
+            <h3>Chips</h3>
+            <p>420 cal</p>
+            <p class="detail-price">$1.99 | 120 cal</p>
+          </div>
+
+          <a href="#" class="edit-link">Edit</a>
+        </div>
+
+        <hr>
+
+        <div class="review-item">
+          <img src="../../pictures/subwaydrink.jpg" class="review-img">
+
+          <div class="review-info">
+            <h3>Medium Fountain Drink</h3>
+            <p>220 cal</p>
+            <p class="detail-price">$2.99 | 220 cal</p>
+          </div>
+
+          <a href="#" class="edit-link">Edit</a>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: SUMMARY -->
+      <div class="review-right">
+
+        <h2 class="review-title">Turkey Sub Meal</h2>
+        <p class="review-meta">$12.97 | 800 cal</p>
+
+        <!-- quantity -->
+        <div class="qty-box">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+
+        <!-- totals -->
+        <div class="price-box">
+          <p>Subtotal: $12.97</p>
+          <p>Tax: $0.65</p>
+          <hr>
+          <p class="total">Total: $13.62</p>
+        </div>
+
+        <a href="../subway/ConfirmationOrder.html" class="checkout-btn">Go to Checkout</a>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+</body>
+</html>
