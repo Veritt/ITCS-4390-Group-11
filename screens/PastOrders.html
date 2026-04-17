@@ -14,21 +14,20 @@
   <div class="past-orders-page">
     <!-- Top navigation bar (green background) with logo, hamburger menu, dark mode icon -->
     <header class="top-bar">
-        <a href="./index.html" class="topbar-logo">
-            <img src="../pictures/charlotte-logo.png" alt="UNC Charlotte Dining Logo">
-        </a>
+      <a href="./index.html" class="topbar-logo">
+        <img src="../pictures/charlotte-logo.png" alt="UNC Charlotte Dining Logo">
+      </a>
 
-        <nav class="desktop-nav">
-            <a href="./index.html">Home</a>
-            <a href="./profile.html">Profile</a>
-            <a href="./paymentMethod.html">Payment Method</a>
-            <a href="./pastOrders.html" class="active">Past Orders</a>
-        </nav>
+      <nav class="desktop-nav">
+        <a href="./index.html">Home</a>
+        <a href="./profile.html">Profile</a>
+        <a href="./paymentMethod.html">Payment Method</a>
+        <a href="./pastOrders.html" class="active">Past Orders</a>
+      </nav>
 
-        <img class="dark-mode-icon" src="../pictures/dark-mode-button.svg" />
-        <img class="menu-icon" id="menuOpen" src="../pictures/hamburger-menu-icon.svg" alt="Menu">
-      </header>
-    
+      <img class="dark-mode-icon" src="../pictures/dark-mode-button.svg" alt="Dark mode" />
+      <img class="menu-icon" id="menuOpen" src="../pictures/hamburger-menu-icon.svg" alt="Menu">
+    </header>
 
     <div class="menu-overlay" id="menuOverlay"></div>
 
@@ -42,115 +41,199 @@
           <img src="../pictures/home-icon.svg" alt="Homepage">
           <span>Homepage</span>
         </a>
-
         <a href="./profile.html" class="side-menu-link">
           <img src="../pictures/profile-icon.svg" alt="Profile">
           <span>Profile</span>
         </a>
-
         <a href="./paymentMethod.html" class="side-menu-link">
           <img src="../pictures/payment-icon.svg" alt="Payment Method">
           <span>Payment Method</span>
         </a>
-
         <a href="./pastOrders.html" class="side-menu-link">
           <img src="../pictures/orders-icon.svg" alt="Past Orders">
-          <span>Past Orders</span>
         </a>
       </nav>
     </aside>
 
-    <main class="past-orders-container">
-    <section class="past-orders-list">
+<main class="past-orders-container">
+  <!-- Page Title -->
+  <div class="page-title-container">
+    <h1 class="page-title">My Past Orders</h1>
+  </div>
 
+  <!-- Dropdown List -->
+  <section class="past-orders-list">
+
+        <!-- 1. Bojangles -->
         <section class="past-order-restaurant">
-        <button class="past-order-summary" id="bojangles-button" type="button">
-            <img
-            src="../pictures/bojangles-logo.svg"
-            alt="Bojangles logo"
-            class="restaurant-logo"
-            >
-
+          <button class="past-order-summary" id="bojangles-button" type="button">
+            <img src="../pictures/bojangles-logo.svg" alt="Bojangles logo" class="restaurant-logo">
             <div class="restaurant-info">
-            <span class="restaurant-name">Bojangles</span>
-            <span class="restaurant-location">Student Union</span>
+              <span class="restaurant-name">Bojangles</span>
+              <span class="restaurant-location">Student Union</span>
             </div>
-
-            <img
-            src="../pictures/forward-arrow-icon.svg"
-            alt="Expand Bojangles orders"
-            class="dropdown-arrow"
-            >
-        </button>
-
-        <div class="past-order-details" id="bojangles-orders" hidden>
+            <img src="../pictures/forward-arrow-icon.svg" alt="Expand Bojangles orders" class="dropdown-arrow">
+          </button>
+          <div class="past-order-details" id="bojangles-orders" hidden>
             <div class="restaurant-order-group">
-            <article class="order-card">
+              <article class="order-card">
                 <div class="order-label">Recent Order</div>
                 <div class="order-row">
-                <div class="order-main-info">
+                  <div class="order-main-info">
                     <div class="order-item-name">Bo's Chicken Sandwich Meal</div>
-                    <div class="order-item-description">
-                    Medium Sweet Tea • Medium Fries
-                    </div>
-                </div>
-                <div class="order-additional-info">
+                    <div class="order-item-description">Bo's Chicken Sandwich • Medium Sweet Tea • Medium Fries</div>
+                  </div>
+                  <div class="order-additional-info">
                     <span class="order-price">$7.99</span>
-                    <span class="order-date">Yesterday</span>
+                    <span class="order-date">1/25/26</span>
+                  </div>
                 </div>
-                </div>
-            </article>
+              </article>
             </div>
-        </div>
+          </div>
         </section>
 
+        <!-- 2. Subway -->
         <section class="past-order-restaurant">
-        <button class="past-order-summary" id="subway-button" type="button">
+          <button class="past-order-summary" id="subway-button" type="button">
             <img src="../pictures/subway.png" alt="Subway logo" class="restaurant-logo">
-
             <div class="restaurant-info">
-            <span class="restaurant-name">Subway</span>
-            <span class="restaurant-location">Cone University Center</span>
+              <span class="restaurant-name">Subway</span>
+              <span class="restaurant-location">Cone University Center</span>
             </div>
-
             <img src="../pictures/forward-arrow-icon.svg" alt="Expand Subway orders" class="dropdown-arrow">
-        </button>
-
-        <div class="past-order-details" id="subway-orders" hidden>
+          </button>
+          <div class="past-order-details" id="subway-orders" hidden>
             <div class="restaurant-order-group">
-            <article class="order-card">
+              <article class="order-card">
                 <div class="order-label">Recent Order</div>
                 <div class="order-row">
-                <div class="order-main-info">
+                  <div class="order-main-info">
                     <div class="order-item-name">Build Your Own 6 inch</div>
-                    <div class="order-item-description">
-                    9-Grain Wheat (Toasted) • Steak • American Cheese
-                    </div>
-                </div>
-                <div class="order-additional-info">
+                    <div class="order-item-description">9-Grain Wheat (Toasted) • Steak • American Cheese</div>
+                  </div>
+                  <div class="order-additional-info">
                     <span class="order-price">$7.99</span>
                     <span class="order-date">Yesterday</span>
+                  </div>
                 </div>
-                </div>
-            </article>
-
-            <article class="order-card">
+              </article>
+              <article class="order-card">
                 <div class="order-row">
-                <div class="order-main-info">
+                  <div class="order-main-info">
                     <div class="order-item-name">Raspberry Cheesecake Cookie</div>
-                </div>
-                <div class="order-additional-info">
+                  </div>
+                  <div class="order-additional-info">
                     <span class="order-price">$2.99</span>
                     <span class="order-date">02/22/26</span>
+                  </div>
                 </div>
-                </div>
-            </article>
+              </article>
             </div>
-        </div>
+          </div>
         </section>
 
-    </section>
+        <!-- 3. Wendy's -->
+        <section class="past-order-restaurant">
+          <button class="past-order-summary" id="wendys-button" type="button">
+            <img src="../pictures/wendys.png" alt="Wendy's logo" class="restaurant-logo">
+            <div class="restaurant-info">
+              <span class="restaurant-name">Wendy's</span>
+              <span class="restaurant-location">Student Union</span>
+            </div>
+            <img src="../pictures/forward-arrow-icon.svg" alt="Expand Wendy's orders" class="dropdown-arrow">
+          </button>
+          <div class="past-order-details" id="wendys-orders" hidden>
+            <div class="restaurant-order-group">
+              <article class="order-card">
+                <div class="order-label">Recent Order</div>
+                <div class="order-row">
+                  <div class="order-main-info">
+                    <div class="order-item-name">Baconator Combo</div>
+                    <div class="order-item-description">Baconator • Medium Starry • Medium Fries</div>
+                  </div>
+                  <div class="order-additional-info">
+                    <span class="order-price">$9.49</span>
+                    <span class="order-date">02/28/26</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Chick-fil-A -->
+        <section class="past-order-restaurant">
+          <button class="past-order-summary" id="chickfila-button" type="button">
+            <img src="../pictures/chickfila-logo.png" alt="Chick-fil-A logo" class="restaurant-logo">
+            <div class="restaurant-info">
+              <span class="restaurant-name">Chick-fil-A</span>
+              <span class="restaurant-location">Prospector</span>
+            </div>
+            <img src="../pictures/forward-arrow-icon.svg" alt="Expand Chick-fil-A orders" class="dropdown-arrow">
+          </button>
+          <div class="past-order-details" id="chickfila-orders" hidden>
+            <div class="restaurant-order-group">
+              <article class="order-card">
+                <div class="order-label">Recent Order</div>
+                <div class="order-row">
+                  <div class="order-main-info">
+                    <div class="order-item-name">Chick-fil-A Sandwich Meal</div>
+                    <div class="order-item-description">Chick-fil-A Sandwich • Large Lemonade • Large Waffle Potato Fries</div>
+                  </div>
+                  <div class="order-additional-info">
+                    <span class="order-price">$12.74</span>
+                    <span class="order-date">03/05/26</span>
+                  </div>
+                </div>
+              </article>
+              <article class="order-card">
+                <div class="order-row">
+                  <div class="order-main-info">
+                    <div class="order-item-name">Medium Waffle Potato Fries</div>
+                  </div>
+                  <div class="order-additional-info">
+                    <span class="order-price">$2.35</span>
+                    <span class="order-date">03/24/26</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. Panda Express -->
+        <section class="past-order-restaurant">
+          <button class="past-order-summary" id="pandaexpress-button" type="button">
+            <img src="../pictures/pandaexpress-logo.jpg" alt="Panda Express logo" class="restaurant-logo">
+            <div class="restaurant-info">
+              <span class="restaurant-name">Panda Express</span>
+              <span class="restaurant-location">Prospector</span>
+            </div>
+            <img src="../pictures/forward-arrow-icon.svg" alt="Expand Panda Express orders" class="dropdown-arrow">
+          </button>
+          <div class="past-order-details" id="pandaexpress-orders" hidden>
+            <div class="restaurant-order-group">
+              <article class="order-card">
+                <div class="order-label">Recent Order</div>
+                <div class="order-row">
+                  <div class="order-main-info">
+                    <div class="order-item-name">Plate</div>
+                    <div class="order-item-description">Chow Mein • Honey Sesame Chicken • Honey Sesame Chicken • Chicken egg roll and Drink </div>
+                  </div>
+                  <div class="order-additional-info">
+                    <span class="order-price">$13.63</span>
+                    <span class="order-date">04/14/26</span>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </section>
+
+      </section>
     </main>
-</div>
+  </div>
 </body>
 </html>
