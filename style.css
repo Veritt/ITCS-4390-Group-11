@@ -438,8 +438,7 @@ img {
 }
 
 .selection-header {
-    display: flex;
-    flex-direction: column;
+    flex: 1; 
     gap: 16px;
     margin-bottom: 24px;
 }
@@ -568,7 +567,7 @@ img {
 /* ---------- BEVERAGE SELECTION ---------- */
 
 .beverage-page {
-    background: #f4f4f4;
+    background: #ffffff;
     text-align: center;
 }
 
@@ -608,7 +607,7 @@ img {
 
 
 .beverage-size-page {
-    background: #f4f4f4;
+    background: #ffffff;
 }
 
 /* MAIN LAYOUT */
@@ -757,7 +756,7 @@ img {
 /* ---------- REVIEW PAGE ---------- */
 .review-page {
     padding: 20px 24px 40px;
-    background: #f4f4f4;
+    background: #ffffff;
 }
 
 /* LAYOUT */
@@ -904,7 +903,7 @@ img {
 /* ---------- PLACE ORDER ---------- */
 
 .placeorder-page {
-  background: #f4f4f4;
+  background: #ffffff;
 }
 
 /* MAIN LAYOUT */
@@ -1059,7 +1058,7 @@ img {
 /* ---------- ORDER CONFIRMATION PAGE ---------- */
 
 .confirm-page {
-  background: #f4f4f4;
+  background: #ffffff;
 }
 
 /* MAIN LAYOUT */
