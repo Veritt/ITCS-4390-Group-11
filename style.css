@@ -1258,15 +1258,18 @@ img {
     align-items: center;
 }
 
-/* Profile Image */
+.profile-left, .profile-right {
+    display: flex;
+    flex-direction: column;
+}
+
 .profile-page .userimg {
-    width: 120px;
-    height: 120px;
+    width: 168px;
+    height: 168px;
     border-radius: 50%;
     margin-bottom: 18px;
 }
 
-/* Name + School */
 .profile-page .profile-name {
     font-size: 1.6rem;
     font-weight: 700;
@@ -1296,21 +1299,85 @@ img {
     border-bottom: none;
 }
 
-/* Icons */
 .profile-page .icon {
-    width: 26px;
-    height: 26px;
+    width: 46px;
+    height: 46px;
 }
 
-/* Email text */
 .profile-page .email {
     font-weight: 600;
 }
 
-/* Logout */
 .profile-page .logout-text {
     color: #c62828;
     font-weight: 700;
+}
+
+/* Responsive desktop for profile page */
+@media (min-width: 768px) {
+    .profile-page {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 120px;
+        padding: 40px;
+    }
+
+    .profile-page .userimg {
+        width: 502px;
+        height: 514px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .profile-page .profile-name {
+        font-size: 2rem;
+    }
+
+    .profile-page .profile-school {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
+
+    .profile-page .profile-row {
+        max-width: none;
+        width: auto;
+    }
+
+    .profile-left {
+        align-items: center;
+        padding-left: 200px;
+    }
+
+    .profile-right {
+        gap: 6px;
+        align-items: flex-start;
+        padding-left: 80px;
+    }
+
+    .profile-row {
+        font-size: 2.15rem;
+    }
+
+    .profile-right-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        align-items: center;
+        padding-left: 120px;
+    }
+
+    .profile-page .icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .profile-page .email {
+        font-weight: 600;
+    }
+
+    .profile-page .logout-text {
+        color: #c62828;
+        font-weight: 700;
+    }
 }
 
 /* ---------- CREDIT CARD PAGE ---------- */
