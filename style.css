@@ -1303,13 +1303,19 @@ img {
     height: 46px;
 }
 
-.profile-page .email {
+.profile-page {
     font-weight: 600;
 }
 
 .profile-page .logout-text {
     color: #c62828;
     font-weight: 700;
+}
+
+.phone-profile,
+.email,
+.logout-text {
+    font-size: 1.2rem;
 }
 
 /* Responsive desktop for profile page */
@@ -1361,7 +1367,7 @@ img {
         font-size: 1.5rem;
         font-weight: 700;
         align-items: center;
-        padding-left: 120px;
+        padding-left: 80px; /* need to change for all desktop sizes */
     }
 
     .profile-page .icon {
@@ -1376,6 +1382,12 @@ img {
     .profile-page .logout-text {
         color: #c62828;
         font-weight: 700;
+    }
+
+    .phone-profile,
+    .email,
+    .logout-text {
+        font-size: 1.3rem;
     }
 }
 
@@ -2531,4 +2543,262 @@ img {
     font-weight: bold;
 }
 
+/* Footer */
+.footer-container {
+    width: 100%;
+    margin: 0;
+    padding: 2.5rem 2rem 1.8rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2.2rem;
+    background: #005035;
+}
 
+/* Left column: University logo, addresses, phone */
+.footer-address {
+    flex: 1;
+    min-width: 240px;
+}
+
+.university-logo {
+    width: 280px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.address-block {
+    margin-top: 0.75rem;
+}
+
+.address-item {
+    margin-bottom: 1.2rem;
+    line-height: 1.45;
+}
+
+.address-link {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.address-link a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 450;
+}
+
+.address-link a:hover {
+    color: #f0cd8d;
+    transform: translateX(3px);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.campus-title {
+    color: #39AD7B;
+    font-size: 1.1rem;
+    letter-spacing: 0.3px;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+
+.address-detail {
+    font-size: 1rem;
+    color: #e2e8f0;
+    line-height: 1.5;
+}
+
+.phone-block {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.4rem 1rem;
+    border-radius: 40px;
+    backdrop-filter: blur(2px);
+}
+
+.phone-icon {
+    width: 26px;
+    height: 26px;
+}
+
+.phone-link {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.phone-link a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 450;
+}
+
+.phone-link a:hover {
+    color: #39AD7B;
+    transform: translateX(3px);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.copyright {
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    font-size: 0.8rem;
+}
+
+/* Right column: Resources */
+.footer-resources {
+    flex: 1;
+    min-width: 220px;
+}
+
+.resources-heading {
+    font-size: 1.1rem;
+    font-weight: bold italic;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem 1.5rem;
+}
+
+.resource-link {
+    list-style: none;
+}
+
+.resource-link a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: underline;
+    gap: 6px;
+    font-weight: 450;
+}
+
+.resource-link a:hover {
+    color: #39AD7B;
+    transform: translateX(3px);
+    text-underline-offset: 4px;
+    text-decoration: none;
+}
+
+/* Socials */
+.footer-social {
+    flex: 1;
+    min-width: 180px;
+}
+
+.social-heading {
+    font-size: 1.1rem;
+    font-weight: bold italic;
+    color: #FFFFFF;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.social-item {
+    list-style: none;
+}
+
+/* placeholder for icon later */
+.social-item a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #e0e7ef;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 450;
+    transition: all 0.2s ease;
+    padding: 0.2rem 0;
+}
+
+.social-item a:hover {
+    color: #39AD7B;
+    text-decoration: none;
+    transform: translateX(4px);
+}
+
+.social-item a:hover .social-icon {
+    transform: scale(1.05);
+}
+
+.social-label {
+    font-size: 0.9rem;
+}
+
+
+/* Responsive Footer */
+@media (max-width: 780px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .footer-address, .footer-resources {
+        flex: auto;
+    }
+    .resources-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+}
+
+@media (min-width: 1280px) {
+    .footer-container {
+        padding: 2.5rem 4rem 1.8rem 4rem;
+        gap: 3rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .footer-container {
+        padding: 2.5rem 6rem 1.8rem 6rem;
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 1.8rem 1.2rem 1.2rem 1.2rem;
+    }
+    .university-logo {
+        width: 220px;
+        height: 80px;
+    }
+    .address-link a, .phone-link a {
+        font-size: 0.85rem;
+    }
+    .resources-heading {
+        font-size: 1rem;
+    }
+    .resource-link a {
+        font-size: 0.85rem;
+    }
+}
