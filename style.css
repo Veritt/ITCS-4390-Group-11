@@ -1304,13 +1304,19 @@ img {
     height: 46px;
 }
 
-.profile-page .email {
+.profile-page {
     font-weight: 600;
 }
 
 .profile-page .logout-text {
     color: #c62828;
     font-weight: 700;
+}
+
+.phone,
+.email,
+.logout-text {
+    font-size: 1.2rem;
 }
 
 /* Responsive desktop for profile page */
@@ -1362,7 +1368,7 @@ img {
         font-size: 1.5rem;
         font-weight: 700;
         align-items: center;
-        padding-left: 120px;
+        padding-left: 80px; /* need to change for all desktop sizes */
     }
 
     .profile-page .icon {
@@ -1377,6 +1383,12 @@ img {
     .profile-page .logout-text {
         color: #c62828;
         font-weight: 700;
+    }
+
+    .phone,
+    .email,
+    .logout-text {
+        font-size: 1.3rem;
     }
 }
 
