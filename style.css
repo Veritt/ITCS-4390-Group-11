@@ -2078,7 +2078,7 @@ img {
   display: block;
   width: 100%;
   text-align: center;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 600;
   margin: 0;
 }
@@ -2135,6 +2135,39 @@ img {
     cursor: pointer;
     text-align: left;
     font: inherit;
+}
+
+/* Past Orders - Date under Price on Right Side*/
+.order-item-description {
+  display: block;
+}
+
+.order-additional-info {
+  gap: 4px;
+  text-align: right;
+}
+
+.order-price {
+  margin-bottom: 4px;
+}
+
+.order-date {
+  padding-top: 2px;
+}
+
+@media (max-width: 600px) {
+  .order-additional-info {
+    flex-direction: row;
+    gap: 16px;
+  }
+  
+  .order-price {
+    margin-bottom: 0;
+  }
+  
+  .order-date {
+    padding-top: 0;
+  }
 }
 
 .restaurant-info {
@@ -2311,6 +2344,13 @@ img {
   box-shadow: 0 0 0 1px #005035;
 }
 
+/* Past Orders Page, Resturant Card Dropdown - Hover Over */
+.past-order-restaurant:hover {
+    border: 1px solid #005035;
+    transition: border 0.2s ease;
+}
+
+
 /* Navigation Bar, Dark Mode and Hamburger - Hover Over*/
 .dark-mode-icon:hover,
 .menu-icon:hover {
@@ -2333,12 +2373,6 @@ img {
     background-color: #ffffff;
     color: #000000;
     border: 1px solid #000000;
-}
-
-/* Past Orders Page, Bojangles and Subway Dropdown - Hover Over */
-.dropdown:hover {
-    border: 1px solid #005035;
-    transition: border 0.2s ease;
 }
 
 /* Restaurant Menu Page, Meals Card - Hover Over */
@@ -2525,11 +2559,6 @@ img {
   display: block; 
 }
 
-/* Past Orders Page, Resturant Card Dropdown - Hover Over */
-.past-order-restaurant:hover {
-    border: 1px solid #005035;
-    transition: border 0.2s ease;
-}
 
 /* ASSIGNMENT 12 -- FORMATS */ 
 .success-text {
