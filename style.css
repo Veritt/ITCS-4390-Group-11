@@ -1390,6 +1390,32 @@ img {
         font-size: 1.3rem;
     }
 }
+/* Fixed Profile Picture Stretching */
+.profile-page .userimg {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 168px;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .profile-page .userimg {
+        width: 350px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        min-width: 350px;
+        max-width: 350px;
+    }
+}
+
+/* Prevent size loss on zoom for very large screens */
+@media (min-width: 1200px) {
+    .profile-page .userimg {
+        width: 400px;
+        min-width: 400px;
+        max-width: 400px;
+    }
+}
 
 /* ---------- CREDIT CARD PAGE ---------- */
 
