@@ -1373,7 +1373,7 @@ img {
     }
 
     .profile-right-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 700;
         align-items: center;
         padding-left: 80px; /* need to change for all desktop sizes */
@@ -2118,7 +2118,7 @@ img {
   display: block;
   width: 100%;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   margin: 0;
 }
