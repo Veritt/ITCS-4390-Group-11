@@ -168,7 +168,7 @@ img {
 
 /* Alternative: If you want contain (shows whole logo without cropping) */
 .header-block .header-logo.contain {
-    object-fit: contain;
+    object-fit: contain !important;
     background-color: #ffffff;
 }
 
@@ -2084,12 +2084,17 @@ img {
     color: #777;
 }
 
-/* ---------- PAST ORDERS PAGE - CENTERED ---------- */
+/* ---------- PAST ORDERS PAGE ---------- */
 .past-orders-page {
   min-height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* pulls title upward */
+.page-title-container {
+    margin-top: -75px;  
 }
 
 .past-orders-container {
@@ -2098,7 +2103,7 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 24px 16px 36px;
+  padding: 10px 16px 36px;
   flex: 1;
 }
 
