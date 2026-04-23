@@ -2544,6 +2544,10 @@ img {
 }
 
 /* Footer */
+.footer {
+    margin-top: 100px;
+}
+
 .footer-container {
     width: 100%;
     margin: 0;
@@ -2566,10 +2570,13 @@ img {
     height: 100px;
     display: flex;
     justify-content: center;
+    padding-left: 20%;
 }
 
 .address-block {
     margin-top: 0.75rem;
+    padding-left: 20%;
+    padding-bottom: 8px;
 }
 
 .address-item {
@@ -2658,6 +2665,7 @@ img {
     letter-spacing: 0.2px;
     color: #FFFFFF;
     font-size: 0.8rem;
+    padding-left: 20%;
 }
 
 /* Right column: Resources */
@@ -2673,16 +2681,20 @@ img {
     color: #FFFFFF;
     display: inline-block;
     padding-bottom: 0.3rem;
+    padding-left: 20%;
 }
 
 .resources-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0.85rem 1.5rem;
+    align-items: center;
+    padding-left: 15%;
 }
 
 .resource-link {
     list-style: none;
+    align-items: center;
 }
 
 .resource-link a {
@@ -2716,12 +2728,20 @@ img {
     color: #FFFFFF;
     display: inline-block;
     padding-bottom: 0.3rem;
+    padding-left: 20%;
 }
 
 .social-links {
     display: flex;
     flex-direction: column;
     gap: 0.9rem;
+    padding-bottom: 20%;
+    padding-left: 15%;
+}
+
+.social-icon {
+    width: 26px;
+    height: 26px;
 }
 
 .social-item {
@@ -2733,8 +2753,8 @@ img {
     display: flex;
     align-items: center;
     gap: 12px;
-    color: #e0e7ef;
-    text-decoration: none;
+    color: #FFFFFF;
+    text-decoration: underline;
     font-size: 0.95rem;
     font-weight: 450;
     transition: all 0.2s ease;
@@ -2766,7 +2786,30 @@ img {
         flex: auto;
     }
     .resources-grid {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        align-items: center;
+        flex: auto;
+        padding-top: 20px;
+        padding-left: 20%;
+    }
+    .resources-heading {
+        padding-top: 40px;
+        padding-left: 30%;
+    }
+    .social-heading {
+        padding-top: 40px;
+        padding-left: 30%;
+    }
+    .footer-social {
+        flex: auto;
+        padding-bottom: 20%;
+    }
+    .social-links {
+        padding-left: 20%;
+    }
+    .university-logo {
+        width: 280px;
+        height: 100px;
+        justify-content: center;
     }
 }
 
