@@ -158,10 +158,18 @@ img {
     margin-bottom: 34px;
 }
 
-.header-logo {
-    width: 102px;
-    height: 102px;
-    border-radius: 14px;
+
+.header-block .header-logo {
+    width: 100px ;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 10px ;
+}
+
+/* Alternative: If you want contain (shows whole logo without cropping) */
+.header-block .header-logo.contain {
+    object-fit: contain;
+    background-color: #ffffff;
 }
 
 .header-text {
