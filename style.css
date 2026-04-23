@@ -2816,3 +2816,156 @@ img {
     align-items: center;
     text-align: center;
 }
+
+/* ===============================================
+   UPDATED IMAGE CONTAINER STYLES
+   360px x 280px for Meals, Sides, and Beverages
+   =============================================== */
+
+/* --- MEALS PAGE (meals-container) --- */
+.meals-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.meal-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.meal-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 360px;
+}
+
+.meal-image {
+  width: 360px;
+  height: 280px;
+  object-fit: cover;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  display: block;
+}
+
+/* --- SIDE SELECTION PAGE (selection-grid) --- */
+.selection-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.selection-card-link {
+  display: block;
+  text-decoration: none;
+}
+
+.selection-card {
+  width: 360px;
+  height: 280px;
+  padding: 0;
+  border: 1px solid #cfcfcf;
+  background: #ffffff;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.selection-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Override any conflicting .selection-card styles from existing CSS */
+.selection-card.selected {
+  border: 2px solid #005035;
+}
+
+/* --- BEVERAGE SELECTION PAGE (beverage-container) --- */
+.beverage-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.beverage-card {
+  width: 360px;
+  height: 280px;
+  border: 1px solid #cfcfcf;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.beverage-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+.beverage-label {
+  margin-top: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* --- RESPONSIVE BEHAVIOR (scale down on smaller screens) --- */
+@media (max-width: 560px) {
+  .meal-image,
+  .selection-card,
+  .beverage-card {
+    width: 300px;
+    height: 233px;
+  }
+  
+  .meal-card {
+    width: 300px;
+  }
+}
+
+@media (max-width: 420px) {
+  .meal-image,
+  .selection-card,
+  .beverage-card {
+    width: 260px;
+    height: 202px;
+  }
+  
+  .meal-card {
+    width: 260px;
+  }
+}
+
+@media (max-width: 360px) {
+  .meal-image,
+  .selection-card,
+  .beverage-card {
+    width: 240px;
+    height: 187px;
+  }
+  
+  .meal-card {
+    width: 240px;
+  }
+}
