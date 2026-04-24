@@ -368,3 +368,48 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+/* =========================
+    Menu Button Selection JS
+========================= */
+document.querySelectorAll('.size-toggle').forEach(toggleGroup => {
+        const buttons = toggleGroup.querySelectorAll('.size-option');
+        
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                buttons.forEach(btn => btn.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+    });
+
+/* =========================
+    Condiment Button Selection JS
+========================= */
+document.querySelectorAll('.addon-button').forEach(button => {
+    button.addEventListener('click', function() {
+        this.classList.toggle('selected');
+    });
+});
+
+/* =========================
+    Quantity Selector JS
+========================= */
+const qtyBox = document.querySelector('.qty-box');
+const minusBtn = qtyBox.querySelector('.qty-minus');
+const plusBtn = qtyBox.querySelector('.qty-plus');
+const quantitySpan = qtyBox.querySelector('.qty-number');
+
+let quantity = 1;
+
+minusBtn.addEventListener('click', () => {
+    if (quantity > 1) {
+        quantity--;
+        quantitySpan.textContent = quantity;
+    }
+});
+
+plusBtn.addEventListener('click', () => {
+    quantity++;
+    quantitySpan.textContent = quantity;
+});
