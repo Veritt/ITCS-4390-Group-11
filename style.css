@@ -2654,7 +2654,12 @@ img {
 
 /* Footer */
 .footer {
-    margin-top: 100px;
+    margin-top: 10%;
+    width: 100%;
+    position: relative;
+    clear: both;
+    left: 0;
+    right: 0;
 }
 
 .footer-container {
@@ -2666,6 +2671,7 @@ img {
     justify-content: space-between;
     gap: 2.2rem;
     background: #005035;
+    box-sizing: border-box;
 }
 
 /* Left column: University logo, addresses, phone */
@@ -2922,6 +2928,7 @@ img {
     }
 }
 
+/* Desktop Footer for zooming out */
 @media (min-width: 1280px) {
     .footer-container {
         padding: 2.5rem 4rem 1.8rem 4rem;
@@ -2934,8 +2941,22 @@ img {
         padding: 2.5rem 6rem 1.8rem 6rem;
         gap: 4rem;
     }
+    .university-logo {
+        max-width: 320px;
+    }
+    .address-detail {
+        font-size: 1.05rem;
+    }
 }
 
+@media (max-width: 800px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile Footer */
 @media (max-width: 480px) {
     .footer-container {
         padding: 1.8rem 1.2rem 1.2rem 1.2rem;
