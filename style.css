@@ -158,10 +158,18 @@ img {
     margin-bottom: 34px;
 }
 
-.header-logo {
-    width: 102px;
-    height: 102px;
-    border-radius: 14px;
+
+.header-block .header-logo {
+    width: 100px ;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 10px ;
+}
+
+/* Alternative: If you want contain (shows whole logo without cropping) */
+.header-block .header-logo.contain {
+    object-fit: contain !important;
+    background-color: #ffffff;
 }
 
 .header-text {
@@ -172,7 +180,8 @@ img {
 
 .bojangles,
 .subway,
-.panda {
+.panda,
+.chickfila {   
     margin: 0;
     font-size: clamp(2.4rem, 3vw, 3.4rem); 
     line-height: 1.05;
@@ -1397,7 +1406,7 @@ img {
     }
 
     .profile-right-title {
-        font-size: 1.5em;
+        font-size: 1.3rem;
         font-weight: 700;
         align-items: center;
         padding-left: 40%;
@@ -1428,6 +1437,32 @@ img {
     .email,
     .logout-text {
         font-size: 1.3rem;
+    }
+}
+/* Fixed Profile Picture Stretching */
+.profile-page .userimg {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 168px;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .profile-page .userimg {
+        width: 350px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        min-width: 350px;
+        max-width: 350px;
+    }
+}
+
+/* Prevent size loss on zoom for very large screens */
+@media (min-width: 1200px) {
+    .profile-page .userimg {
+        width: 400px;
+        min-width: 400px;
+        max-width: 400px;
     }
 }
 
@@ -2089,12 +2124,17 @@ img {
     color: #777;
 }
 
-/* ---------- PAST ORDERS PAGE - CENTERED ---------- */
+/* ---------- PAST ORDERS PAGE ---------- */
 .past-orders-page {
   min-height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* pulls title upward */
+.page-title-container {
+    margin-top: -75px;  
 }
 
 .past-orders-container {
@@ -2103,7 +2143,7 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 24px 16px 36px;
+  padding: 10px 16px 36px;
   flex: 1;
 }
 
@@ -2118,7 +2158,7 @@ img {
   display: block;
   width: 100%;
   text-align: center;
-  font-size: 32px;
+  font-size: 1.8rem;
   font-weight: 600;
   margin: 0;
 }
@@ -2175,6 +2215,39 @@ img {
     cursor: pointer;
     text-align: left;
     font: inherit;
+}
+
+/* Past Orders - Date under Price on Right Side*/
+.order-item-description {
+  display: block;
+}
+
+.order-additional-info {
+  gap: 4px;
+  text-align: right;
+}
+
+.order-price {
+  margin-bottom: 4px;
+}
+
+.order-date {
+  padding-top: 2px;
+}
+
+@media (max-width: 600px) {
+  .order-additional-info {
+    flex-direction: row;
+    gap: 16px;
+  }
+  
+  .order-price {
+    margin-bottom: 0;
+  }
+  
+  .order-date {
+    padding-top: 0;
+  }
 }
 
 .restaurant-info {
@@ -2351,6 +2424,13 @@ img {
   box-shadow: 0 0 0 1px #005035;
 }
 
+/* Past Orders Page, Resturant Card Dropdown - Hover Over */
+.past-order-restaurant:hover {
+    border: 1px solid #005035;
+    transition: border 0.2s ease;
+}
+
+
 /* Navigation Bar, Dark Mode and Hamburger - Hover Over*/
 .dark-mode-icon:hover,
 .menu-icon:hover {
@@ -2373,12 +2453,6 @@ img {
     background-color: #ffffff;
     color: #000000;
     border: 1px solid #000000;
-}
-
-/* Past Orders Page, Bojangles and Subway Dropdown - Hover Over */
-.dropdown:hover {
-    border: 1px solid #005035;
-    transition: border 0.2s ease;
 }
 
 /* Restaurant Menu Page, Meals Card - Hover Over */
@@ -2565,11 +2639,6 @@ img {
   display: block; 
 }
 
-/* Past Orders Page, Resturant Card Dropdown - Hover Over */
-.past-order-restaurant:hover {
-    border: 1px solid #005035;
-    transition: border 0.2s ease;
-}
 
 /* ASSIGNMENT 12 -- FORMATS */ 
 .success-text {
