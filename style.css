@@ -37,6 +37,7 @@ img {
     display: flex;
     align-items: center;
     gap: 16px;
+    font-weight: 700;
 }
 
 .desktop-nav a {
@@ -1424,6 +1425,31 @@ img {
     .email,
     .logout-text {
         font-size: 1.3rem;
+    }
+
+    @media {min-width : 1200px} {
+        .profile-page {
+            gap: 200px;
+        }
+
+        .profile-left {
+            padding-left: 250px;
+        }
+
+        .profile-right {
+            padding-left: 15%;
+        }
+
+        .profile-row {
+            padding-bottom: 80%;
+        }
+
+        .profile-right-title {
+            padding-left: 50%;
+            padding-bottom: 20%;
+            padding-top: 20%;
+        }
+        
     }
 }
 /* Fixed Profile Picture Stretching */
