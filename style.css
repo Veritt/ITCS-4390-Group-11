@@ -27,7 +27,6 @@ img {
     min-height: calc(100vh - 80px);
     display: flex; 
     flex-direction: column; 
-    background: #ffffff;
 }
 
 .topbar-logo {
@@ -68,7 +67,7 @@ img {
 
 .desktop-nav a.active {
     background: #ffffff;
-    color: #005035;
+    color: #007951;
     border-color: #ffffff;
     font-weight: 750;
 }
@@ -121,7 +120,6 @@ img {
 .dark-mode-icon, .menu-icon {
     position: absolute; 
     top: 50%;
-    width: 34px;
 }
 
 .dark-mode-icon {
@@ -603,7 +601,6 @@ img {
 /* ---------- BEVERAGE SELECTION ---------- */
 
 .beverage-page {
-    background: #ffffff;
     text-align: center;
 }
 
@@ -640,11 +637,6 @@ img {
 }
 
 /* ---------- DRINK SIZE SELECTION ---------- */
-
-
-.beverage-size-page {
-    background: #ffffff;
-}
 
 /* MAIN LAYOUT */
 .drink-size-layout {
@@ -792,7 +784,6 @@ img {
 /* ---------- REVIEW PAGE ---------- */
 .review-page {
     padding: 20px 24px 40px;
-    background: #ffffff;
 }
 
 /* LAYOUT */
@@ -1092,10 +1083,6 @@ img {
   }
 }
 /* ---------- ORDER CONFIRMATION PAGE ---------- */
-
-.confirm-page {
-  background: #ffffff;
-}
 
 /* MAIN LAYOUT */
 .confirm-layout {
@@ -1693,7 +1680,7 @@ img {
     left: 0;
     right: 0;
     height: 80px;
-    background: #005035;
+    background: #007951;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1717,7 +1704,6 @@ img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 34px;
     cursor: pointer;
 }
 
@@ -1879,7 +1865,7 @@ img {
 }
 
 .banner-wrapper {
-    background: #005035;
+    background: #007951;
     border-radius: 18px;
     padding: 6px;
     margin-top: 15px;
@@ -1938,7 +1924,7 @@ img {
 }
 
 .visit-card {
-    background: #005035;
+    background: #007951;
     color: #ffffff;
     border-radius: 10px;
     min-height: 54px;
@@ -2399,8 +2385,8 @@ img {
 
 /* Homepage, Search Bar - White background, Gray Border */
 .search-bar {
-  border: 1px solid #00000040 !important;
-  background: #ffffff !important;
+  border: 1px solid #00000040;
+  background: #ffffff;
   box-sizing: border-box;
 }
 
@@ -2572,8 +2558,8 @@ img {
 
 /* Highlighted item when using arrow keys */
 .autocomplete-active {
-    background: #e6e6e6 !important;
-    color: #000 !important;
+    background: #e6e6e6;
+    color: #000;
 }
 .autocomplete {
     position: relative;
@@ -2610,7 +2596,6 @@ img {
       display: flex;
       flex-wrap: wrap;
       gap: 2.5rem;
-      background: white;
       border-radius: 2rem;
       padding: 2rem;
       box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
@@ -2627,7 +2612,6 @@ img {
     }
 
     .include-item {
-      background: white;
       border-radius: 60px;
       display: flex;
       align-items: center;
@@ -2670,7 +2654,7 @@ img {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 2.2rem;
-    background: #005035;
+    background: #007951;
     box-sizing: border-box;
 }
 
@@ -2700,12 +2684,12 @@ img {
 }
 
 .address-link {
-    color: #FFFFFF;
+    color: #ffffffff;
     text-decoration: underline;
 }
 
 .address-link a {
-    color: #FFFFFF;
+    color: #ffffffff;
     text-decoration: none;
     font-size: 0.9rem;
     transition: all 0.2s ease;
@@ -2715,7 +2699,7 @@ img {
     font-weight: 450;
 }
 
-.address-link a:hover {
+.address-link:hover {
     color: #f0cd8d;
     transform: translateX(3px);
     text-decoration: underline;
@@ -2723,7 +2707,7 @@ img {
 }
 
 .campus-title {
-    color: #39AD7B;
+    color: #002c1d;
     font-size: 1.1rem;
     letter-spacing: 0.3px;
     margin-bottom: 0.25rem;
@@ -2732,7 +2716,7 @@ img {
 
 .address-detail {
     font-size: 1rem;
-    color: #e2e8f0;
+    color: #ffffff;
     line-height: 1.5;
 }
 
@@ -2754,12 +2738,12 @@ img {
 }
 
 .phone-link {
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: underline;
 }
 
 .phone-link a {
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: none;
     font-size: 0.9rem;
     transition: all 0.2s ease;
@@ -2769,8 +2753,8 @@ img {
     font-weight: 450;
 }
 
-.phone-link a:hover {
-    color: #39AD7B;
+.phone-link:hover {
+    color: #f0cd8d;
     transform: translateX(3px);
     text-decoration: underline;
     text-underline-offset: 4px;
@@ -2778,7 +2762,7 @@ img {
 
 .copyright {
     letter-spacing: 0.2px;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 0.8rem;
     padding-left: 20%;
 }
@@ -2793,7 +2777,8 @@ img {
     font-size: 1.1rem;
     font-weight: bold italic;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #ffffff;
+    font-weight: bold;
     display: inline-block;
     padding-bottom: 0.3rem;
     padding-left: 20%;
@@ -2813,7 +2798,7 @@ img {
 }
 
 .resource-link a {
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: none;
     font-size: 0.9rem;
     transition: all 0.2s ease;
@@ -2825,7 +2810,7 @@ img {
 }
 
 .resource-link a:hover {
-    color: #39AD7B;
+    color: #f0cd8d;
     transform: translateX(3px);
     text-underline-offset: 4px;
     text-decoration: none;
@@ -2840,7 +2825,8 @@ img {
 .social-heading {
     font-size: 1.1rem;
     font-weight: bold italic;
-    color: #FFFFFF;
+    color: #ffffff;
+    font-weight: bold;
     display: inline-block;
     padding-bottom: 0.3rem;
     padding-left: 20%;
@@ -2868,7 +2854,7 @@ img {
     display: flex;
     align-items: center;
     gap: 12px;
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: underline;
     font-size: 0.95rem;
     font-weight: 450;
@@ -2877,7 +2863,7 @@ img {
 }
 
 .social-item a:hover {
-    color: #39AD7B;
+    color: #f0cd8d;
     text-decoration: none;
     transform: translateX(4px);
 }
@@ -3141,4 +3127,159 @@ img {
   .meal-card {
     width: 240px;
   }
+}
+
+/* DARK MODE */
+
+.dark-mode {
+    background-color: #081310;
+}
+
+.dark-mode .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #081310;
+    border: 1px solid #464646;
+    border-radius: 28px;
+    padding: 14px 18px;
+    width: 100%;
+    margin-top: 20px;
+    max-width: 550px;
+    box-shadow: 0 4px 10px rgba(157, 157, 157, 0.12);
+}
+
+.dark-mode .search-icon {
+    filter: brightness(0) invert(1);
+}
+
+.dark-mode .banner-wrapper {
+    background: #022c1e;
+}
+
+.dark-mode .restaurant-grid a:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease;
+    border: 3px solid #f0cd8d;
+    border-radius: 12px;
+}
+
+.dark-mode .section-title, .dark-mode .visit-title {
+    color: #f0cd8d;
+}
+
+.dark-mode .visit-card, .dark-mode .top-bar {
+    background: #022c1e;
+}
+
+.dark-mode .desktop-nav a {
+    color: #f0cd8d;
+    border: 1.5px solid #f0cd8d;
+}
+
+.dark-mode .desktop-nav a:hover {
+    background: #a4966538;
+    border-color: #f0cd8d;
+}
+
+.dark-mode .desktop-nav a.active {
+    background: #f0cd8d;
+    color: #003624;
+    border-color: #f0cd8d;
+    font-weight: 750;
+}
+
+.dark-mode .footer-container {
+    background: #022c1e;
+}
+
+.dark-mode .address-link {
+    color: #f0cd8d;
+    text-decoration: underline;
+}
+
+.dark-mode .address-link a {
+    color: #f0cd8d;
+}
+
+.dark-mode .address-link:hover {
+    color: #e3b55f;
+}
+
+.dark-mode .campus-title {
+    color: #bd9750;
+}
+
+.dark-mode .address-detail {
+    color: #f0cd8d;
+}
+
+.dark-mode .phone-link {
+    color: #f0cd8d;
+}
+
+.dark-mode .phone-link a {
+    color: #f0cd8d;
+}
+
+.dark-mode .phone-link:hover {
+    color: #e3b55f;
+}
+
+.dark-mode .copyright {
+    color: #f0cd8d;
+}
+
+/* Right column: Resources */
+.dark-mode .resources-heading {
+    color: #bd9750;
+    font-weight: bold;
+}
+
+.dark-mode .resource-link a {
+    color: #f0cd8d;
+}
+
+.dark-mode .resource-link a:hover {
+    color: #e3b55f;
+}
+
+/* Socials */
+.dark-mode .social-heading {
+    color: #bd9750;
+    font-weight: bold;
+}
+
+/* placeholder for icon later */
+.dark-mode .social-item a {
+    color: #f0cd8d;
+}
+
+.dark-mode .social-item a:hover {
+    color: #e3b55f;
+}
+
+.dark-mode-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 70px;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+
+    appearance: none;
+    cursor: pointer;
+}
+
+.dark-mode-icon,
+.menu-icon {
+    width: 40px;
 }
