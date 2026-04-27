@@ -52,7 +52,7 @@ img {
     color: #ffffff;
     text-decoration: none;
 
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     font-weight: 600;
 
     border: 1.5px solid rgba(255, 255, 255, 0.6);
@@ -1440,6 +1440,8 @@ img {
         font-size: 1.3rem;
     }
 
+    /* Extra wide screens */
+
     @media {min-width : 1200px} {
         .profile-page {
             gap: 200px;
@@ -1454,7 +1456,7 @@ img {
         }
 
         .profile-row {
-            padding-bottom: 80%;
+            padding-bottom: 20%;
         }
 
         .profile-right-title {
@@ -1464,6 +1466,7 @@ img {
         }
         
     }
+
 }
 /* Fixed Profile Picture Stretching */
 .profile-page .userimg {
@@ -1926,6 +1929,7 @@ img {
 .section-title {
     font-size: 1rem;
     font-weight: 700;
+    font-size: 1.6rem;
     margin-top: 40px;
     margin-bottom: 15px;
 }
@@ -1937,8 +1941,8 @@ img {
 }
 
 .restaurant-logo {
-    width: 100px;
-    height: 72px;
+    width: 180px;
+    height: 102px;
     object-fit: cover;
     border-radius: 10px;
 }
