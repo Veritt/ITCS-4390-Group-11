@@ -293,9 +293,19 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         const month = parseInt(match[1], 10);
+        const year = parseInt(match[2], 10);
 
         if (month < 1 || month > 12) {
             setFieldState(expirationDate, messageElement, "Month must be between 01 and 12.", false);
+            return false;
+        }
+
+        const now = new Date();
+    const currentMonth = now.getMonth() + 1;
+    const currentYear = now.getFullYear() % 100;
+
+        if (year < currentYear || (year === currentYear && month < currentMonth)) {
+            setFieldState(expirationDate, messageElement, "This card is expired. Please use a valid card.", false);
             return false;
         }
 
