@@ -1325,6 +1325,14 @@ img {
     font-size: 1.05rem;
 }
 
+.profile-link-row {
+    text-decoration: none;
+}
+
+.profile-link-row:hover .logout-text {
+    color: #b72525;
+}
+
 .profile-page .profile-row:last-child {
     border-bottom: none;
 }
@@ -1359,81 +1367,27 @@ img {
     .profile-page {
         flex-direction: row;
         align-items: flex-start;
-        gap: 120px;
-        padding: 40px;
-    }
-
-    .profile-page .userimg {
-        width: 502px;
-        height: 514px;
-        margin-bottom: 0;
-        flex-shrink: 0;
-    }
-
-    .profile-page .profile-name {
-        font-size: 2rem;
-    }
-
-    .profile-page .profile-school {
-        font-size: 1.2rem;
-        margin-bottom: 40px;
-    }
-
-    .profile-page .profile-row {
-        max-width: none;
-        width: auto;
+        justify-content: center;
+        gap: 150px;
+        padding: 0px 20px;
     }
 
     .profile-left {
         align-items: center;
-        padding-left: 200px;
+        margin-top: 70px;
     }
 
     .profile-right {
-        gap: 6px;
         align-items: flex-start;
-        padding-left: 10%;
-    }
-
-    .profile-row {
-        font-size: 2.15rem;
-        padding-bottom: 60%;
+        gap: 6px;
     }
 
     .profile-right-title {
-        font-size: 1.3rem;
-        font-weight: 700;
-        align-items: center;
-        padding-left: 40%;
-        padding-bottom: 10%;
         padding-top: 15%;
-    }
-
-    .profile-right-title h2 {
-        margin: 0;
-        white-space: nowrap;
-    }
-
-    .profile-page .icon {
-        width: 60px;
-        height: 60px;
-    }
-
-    .profile-page .email {
-        font-weight: 600;
-    }
-
-    .profile-page .logout-text {
-        color: #c62828;
+        padding-bottom: 10px;
+        font-size: 1.3rem;
         font-weight: 700;
     }
-
-    .phone-profile,
-    .email,
-    .logout-text {
-        font-size: 1.3rem;
-    }
-    
 }
 /* Fixed Profile Picture Stretching */
 .profile-page .userimg {
@@ -1450,15 +1404,6 @@ img {
         aspect-ratio: 1 / 1;
         min-width: 350px;
         max-width: 350px;
-    }
-}
-
-/* Prevent size loss on zoom for very large screens */
-@media (min-width: 1200px) {
-    .profile-page .userimg {
-        width: 400px;
-        min-width: 400px;
-        max-width: 400px;
     }
 }
 
