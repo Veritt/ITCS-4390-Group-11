@@ -1334,6 +1334,11 @@ img {
     height: 46px;
 }
 
+.profile-page .icon-phone {
+    width: 46px;
+    height: 46px;
+}
+
 .profile-page {
     font-weight: 600;
 }
@@ -1428,31 +1433,7 @@ img {
     .logout-text {
         font-size: 1.3rem;
     }
-
-    @media (min-width: 1200px) {
-        .profile-page {
-            gap: 200px;
-        }
-
-        .profile-left {
-            padding-left: 250px;
-        }
-
-        .profile-right {
-            padding-left: 15%;
-        }
-
-        .profile-row {
-            padding-bottom: 80%;
-        }
-
-        .profile-right-title {
-            padding-left: 50%;
-            padding-bottom: 20%;
-            padding-top: 20%;
-        }
-        
-    }
+    
 }
 /* Fixed Profile Picture Stretching */
 .profile-page .userimg {
@@ -3324,16 +3305,16 @@ img {
     filter: brightness(0) invert(1);
 }
 
-.dark-mode .next-button, .dark-mode .next-btn, .dark-mode .checkout-btn,.dark-mode .done-button, .dark-mode .confirm-home-btn {
+.dark-mode .next-button, .dark-mode .next-btn, .dark-mode .checkout-btn,.dark-mode .done-button, .dark-mode .confirm-home-btn, .dark-mode .add-card-btn, .dark-mode .save-card-btn {
     background: #f0cd8d;
     color: #000000;
 }
 
-.dark-mode .next-button:hover, .dark-mode .next-btn:hover, .dark-mode .checkout-btn:hover, .dark-mode .done-button:hover, .dark-mode .confirm-home-btn:hover {
+.dark-mode .next-button:hover, .dark-mode .next-btn:hover, .dark-mode .checkout-btn:hover, .dark-mode .done-button:hover, .dark-mode .confirm-home-btn:hover, .dark-mode .add-card-btn:hover, .dark-mode .save-card-btn:hover {
     background: #d1a149;
 }
 
-.dark-mode .selection-title, .dark-mode .side-title, .dark-mode .selection-page-title, .dark-mode .beverage-label, .dark-mode .confirmation-text {
+.dark-mode .selection-title, .dark-mode .side-title, .dark-mode .selection-page-title, .dark-mode .beverage-label, .dark-mode .confirmation-text, .dark-mode .page-title {
     color: #f0cd8d;
 }
 
@@ -3370,4 +3351,75 @@ img {
 
 .dark-mode .confirm-link:hover, .dark-mode .edit-link:hover {
     color: #bf8c2d;
+}
+
+.dark-mode .profile-page {
+    color: #f0cd8d;
+}
+
+.dark-mode .profile-school {
+    color: #cbae78;
+}
+
+.dark-mode .icon {
+    filter: brightness(0) invert(1);
+}
+
+.profile-page .logout-text {
+    color: #e63838;
+    font-weight: 700;
+}
+
+.dark-mode .card-page {
+    color: #f0cd8d;
+}
+
+.dark-mode .add-card-btn {
+    border: 2px solid #bf8c2d;
+}
+
+.dark-mode .form-group label {
+    color: #f0cd8d;
+}
+
+.dark-mode .form-group input::placeholder {
+    color: #bf8c2d;
+}
+
+.dark-mode .success-text {
+    color: #5bb860;
+}
+
+.dark-mode .error-text {
+    color: #e14646;
+}
+
+.dark-mode .past-orders-list {
+    background: #081310;
+    border: 1px solid #d8d8d833;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.past-order-restaurant {
+    border: 1px solid #676767;
+}
+
+.dark-mode .past-order-summary {
+    background: #081310;
+}
+
+.dark-mode .restaurant-name, .dark-mode .order-item-name, .dark-mode .order-price {
+    color: #f0cd8d;
+}
+
+.dark-mode .restaurant-location, .dark-mode .order-item-description, .dark-mode .order-date {
+    color: #f0cd8dc8;
+}
+
+.dark-mode .dropdown-arrow {
+    filter: brightness(0) invert(1);
+}
+
+.dark-mode .past-order-details {
+    background: #081310;
 }
