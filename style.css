@@ -2075,7 +2075,7 @@ img {
 
 /* pulls title upward */
 .page-title-container {
-    margin-top: -75px;  
+    margin-top: 50px;  
 }
 
 .past-orders-container {
@@ -3127,6 +3127,12 @@ img {
     margin-top: 20px;
     max-width: 550px;
     box-shadow: 0 4px 10px rgba(157, 157, 157, 0.12);
+}
+
+.dark-mode .search-bar:focus-within {
+    outline: none;
+    border: 1px solid rgb(227, 181, 95);
+    box-shadow: 0 0 0 1px #f0cd8d;
 }
 
 .dark-mode .search-icon {
