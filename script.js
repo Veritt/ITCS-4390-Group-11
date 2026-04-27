@@ -293,9 +293,19 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         const month = parseInt(match[1], 10);
+        const year = parseInt(match[2], 10);
 
         if (month < 1 || month > 12) {
             setFieldState(expirationDate, messageElement, "Month must be between 01 and 12.", false);
+            return false;
+        }
+
+        const now = new Date();
+        const currentMonth = now.getMonth() + 1;
+        const currentYear = now.getFullYear() % 100;
+
+        if (year < currentYear || (year === currentYear && month < currentMonth)) {
+            setFieldState(expirationDate, messageElement, "This card is expired. Please use a valid card.", false);
             return false;
         }
 
@@ -395,21 +405,91 @@ document.querySelectorAll('.addon-button').forEach(button => {
 /* =========================
     Quantity Selector JS
 ========================= */
+// const qtyBox = document.querySelector('.qty-box');
+// // const minusBtn = qtyBox.querySelector('.qty-minus');
+// const plusBtn = qtyBox.querySelector('.qty-plus');
+// const quantitySpan = qtyBox.querySelector('.qty-number');
+
+// let quantity = 1;
+
+// minusBtn.addEventListener('click', () => {
+//     if (quantity > 1) {
+//         quantity--;
+//         quantitySpan.textContent = quantity;
+//     }
+// });
+
+// plusBtn.addEventListener('click', () => {
+//     quantity++;
+//     quantitySpan.textContent = quantity;
+// });
+
 const qtyBox = document.querySelector('.qty-box');
-const minusBtn = qtyBox.querySelector('.qty-minus');
-const plusBtn = qtyBox.querySelector('.qty-plus');
-const quantitySpan = qtyBox.querySelector('.qty-number');
 
-let quantity = 1;
+if (qtyBox) {
+    const minusBtn = qtyBox.querySelector('.qty-minus');
+    const plusBtn = qtyBox.querySelector('.qty-plus');
+    const quantitySpan = qtyBox.querySelector('.qty-number');
 
-minusBtn.addEventListener('click', () => {
-    if (quantity > 1) {
-        quantity--;
+    let quantity = 1;
+
+    minusBtn.addEventListener('click', () => {
+        if (quantity > 1) {
+            quantity--;
+            quantitySpan.textContent = quantity;
+        }
+    });
+
+    plusBtn.addEventListener('click', () => {
+        quantity++;
         quantitySpan.textContent = quantity;
-    }
-});
+    });
+}
 
-plusBtn.addEventListener('click', () => {
-    quantity++;
-    quantitySpan.textContent = quantity;
+// DARK MODE TOGGLE
+document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("darkModeToggle");
+    const menuIcon = document.querySelector(".menu-icon");
+    const darkModeIcon = document.querySelector(".dark-mode-icon");
+    
+    console.log(toggle, menuIcon, darkModeIcon);
+    if (!toggle || !menuIcon || !darkModeIcon) return;
+
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+
+        menuIcon.src = menuIcon.src.replace(".svg", "-dark.svg");
+        darkModeIcon.src = darkModeIcon.src.replace("dark-mode-icon.svg", "light-mode-icon.svg");
+    }
+    
+    toggle.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+
+        let menuSrc = menuIcon.getAttribute("src");
+
+        if (menuSrc.includes("-dark")) {
+            let newMenuSrc = menuSrc.replace("-dark", "");
+            menuIcon.src = newMenuSrc;
+
+            localStorage.setItem("theme", "light");
+
+        } else {
+            let newMenuSrc = menuSrc.replace(".svg", "-dark.svg");
+            menuIcon.src = newMenuSrc;
+
+            localStorage.setItem("theme", "dark");
+        }
+
+        let iconSrc = darkModeIcon.getAttribute("src");
+
+        if (document.body.classList.contains("dark-mode")) {
+            let newIconSrc = iconSrc.replace("dark-mode-icon.svg", "light-mode-icon.svg");
+            darkModeIcon.src = newIconSrc;
+        } else {
+            let newIconSrc = iconSrc.replace("light-mode-icon.svg", "dark-mode-icon.svg");
+            darkModeIcon.src = newIconSrc;
+        }
+    });
 });
