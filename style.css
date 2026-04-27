@@ -756,6 +756,7 @@ img {
     text-align: center;
     width: 260px;
     font-size: 1.1rem;
+    font-weight: bold;
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -908,6 +909,7 @@ img {
     border-radius: 8px;
     text-decoration: none;
     font-size: 1.1rem;
+    font-weight: bold;
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -1427,7 +1429,7 @@ img {
         font-size: 1.3rem;
     }
 
-    @media {min-width : 1200px} {
+    @media (min-width: 1200px) {
         .profile-page {
             gap: 200px;
         }
@@ -2733,7 +2735,7 @@ img {
 }
 
 .campus-title {
-    color: #002c1d;
+    color: #000000;
     font-size: 1.1rem;
     letter-spacing: 0.3px;
     margin-bottom: 0.25rem;
@@ -3161,6 +3163,31 @@ img {
     background-color: #081310;
 }
 
+.dark-mode-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 70px;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+
+    appearance: none;
+    cursor: pointer;
+}
+
+.dark-mode-icon,
+.menu-icon {
+    width: 40px;
+}
+
 .dark-mode .search-bar {
     display: flex;
     align-items: center;
@@ -3179,10 +3206,6 @@ img {
     filter: brightness(0) invert(1);
 }
 
-.dark-mode .banner-wrapper {
-    background: #022c1e;
-}
-
 .dark-mode .restaurant-grid a:hover {
     transform: scale(1.05);
     transition: 0.2s ease;
@@ -3194,7 +3217,7 @@ img {
     color: #f0cd8d;
 }
 
-.dark-mode .visit-card, .dark-mode .top-bar {
+.dark-mode .visit-card, .dark-mode .banner-wrapper, .dark-mode .top-bar, .dark-mode .footer-container {
     background: #022c1e;
 }
 
@@ -3213,10 +3236,6 @@ img {
     color: #003624;
     border-color: #f0cd8d;
     font-weight: 750;
-}
-
-.dark-mode .footer-container {
-    background: #022c1e;
 }
 
 .dark-mode .address-link {
@@ -3285,27 +3304,70 @@ img {
     color: #e3b55f;
 }
 
-.dark-mode-btn {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    width: 70px;
-    transform: translateY(-50%);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    outline: none;
-
-    appearance: none;
-    cursor: pointer;
+.dark-mode .bojangles, .dark-mode .chickfila, .dark-mode .subway, .dark-mode .panda, .dark-mode .student-union, .dark-mode .menu-card-title {
+    color: #f0cd8d;
 }
 
-.dark-mode-icon,
-.menu-icon {
-    width: 40px;
+.dark-mode .menu-card-arrow {
+    filter: brightness(0) invert(1);
+}
+
+.dark-mode .meals-heading, .dark-mode .meal-title {
+    color: #f0cd8d;
+}
+
+.dark-mode .detail-left, .dark-mode .detail-right, .dark-mode .drink-left, .dark-mode .drink-right, .dark-mode .review-left, .dark-mode .review-right, .dark-mode .confirm-left, .dark-mode .confirm-right {
+    color: #f0cd8d;
+}
+
+.dark-mode .addon-button img {
+    filter: brightness(0) invert(1);
+}
+
+.dark-mode .next-button, .dark-mode .next-btn, .dark-mode .checkout-btn,.dark-mode .done-button, .dark-mode .confirm-home-btn {
+    background: #f0cd8d;
+    color: #000000;
+}
+
+.dark-mode .next-button:hover, .dark-mode .next-btn:hover, .dark-mode .checkout-btn:hover, .dark-mode .done-button:hover, .dark-mode .confirm-home-btn:hover {
+    background: #d1a149;
+}
+
+.dark-mode .selection-title, .dark-mode .side-title, .dark-mode .selection-page-title, .dark-mode .beverage-label, .dark-mode .confirmation-text {
+    color: #f0cd8d;
+}
+
+.dark-mode .size-option, .dark-mode .qty-btn {
+    background: #f0cd8d;
+}
+
+.dark-mode .size-option.selected, .dark-mode .qty-btn:hover {
+  background: #d1a149;
+  color: #000000;
+}
+
+.dark-mode .selection-card, .dark-mode .beverage-card {
+    background: #081310;
+    border: 1px solid #cfcfcf2d;
+}
+
+.dark-mode .includes-box {
+    background: #efefef;
+    color: #bf8c2d;
+}
+
+.dark-mode .edit-link:hover {
+    color: #d1a149; 
+}
+
+.dark-mode .confirmation-card {
+    background: #081310;
+}
+
+.dark-mode .confirm-link, .dark-mode .edit-link {
+    color: #d1a149;
+}
+
+.dark-mode .confirm-link:hover, .dark-mode .edit-link:hover {
+    color: #bf8c2d;
 }
