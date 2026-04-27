@@ -499,7 +499,7 @@ img {
 }
 
 .selection-card.selected {
-    border: 2px solid #005035;
+    border: 2px solid #007951;
 }
 
 .selection-next {
@@ -1501,8 +1501,8 @@ img {
 
 /* Add New Card Button */
 .add-card-btn {
-    border: 2px solid #005035;
-    color: #005035;
+    border: 2px solid #007951;
+    color: #007951;
     border-radius: 10px;
     padding: 14px 20px;
     font-size: 1rem;
@@ -1908,7 +1908,7 @@ img {
 .restaurant-grid a:hover {
     transform: scale(1.05);
     transition: 0.2s ease;
-    border: 3px solid #005035;
+    border: 3px solid #007951;
     border-radius: 12px;
 }
 
@@ -2002,11 +2002,11 @@ img {
     color: #5a5a5a;
     font-size: 1rem;
     font-weight: 600;
-    border-top: 2px solid #005035;
+    border-top: 2px solid #007951;
 }
 
 .side-menu-link:last-child {
-    border-bottom: 2px solid #005035;
+    border-bottom: 2px solid #007951;
 }
 
 .side-menu-link img {
@@ -2334,8 +2334,8 @@ img {
 }
 .card-form input:focus {
   outline: none;
-  border: 1px solid #005035;
-  box-shadow: 0 0 0 1px #005035;
+  border: 1px solid #007951;
+  box-shadow: 0 0 0 1px #007951;
 }
 
 /* Homepage, Search Bar - White background, Gray Border */
@@ -2348,8 +2348,8 @@ img {
 /* Homepage, Search Bar - Input Focus Solid Green Border */
 .search-bar:focus-within {
   outline: none;
-  border: 1px solid #005035;
-  box-shadow: 0 0 0 1px #005035;
+  border: 1px solid #007951;
+  box-shadow: 0 0 0 1px #007951;
 }
 
 /* Place Order Page, Promo Code - Input Focus Solid Green Border */
@@ -2361,13 +2361,13 @@ img {
 
 .place-input:focus {
   outline: none;
-  border: 1px solid #005035;
-  box-shadow: 0 0 0 1px #005035;
+  border: 1px solid #007951;
+  box-shadow: 0 0 0 1px #007951;
 }
 
 /* Past Orders Page, Resturant Card Dropdown - Hover Over */
 .past-order-restaurant:hover {
-    border: 1px solid #005035;
+    border: 1px solid #007951;
     transition: border 0.2s ease;
 }
 
@@ -2382,7 +2382,7 @@ img {
 
 /* Payment Method Page, Add New Card Button - Hover Over */
 .add-card-btn:hover {
-    background-color: #005035;
+    background-color: #007951;
     color: #ffffff;
 }
 .add-card-btn:hover img {
@@ -2398,13 +2398,13 @@ img {
 
 /* Restaurant Menu Page, Meals Card - Hover Over */
 .menu-card:hover {
-    border: 1px solid #005035;
+    border: 1px solid #007951;
     transition: border 0.2s ease;
 }
 
 /* Meals Page, Chicken Sandwich Meal Card - Hover Over */
 .meal-image:hover {
-    border: 1px solid #005035;
+    border: 1px solid #007951;
     transition: border 0.2s ease;
 }
 
@@ -2428,7 +2428,7 @@ img {
 
 /* Side Selection Page, Fries Card - Hover Over */
 .selection-card:hover {
-    border: 1px solid #005035;
+    border: 1px solid #007951;
     transition: border 0.2s ease;
 }
 
@@ -2442,7 +2442,7 @@ img {
 
 /* Drink Selection Page, Sweat Tea Card - Hover Over */
 .beverage-card:hover {
-    border: 1px solid #005035;
+    border: 1px solid #007951;
     transition: border 0.2s ease;
 }
 
@@ -3004,7 +3004,7 @@ img {
 
 /* Override any conflicting .selection-card styles from existing CSS */
 .selection-card.selected {
-  border: 2px solid #005035;
+  border: 2px solid #007951;
 }
 
 /* --- BEVERAGE SELECTION PAGE (beverage-container) --- */
@@ -3374,4 +3374,50 @@ img {
 
 .dark-mode .past-order-details {
     background: #081310;
+}
+
+/* Spinner for both Review Page Checkout Button and Payment Method Save Card Button */
+.save-card-loader {
+    border: 8px solid #dddddd;
+    border-radius: 50%;
+    border-top: 8px solid #007951;
+    width: 60px;
+    height: 60px;
+    animation: saveCardSpin 1s linear infinite;
+}
+
+@keyframes saveCardSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.spinner-container {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.spinner-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
 }

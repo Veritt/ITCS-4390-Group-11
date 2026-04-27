@@ -493,3 +493,179 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// Spinner for save card button on payment method page
+(function() {
+    let spinnerOverlay = null;
+
+    function createSpinner() {
+        const overlay = document.createElement('div');
+        overlay.className = 'spinner-overlay';
+        
+        const container = document.createElement('div');
+        container.className = 'spinner-container';
+        
+        const loader = document.createElement('div');
+        loader.className = 'save-card-loader';
+        
+        const text = document.createElement('p');
+        text.className = 'spinner-text';
+        text.textContent = 'Saving your card...';
+        
+        container.appendChild(loader);
+        container.appendChild(text);
+        overlay.appendChild(container);
+        
+        return overlay;
+    }
+
+    function showSpinner() {
+        if (spinnerOverlay) return;
+        spinnerOverlay = createSpinner();
+        document.body.appendChild(spinnerOverlay);
+    }
+
+    function hideSpinner() {
+        if (spinnerOverlay) {
+            spinnerOverlay.remove();
+            spinnerOverlay = null;
+        }
+    }
+
+    function showStatusMessage(message, isError = false) {
+        const statusDiv = document.getElementById('formStatus');
+        if (statusDiv) {
+            statusDiv.innerHTML = `<span class="${isError ? 'error-text' : 'success-text'}">${message}</span>`;
+            setTimeout(() => {
+                if (statusDiv.innerHTML.includes(message)) {
+                    statusDiv.innerHTML = '';
+                }
+            }, 3000);
+        }
+    }
+
+    async function saveCardToBackend(cardData) {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve({ success: true });
+            }, 1500);
+        });
+    }
+
+    async function saveCard() {
+        const nameInput = document.getElementById('cardName');
+        const cardInput = document.getElementById('cardNumber');
+        const expInput = document.getElementById('expirationDate');
+        const cvcInput = document.getElementById('cvc');
+        
+        if (!nameInput.value.trim() || !cardInput.value.trim() || 
+            !expInput.value.trim() || !cvcInput.value.trim()) {
+            showStatusMessage('Please fill in all card details', true);
+            return;
+        }
+        
+        const cardData = {
+            nameOnCard: nameInput.value.trim(),
+            cardNumber: cardInput.value.trim(),
+            expirationDate: expInput.value.trim(),
+            cvc: cvcInput.value.trim()
+        };
+        
+        showSpinner();
+        
+        try {
+            const result = await saveCardToBackend(cardData);
+            
+            hideSpinner();
+            showStatusMessage('✓ Card saved successfully!');
+            
+            nameInput.value = '';
+            cardInput.value = '';
+            expInput.value = '';
+            cvcInput.value = '';
+        } catch (error) {
+            hideSpinner();
+            showStatusMessage('Failed to save card. Please try again.', true);
+            console.error('Save card error:', error);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const saveButton = document.querySelector('.save-card-btn');
+        const form = document.getElementById('cardForm');
+        if (saveButton && form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); 
+                saveCard(); // Call our async save function
+            });
+        }
+    });
+})();
+
+
+// Spinner for checkout buttons on the Review Pages
+(function() {
+    let checkoutSpinnerOverlay = null;
+
+    function createCheckoutSpinner() {
+        const overlay = document.createElement('div');
+        overlay.className = 'spinner-overlay';
+        
+        const container = document.createElement('div');
+        container.className = 'spinner-container';
+        
+        const loader = document.createElement('div');
+        loader.className = 'save-card-loader';
+        
+        const text = document.createElement('p');
+        text.className = 'spinner-text';
+        text.textContent = 'Processing your order...';
+        
+        container.appendChild(loader);
+        container.appendChild(text);
+        overlay.appendChild(container);
+        
+        return overlay;
+    }
+
+    function showCheckoutSpinner() {
+        if (checkoutSpinnerOverlay) return;
+        checkoutSpinnerOverlay = createCheckoutSpinner();
+        document.body.appendChild(checkoutSpinnerOverlay);
+        document.body.style.overflow = 'hidden';
+    }
+
+    function hideCheckoutSpinner() {
+        if (checkoutSpinnerOverlay) {
+            checkoutSpinnerOverlay.remove();
+            checkoutSpinnerOverlay = null;
+            document.body.style.overflow = '';
+        }
+    }
+
+    function initCheckoutButtons() {
+        const checkoutButtons = document.querySelectorAll('.checkout-btn');
+        
+        checkoutButtons.forEach(button => {
+            const newButton = button.cloneNode(true);
+            button.parentNode.replaceChild(newButton, button);
+            
+            newButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetUrl = this.getAttribute('href');
+                if (targetUrl) {
+                    showCheckoutSpinner();
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 800);
+                }
+            });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCheckoutButtons);
+    } else {
+        initCheckoutButtons();
+    }
+})();
