@@ -301,8 +301,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         const now = new Date();
-    const currentMonth = now.getMonth() + 1;
-    const currentYear = now.getFullYear() % 100;
+        const currentMonth = now.getMonth() + 1;
+        const currentYear = now.getFullYear() % 100;
 
         if (year < currentYear || (year === currentYear && month < currentMonth)) {
             setFieldState(expirationDate, messageElement, "This card is expired. Please use a valid card.", false);
