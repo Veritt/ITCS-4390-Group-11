@@ -51,7 +51,7 @@ img {
     color: #ffffff;
     text-decoration: none;
 
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     font-weight: 600;
 
     border: 1.5px solid rgba(255, 255, 255, 0.6);
@@ -1840,6 +1840,7 @@ img {
 .section-title {
     font-size: 1rem;
     font-weight: 700;
+    font-size: 1.6rem;
     margin-top: 40px;
     margin-bottom: 15px;
 }
@@ -1851,8 +1852,8 @@ img {
 }
 
 .restaurant-logo {
-    width: 100px;
-    height: 72px;
+    width: 180px;
+    height: 102px;
     object-fit: cover;
     border-radius: 10px;
 }
