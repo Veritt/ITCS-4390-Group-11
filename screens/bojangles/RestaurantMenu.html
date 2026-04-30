@@ -1,14 +1,14 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../style.css">
+  <script src="../../bojangles.js" defer></script>
   <script src="../../script.js" defer></script>
   <title>Restaurant Menu</title>
 </head>
-<body>
+<body class="bojangles-menu-page">
     <div class="restaurant-menu">
         <header class="top-bar">
         <a href="../index.html" class="topbar-logo">
@@ -60,73 +60,23 @@
       </nav>
     </aside>
         <!-- Main Content -->
-        <div class="selection-topbar">
-
-            <a href="../index.html" class="back-link">
-                <img src="../../pictures/back-arrow-icon.svg" alt="Back" class="back-icon">
-                <span>Back</span>
-            </a>
-
-            <div class="selection-page-title restaurant-heading">
-                <img class="header-logo" src="../../pictures/bojangles-logo.svg" alt="Bojangles Logo">
-
-                <div class="header-text">
-                    <h1 class="bojangles">Bojangles</h1>
-                    <p class="student-union">Student Union</p>
-                </div>
-            </div>
-
+        <main class="menu-content">
+    <section class="header-block">
+        <img class="header-logo contain" src="../../pictures/bojangles-logo.svg" alt="Bojangles logo">
+        <div class="header-text">
+            <h1 class="bojangles">Bojangles</h1>
+            <p class="student-union">Student Union</p>
         </div>
+    </section>
 
-            <!-- Menu Card -->
-
-        <div class="top-section">
-            <div class="box">
-                <a href="../bojangles/Meals.html" class="meal-card-link meal-option">
-                    <div class="meal-card">
-                        <img src="../../pictures/bojangles-meal.png" alt="A picture of a Chicken Supremes Combo" class="meal-image">
-                        <p class="meal-title">Meals</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="box">
-                <a href="../bojangles/entreesMenu.html" class="meal-card-link meal-option">
-                    <div class="meal-card">
-                        <img src="../../pictures/bojangles-entree.avif" alt="A picture of a Chicken Sandwich" class="meal-image">
-                        <p class="meal-title">Entrees</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="box">
-                <a href="../bojangles/sidesMenu.html" class="meal-card-link meal-option">
-                    <div class="meal-card">
-                        <img src="../../pictures/bojangles-fries.png" alt="A picture of Bo Fries" class="meal-image">
-                        <p class="meal-title">Sides</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="box">
-                <a href="../bojangles/beveragesMenu.html" class="meal-card-link meal-option">
-                    <div class="meal-card">
-                        <img src="../../pictures/sweet-tea.png" alt="A picture of a large sweet tea" class="meal-image">
-                        <p class="meal-title">Beverages</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="box">
-                <a href="../bojangles/treatsMenu.html" class="meal-card-link meal-option">
-                    <div class="meal-card">
-                        <img src="../../pictures/bojangles-treat.avif" alt="A picture of Bo-berry biscuits" class="meal-image">
-                        <p class="meal-title">Treats</p>
-                    </div>
-                </a>
-            </div>
+    <a class="menu-card" href="Meals.html">
+        <div class="menu-card-left">
+            <img class="menu-card-image" src="../../pictures/large-chicken-meal.png" alt="Bojangles meals">
+            <span class="menu-card-title">Meals</span>
         </div>
-    </div>
+        <img class="menu-card-arrow" src="../../pictures/forward-arrow-icon.svg" alt="Open meals">
+    </a>
+</main>
 </body>
 <!-- Footer -->
 <footer class="footer">

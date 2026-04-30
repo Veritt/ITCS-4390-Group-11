@@ -51,13 +51,14 @@ img {
     color: #ffffff;
     text-decoration: none;
 
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 600;
 
     border: 1.5px solid rgba(255, 255, 255, 0.6);
     border-radius: 999px;
 
     transition: all 0.2s ease;
+    box-shadow: 0px 8px 5px rgba(103, 103, 103, 0.12);
 }
 
 .desktop-nav a:hover,
@@ -71,6 +72,7 @@ img {
     color: #007951;
     border-color: #ffffff;
     font-weight: 750;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.12);
 }
 
 /* 170% zoom detection*/
@@ -163,12 +165,6 @@ img {
     height: 72px;
     object-fit: cover;
     border-radius: 10px ;
-}
-
-/* Alternative: If you want contain (shows whole logo without cropping) */
-.header-block .header-logo.contain {
-    object-fit: contain !important;
-    background-color: #ffffff;
 }
 
 .header-text {
@@ -2403,8 +2399,10 @@ img {
 
 /* Meals Page, Chicken Sandwich Meal Card - Hover Over */
 .meal-image:hover {
-    border: 2px solid #007951;
-    transition: border 0.2s ease;
+    transform: scale(1.05);
+    transition: 0.2s ease;
+    border: 3px solid #007951;
+    border-radius: 12px;
 }
 
 /* Checkout/Ordering Pages, Addon Button - Hover Over */
@@ -3156,6 +3154,7 @@ img {
 .dark-mode .desktop-nav a {
     color: #f0cd8d;
     border: 1.5px solid #f0cd8d;
+    box-shadow: 0px 8px 5px rgba(64, 64, 64, 0.12);
 }
 
 .dark-mode .desktop-nav a:hover {
@@ -3168,6 +3167,7 @@ img {
     color: #003624;
     border-color: #f0cd8d;
     font-weight: 750;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.12);
 }
 
 .dark-mode .address-link {
@@ -3439,153 +3439,4 @@ img {
     font-weight: 600;
     color: #333;
     margin: 0;
-}
-
-/*RESTAURANT REDESIGN */
-.top-section {
-    max-width: 1350px;
-    margin: 30px auto 0;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    column-gap: 55px;
-    row-gap: 65px;
-}
-
-.top-section .box:nth-child(1),
-.top-section .box:nth-child(2),
-.top-section .box:nth-child(3) {
-    grid-column: span 2;
-}
-
-.top-section .box:nth-child(4) {
-    grid-column: 2 / 4;
-}
-
-.top-section .box:nth-child(5) {
-    grid-column: 4 / 6;
-}
-
-.selection-topbar {
-    position: relative;
-    display: flex;
-    align-items: center;      
-    min-height: 120px;       
-    padding: 13px 0 13px;    
-    margin-bottom: 24px;
-    border-bottom: 1px solid #d8d8d8;
-}
-
-.restaurant-heading {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-.restaurant-heading .header-logo {
-    width: 100px;
-    height: 72px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.restaurant-heading .bojangles {
-    margin: 0;
-}
-
-.restaurant-heading .student-union {
-    margin: 4px 0 0;
-}
-
-.back-link {
-    position: relative;
-    top: 0;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    margin: 0 0 0 20px;
-}
-
-@media (max-width: 768px) {
-    .top-section {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        padding: 0 16px;
-    }
-
-    .top-section .box {
-        width: 100%;
-        max-width: 360px;
-    }
-
-    .top-section .box:nth-child(1),
-    .top-section .box:nth-child(2),
-    .top-section .box:nth-child(3),
-    .top-section .box:nth-child(4),
-    .top-section .box:nth-child(5) {
-        grid-column: auto;
-    }
-
-    .meal-card {
-        width: 100%;
-    }
-
-    .meal-image {
-        width: 100%;
-        height: auto;
-    }
-
-    .bojangles {
-        font-size: 1.55rem;
-        white-space: nowrap;
-    }
-}
-
-@media (max-width: 480px) {
-    .selection-topbar {
-        min-height: auto;
-        padding: 18px 16px 22px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .back-link {
-        margin: 0;
-        padding: 0.45rem 0.9rem;
-        font-size: 0.9rem;
-        flex-shrink: 0;
-    }
-
-    .restaurant-heading {
-        position: static;
-        transform: none;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        min-width: 0;
-    }
-
-    .restaurant-heading .header-logo {
-        width: 70px;
-        height: 52px;
-    }
-
-    .bojangles {
-        font-size: 1.55rem;
-        white-space: nowrap;
-    }
-
-    .student-union {
-        font-size: 0.9rem;
-    }
 }
