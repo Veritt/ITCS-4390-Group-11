@@ -265,7 +265,6 @@ img {
 
 .meal-image {
     width: clamp(140px, 22vw, 220px);
-    border: 1px solid #d0d0d0;
     border-radius: 10px;
     margin-bottom: 14px;
 }
@@ -2404,7 +2403,7 @@ img {
 
 /* Meals Page, Chicken Sandwich Meal Card - Hover Over */
 .meal-image:hover {
-    border: 1px solid #007951;
+    border: 2px solid #007951;
     transition: border 0.2s ease;
 }
 
@@ -2961,7 +2960,7 @@ img {
   width: 360px;
   height: 280px;
   object-fit: cover;
-  border: 1px solid #d0d0d0;
+  box-shadow: 0 8px 10px rgba(157, 157, 157, 0.12);
   border-radius: 10px;
   margin-bottom: 14px;
   display: block;
@@ -3376,6 +3375,26 @@ img {
     background: #081310;
 }
 
+.dark-mode .side-menu {
+    background: #003624;
+}
+
+.dark-mode .side-menu-link img {
+    filter: brightness(0) invert(1);
+}
+
+.dark-mode .side-menu-link span {
+    color: #f0cd8d;
+}
+
+.dark-mode .side-menu-link {
+    border-top: 2px solid #00a971;
+}
+
+.dark-mode .menu-close {
+    filter: brightness(0) invert(1);
+}
+
 /* Spinner for both Review Page Checkout Button and Payment Method Save Card Button */
 .save-card-loader {
     border: 8px solid #dddddd;
@@ -3420,4 +3439,153 @@ img {
     font-weight: 600;
     color: #333;
     margin: 0;
+}
+
+/*RESTAURANT REDESIGN */
+.top-section {
+    max-width: 1350px;
+    margin: 30px auto 0;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 55px;
+    row-gap: 65px;
+}
+
+.top-section .box:nth-child(1),
+.top-section .box:nth-child(2),
+.top-section .box:nth-child(3) {
+    grid-column: span 2;
+}
+
+.top-section .box:nth-child(4) {
+    grid-column: 2 / 4;
+}
+
+.top-section .box:nth-child(5) {
+    grid-column: 4 / 6;
+}
+
+.selection-topbar {
+    position: relative;
+    display: flex;
+    align-items: center;      
+    min-height: 120px;       
+    padding: 13px 0 13px;    
+    margin-bottom: 24px;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.restaurant-heading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.restaurant-heading .header-logo {
+    width: 100px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.restaurant-heading .bojangles {
+    margin: 0;
+}
+
+.restaurant-heading .student-union {
+    margin: 4px 0 0;
+}
+
+.back-link {
+    position: relative;
+    top: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 0 0 20px;
+}
+
+@media (max-width: 768px) {
+    .top-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 16px;
+    }
+
+    .top-section .box {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .top-section .box:nth-child(1),
+    .top-section .box:nth-child(2),
+    .top-section .box:nth-child(3),
+    .top-section .box:nth-child(4),
+    .top-section .box:nth-child(5) {
+        grid-column: auto;
+    }
+
+    .meal-card {
+        width: 100%;
+    }
+
+    .meal-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .bojangles {
+        font-size: 1.55rem;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .selection-topbar {
+        min-height: auto;
+        padding: 18px 16px 22px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .back-link {
+        margin: 0;
+        padding: 0.45rem 0.9rem;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+    }
+
+    .restaurant-heading {
+        position: static;
+        transform: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+    }
+
+    .restaurant-heading .header-logo {
+        width: 70px;
+        height: 52px;
+    }
+
+    .bojangles {
+        font-size: 1.55rem;
+        white-space: nowrap;
+    }
+
+    .student-union {
+        font-size: 0.9rem;
+    }
 }
