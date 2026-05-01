@@ -465,7 +465,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     toggle.addEventListener("click", function () {
-        document.documentElement.classList.toggle("dark-mode");
+        document.body.classList.toggle("dark-mode");
 
         let menuSrc = menuIcon.getAttribute("src");
 
@@ -484,7 +484,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let iconSrc = darkModeIcon.getAttribute("src");
 
-        if (document.documentElement.classList.contains("dark-mode")) {
+        if (document.body.classList.contains("dark-mode")) {
             let newIconSrc = iconSrc.replace("dark-mode-icon.svg", "light-mode-icon.svg");
             darkModeIcon.src = newIconSrc;
         } else {
