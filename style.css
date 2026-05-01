@@ -22,6 +22,11 @@ img {
     max-width: 100%;
 }
 
+html.dark-mode,
+html.dark-mode body {
+    background: #081310;
+}
+
 /* --------- RESTAURANT MENU ---------- */
 .restaurant-menu {
     min-height: calc(100vh - 80px);
@@ -1322,6 +1327,11 @@ img {
 
 .profile-link-row {
     text-decoration: none;
+}
+
+.profile-page .logout-text {
+    color: #e63838;
+    font-weight: 700;
 }
 
 .profile-link-row:hover .logout-text {
@@ -3314,11 +3324,6 @@ img {
 
 .dark-mode .icon {
     filter: brightness(0) invert(1);
-}
-
-.profile-page .logout-text {
-    color: #e63838;
-    font-weight: 700;
 }
 
 .dark-mode .card-page {
