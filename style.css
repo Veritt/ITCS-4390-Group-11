@@ -22,11 +22,6 @@ img {
     max-width: 100%;
 }
 
-html.dark-mode,
-html.dark-mode body {
-    background: #081310;
-}
-
 /* --------- RESTAURANT MENU ---------- */
 .restaurant-menu {
     min-height: calc(100vh - 80px);
