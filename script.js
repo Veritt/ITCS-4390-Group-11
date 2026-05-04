@@ -177,12 +177,12 @@ for (i = 0; i < arr.length; i++) {
 // =========================
 document.addEventListener("DOMContentLoaded", function () {
  const searchSuggestions = [
-   { name: "Wendy's", link: "../screens/wendys/restaurantMenu.html" },
-   { name: "Bojangles", link: "../screens/bojangles/restaurantMenu.html" },
-   { name: "Panda Express", link: "../screens/panda/restaurantMenu.html"},
-   { name: "Chick-Fil-A", link: "../screens/chickfila/restaurantMenu.html"},
-   { name: "Subway", link: "../screens/subway/restaurantMenu.html" },
-   { name: "Halal Shack", link: "../screens/halal/restaurantMenu.html" },
+   { name: "Wendy's", link: "../screens/wendys/RestaurantMenu.html" },
+   { name: "Bojangles", link: "../screens/bojangles/RestaurantMenu.html" },
+   { name: "Panda Express", link: "../screens/panda/RestaurantMenu.html"},
+   { name: "Chick-Fil-A", link: "../screens/chickfila/RestaurantMenu.html"},
+   { name: "Subway", link: "../screens/subway/RestaurantMenu.html" },
+   { name: "Halal Shack", link: "../screens/halal/RestaurantMenu.html" },
  ];
 
   const searchInput = document.getElementById("myInput");
